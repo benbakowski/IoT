@@ -32,12 +32,11 @@ Before you can begin receiving data from devices that are connected to your Edge
 ## Create an organization
 {: #edge_org}
 
-Create an organization within the {{site.data.keyword.iot_short_notm}} Edge preview test environment by completing the following steps:
-1. Go to http://YOUR_ORGANIZATION.internetofthings.ibmcloud.com.
-2. Complete the information to provision the IBM Cloud organization. **Important:** For the {{site.data.keyword.iot_short_notm}} Edge preview, you must create your IBM Cloud organization in the US region.
-3. Click **Provision Service Instance**.
-4. In the {{site.data.keyword.iot_short_notm}} instance that opens, click **Launch**.
-A new WIoTP organization is created. The org ID is shown at the start of the URL and in the dashboard under your user name. You can now enable {{site.data.keyword.iot_short_notm}} Edge for the organization.
+**Important:** If you already have a WIoTP service, the {{site.data.keyword.iot_short_notm}} Edge preview is only available if your service is provisioned in the US region. If your organization is not in the US region, you must create an additional service to experience the preview by completing the following steps:
+1. Go to https://console.bluemix.net/.
+2. Create an instance of the Internet of Things Platform.  **Important:** For the {{site.data.keyword.iot_short_notm}} Edge preview, you must create this service in the US region.
+3. In the {{site.data.keyword.iot_short_notm}} instance that opens, click **Launch**.
+A new Watson Internet of Things Platform organization is created. You are now ready to enable {{site.data.keyword.iot_short_notm}} Edge for the organization.
 
 ## Enable the {{site.data.keyword.iot_short_notm}} Edge preview
 {: #edge_enable}

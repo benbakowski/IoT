@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-08-18"
+  years: 2017, 2019
+lastupdated: "2019-02-14"
 
 ---
 
@@ -39,7 +39,7 @@ By completing the instructions that are in this guide, you will:
 - Use Cloud Foundry to deploy a Node-RED based and webhook enabled device simulator application.
 - Use API calls to create and register devices, publish device events, and delete devices.
 
-**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_full}} might use up a large amount of data. 
+**Important:** Simulating large numbers of devices that concurrently send device data to {{site.data.keyword.iot_full}} might use up a large amount of data.
 
 ## Prerequisites
 {: #prereqs}  
@@ -224,7 +224,7 @@ Because the simulated devices are registered with {{site.data.keyword.iot_short_
 To send device events:  
 1. In the Node-RED flow editor, select the **Simulate multiple devices** tab.
 7. To simulate five devices, click the inject node that is labeled **Simulate 5 devices**.
- 
+
 
 
 ### Simulating device events by using Rest API  
@@ -247,7 +247,7 @@ Where:
     - timeInterval is the spacing of the events in milliseconds.
     - deviceType is the device type that you created simulated devices for.
     - deviceName is the pattern for the deviceID for the created devices.
- 
+
 
 ## Step 5 - Deleting devices
 {: #deleting}
@@ -270,7 +270,7 @@ Example: `https://YOUR_APP_NAME-lesson4-simulate.mybluemix.net/rest/deleteDevice
 "deviceType":"iot-conveyor-belt",  
 "deviceName": "belt"  
 }</code></pre>
-  
+
 
 
 ## What's next?

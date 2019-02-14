@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-24"
+  years: 2017, 2019
+lastupdated: "2019-02-14"
 
 ---
 
@@ -57,7 +57,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
    ```
 cf api API-ENDPOINT
    ```
-Example: `cf api https://api.ng.bluemix.net`
+Example: `cf api https://api.us-south.cf.cloud.ibm.com`
 <table>
 <tr>
 <th>Region</th>
@@ -65,15 +65,15 @@ Example: `cf api https://api.ng.bluemix.net`
 </tr>
 <tr>
 <td>US South</td>
-<td>https://api.ng.bluemix.net</td>
+<td>https://api.us-south.cf.cloud.ibm.com</td>
 </tr>
 <tr>
 <td>United Kingdom</td>
-<td>https://api.eu-gb.bluemix.net</td>
+<td>https://api.eu-gb.cf.cloud.ibm.com</td>
 </tr>
  <!--<tr>
  <td>Germany</td>
- <td>https://api.eu-de.bluemix.net</td>
+ <td>https://api.eu-de.cf.cloud.ibm.com</td>
  </tr>-->
 </table>
 2. Log into your {{site.data.keyword.Bluemix_notm}} account.
@@ -276,9 +276,9 @@ Continue with the next guide or jump to another topic that interests you:
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-simulator/blob/master/README.md){: new_window}
  - [Node.js clienmt libraries ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-nodejs){: new_window}
- 
+
  **Note:** Bluemix is now IBM Cloud. Check out the [IBM Cloud Blog](https://www.ibm.com/blogs/bluemix/2017/10/bluemix-is-now-ibm-cloud/){: new_window} ![External link icon](../../../icons/launch-glyph.svg "External link icon") for more details.
- 
+
 - Path B: Modify the Raspberry Pi setup to suit your needs.  
 For technical details, see:
  - [https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/guide-conveyor-rasp-pi/blob/master/README.md){: new_window}

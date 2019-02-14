@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-01"
+  years: 2017, 2019
+lastupdated: "2019-02-14"
 
 ---
 
@@ -120,7 +120,7 @@ Replace the `API-ENDPOINT` value with the API endpoint for your region.
   ```
 cf api API-ENDPOINT
   ```
-Example: `cf api https://api.ng.bluemix.net`
+Example: `cf api https://api.us-south.cf.cloud.ibm.com`
 <table>
 <tr>
 <th>Region</th>
@@ -128,15 +128,15 @@ Example: `cf api https://api.ng.bluemix.net`
 </tr>
 <tr>
 <td>US South</td>
-<td>https://api.ng.bluemix.net</td>
+<td>https://api.us-south.cf.cloud.ibm.com</td>
 </tr>
 <tr>
 <td>United Kingdom</td>
-<td>https://api.eu-gb.bluemix.net</td>
+<td>https://api.eu-gb.cf.cloud.ibm.com</td>
 </tr>
 <!--<tr>
 <td>Germany</td>
-<td>https://api.eu-de.bluemix.net</td>
+<td>https://api.eu-de.cf.cloud.ibm.com</td>
 </tr>-->
 </table>
 6. Change the directory to the directory in which the sample app is located.  
@@ -302,7 +302,7 @@ applications:  </br>
    ```
  cf api API-ENDPOINT
    ```
- Example: `cf api https://api.ng.bluemix.net`
+ Example: `cf api https://api.us-south.cf.cloud.ibm.com`
  <table>
  <tr>
  <th>Region</th>
@@ -310,15 +310,15 @@ applications:  </br>
  </tr>
  <tr>
  <td>US South</td>
- <td>https://api.ng.bluemix.net</td>
+ <td>https://api.us-south.cf.cloud.ibm.com</td>
  </tr>
  <tr>
  <td>United Kingdom</td>
- <td>https://api.eu-gb.bluemix.net</td>
+ <td>https://api.eu-gb.cf.cloud.ibm.com</td>
  </tr>
  <!--<tr>
  <td>Germany</td>
- <td>https://api.eu-de.bluemix.net</td>
+ <td>https://api.eu-de.cf.cloud.ibm.com</td>
  </tr>-->
  </table>
  6. Change the directory to the directory in which the sample app is located.  

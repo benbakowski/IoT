@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-01-17"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,11 +11,17 @@ lastupdated: "2018-01-17"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # Contacting {{site.data.keyword.iot_short_notm}} support
 {: #gettinghelp}
 
-You have several options for getting in touch for support using {{site.data.keyword.iot_full}}, such as getting help through a forum, or through Slack, or by opening a support ticket. You can even submit your own ideas for enhancements to {{site.data.keyword.iot_short_notm}} by using the ideas portal.
+<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+</p>
+{: important}
+
+You have several options for getting support when using {{site.data.keyword.iot_full}}, such as getting help through a forum, or through Slack, or by opening a support ticket. You can even submit your own ideas for enhancements to {{site.data.keyword.iot_short_notm}} by using the ideas portal.
 
 ## Forums
 
@@ -23,7 +29,7 @@ You have several options for getting in touch for support using {{site.data.keyw
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - tag your posts with "ibm-cloud" and "watson-iot".
 
-See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
+See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/support/index.html#getting-help){:new_window} for more details about using the forums.
 
 
 ## Slack
@@ -33,7 +39,7 @@ See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help
 
 ## Support tickets
 
-* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/support/index.html#contacting-support){:new_window}
 
 
 ## Ideas portal

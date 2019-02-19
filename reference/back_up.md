@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017, 2018
-lastupdated: "2018-01-11"
+years: 2017, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,10 +12,17 @@ lastupdated: "2018-01-11"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
+
 
 
 # Data backup
 {: #back_up}
+
+<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+</p>
+{: important}
 
 Use the following information to understand the data backup strategy for {{site.data.keyword.iot_full}}.
 
@@ -27,7 +34,7 @@ The following types of client data are currently backed up as part of the {{site
 - Device information
 - API keys and tokens
 - User information
-- All records of device management requests, including the history of any initiated requests - for example the current state of the request
+- All records of device management requests including the history of any initiated requests, for example: the current state of the request
 - Definitions of custom device management request bundles
 
 **Note:** All data for an organization is retained for 14 days after service deprovisioning. Contact support within the 14-day window to have an organization restored.
@@ -37,7 +44,7 @@ The following types of client data are currently backed up as part of the {{site
 The following types of data are not backed up in {{site.data.keyword.iot_short_notm}}:
 
 - Device events
-- Transient messaging state, for example in-flight data
+- Transient messaging state, for example: data-in-flight
 - MQTT messages that are sent and received as part of a device management request
 <!-- - Analytics rules and alert configuration -->
 

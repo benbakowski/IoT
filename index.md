@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-27"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -15,55 +15,148 @@ lastupdated: "2018-11-27"
 {:important: .important}
 
 
-# Getting started with {{site.data.keyword.iot_short_notm}}
-{: #gettingstartedtemplate}
+# Getting started tutorial
+{: #getting-started-with-iotp .task}
 
-<p>The {{site.data.keyword.iot_short_notm}} pricing plans were updated on November 27, 2018.   
-For more information, including upgrade information, see [{{site.data.keyword.iot_short_notm}} service plans](plans_overview.html). The contents of this [IBM Cloud documentation collection](https://console.bluemix.net/docs/services/IoT/) pertain to the {{site.data.keyword.iot_short_notm}} Lite plan, and to the previous Standard and Advanced Security plans. For documentation about the {{site.data.keyword.iot_short_notm}} Connection and Analytics Service plans, with their extended feature set, see the [{{site.data.keyword.iot_short_notm}} knowledge center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html).
+<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
 </p>
 {: important}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} gives you a versatile toolkit that includes gateway devices, device management, and powerful application access. By using {{site.data.keyword.iot_short_notm}}, you can collect connected device data and perform analytics on real-time data from your organization.
+In this {{site.data.keyword.iot_full}} getting started tutorial, we connect an IoT device to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
-
-## Before you begin using Watson IoT Platform
-{: #byb}
-
-Before connecting devices and utilizing data, register for an {{site.data.keyword.Bluemix_notm}} account and create an instance of the {{site.data.keyword.iot_short_notm}} service in your {{site.data.keyword.Bluemix_notm}} organization. You can create an {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the IBM Cloud Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.
-
-For detailed information about how to sign up for an account on {{site.data.keyword.Bluemix_notm}}, configure regions, and other account management settings, see [Signing up for IBM Cloud](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud).
-
-You can set up and configure your {{site.data.keyword.iot_short_notm}} instance from the dashboard. To open the dashboard, go to your {{site.data.keyword.iot_short_notm}} service instance in  {{site.data.keyword.Bluemix_notm}}, and then click **Launch**.
-
 ## About this task
+{: #index-about .sectiontitle}  
 
-The following steps describe how you can quickly get started with your {{site.data.keyword.iot_short_notm}} service.
+Before you can begin receiving data from your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
 
-A more detailed set of getting started guides and sample applications that step through the basics of developing a ready-for-production, end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} are also available. If you are a developer who is new to working with {{site.data.keyword.iot_short_notm}}, use the step-by-step processes in the [Getting started guides](https://console.bluemix.net/docs/services/IoT/getting_started/getting-started-iot-overview.html#getting-started) section.
+## Before you begin
+{: #index-byb .sectiontitle}  
 
-## Step 1: Connect your devices
-{: #up_and_running}
+Before you can start using {{site.data.keyword.iot_short_notm}} you will need the following:  
+* An [IBM Cloud account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){: new_window}.
+* A {{site.data.keyword.iot_short_notm}} instance.  
+You can create a {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the IBM Cloud Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+* A device that meets the following requirements:  
+  *	Your device must be able to communicate by using HTTP or MQTT protocols.
+  * The device messages must conform to the {{site.data.keyword.iot_short_notm}} message payload requirements.  
+For more information, see [Developing devices on Watson IoT Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_dev_index.html){: new_window}.
 
-To get up and running with the service, explore the following options depending on your situation:
+Explore the following options depending on your situation:
 
  |  |   The service is deployed | The service is not deployed
  | -------------| ------------- | -------------
-  |**I have a device to connect** | [Connect your device to {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore device connection in the [Play with {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**I do not have a device to connect** | [Create and connect a Node-RED device simulator](nodereddevice_sample.html){:new_window}. Or [Connect your Smartphone ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Get started with [Watson IoT Platform Starter](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html).
-
-For more information on how to connect specific device types to {{site.data.keyword.iot_short_notm}}, see [developerWorks recipes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
-
-For device connection developer documentation, see:
-- [MQTT connectivity for devices](devices/mqtt.html).
-- [MQTT connectivity for gateways](gateways/mqtt.html).
+  |**I have a device to connect** | Follow the process that is outlined in this topic. | Explore device connection in the [Play with {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  |**I do not have a device to connect** | [Simulate device data](/docs/IoT/devices/device_sim.html) or [Connect your Smartphone ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Get started with [Watson IoT Platform Starter](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}.
 
 
-## Step 2: Create applications to consume your device data
-{: #develop_applications}
-Create and connect your own applications to consume device data.
-For more information, see the following topics:   
-- Explore the [application developer documentation](applications/api.html) and the [{{site.data.keyword.iot_short_notm}} API Documentation](reference/api.html).
-- Explore the [{{site.data.keyword.iot_short_notm}} client libraries](iot_platform_client_lib.html) that provide tools and files to build and develop code for integrating and connecting your devices and applications.
-- [Connect a {{site.data.keyword.cloudantfull}} service](cloudant_connector.html) to your {{site.data.keyword.iot_short_notm}} to store historical device data.
-- Create your own rules by using the new [embedded rules (Beta)](information_management/im_rules.html) feature.
+
+## Step 1: Register your device
+{: #index-step1 .sectiontitle}  
+Registering a device involves classifying the device as a device type, giving the device a name, and providing device information. Then you provide a connection token or accept a token that is generated by {{site.data.keyword.iot_short_notm}}.
+
+**Tip:** You can register your devices one at a time from the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or you can use the [Watson IoT Platform API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} to add multiple devices.
+
+To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
+1. In the {{site.data.keyword.Bluemix_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
+
+    The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
+
+    ```
+    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+    ```
+
+    Where *org_id* is the ID of your {{site.data.keyword.iot_short_notm}} organization.
+
+2. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
+
+3. Create a device type for the device that you are adding.
+
+    Each device that is connected to the {{site.data.keyword.iot_short_notm}} must be associated with a device type. Device types are groups of devices that share common characteristics.
+
+    1. Click **Create device type**.
+    2. Enter a device name, such as `my_device_type`, and a description for the device type.
+
+        > **Note:** The device type name must be no more than 36 characters and can contain only alpha-numeric characters (a-z, A-Z, 0-9) and any of the following characters: `_`, `.`, and `-`.
+
+    3. Optional: Enter device type attributes and metadata.
+
+        You can add and edit attributes and metadata later.
+        {: tip}
+
+4. Click **Next** to begin the process of adding your device with the selected device type.
+
+5. Enter a device ID, for example `my_first_device`.
+
+    The device ID is used to identify the device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your device to {{site.data.keyword.iot_short_notm}}.
+
+    > **Note:** The device type name must be no more than 36 characters and can contain only alpha-numeric characters (a-z, A-Z, 0-9) and any of the following characters: `_`, `.`, and `-`.
+
+    For network connected devices, the device ID could be the device MAC address without any separating colons.
+
+5. Click **Next** to complete the process.
+
+6. Provide an authentication token, or accept an automatically generated token. If you choose to create your own token, make sure that it is between 8 and 36 characters long and consists only of alpha-numerical characters and the following characters: `_`, `.`, `!`, `&`, `@`, `?`, `\*`, `+`, `(`, `)`, and `-`.
+
+    The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
+
+7. Verify the summary information is correct, and then click **Add** to add the connection.
+
+8. In the device information page, copy and save the following details:
+
+    * Organization ID
+    * Device Type
+    * Device ID
+    * Authentication Method
+    * Authentication Token
+
+    You'll need Organization ID, Device Type, Device ID, and Authentication Token configure your device to connect to {{site.data.keyword.iot_short_notm}}.
+
+## Step 2: Connect your device to {{site.data.keyword.iot_short_notm}}
+{: #index-step2 .sectiontitle}  
+
+After you register a device with {{site.data.keyword.iot_short_notm}}, you can use the registration information to connect the device and start receiving device data.
+
+**Tip:** Connection recipes are available for some commonly used devices at [Device connection recipes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} on IBM.com.
+
+To connect a device to {{site.data.keyword.iot_short_notm}}:
+1. Set up your device for MQTT messaging and authenticate by using Organization ID, Device Type, Device ID, and Authentication Token.
+
+2. Send device messages to your {{site.data.keyword.iot_short_notm}} organization by using the MQTT protocol.
+
+    The following information is required when connecting your device:
+
+    * URL: *org_id*.messaging.internetofthings.ibmcloud.com
+
+      Where *org_id* is the ID of your {{site.data.keyword.iot_short_notm}} organization.
+
+    * Port:
+      * 1883
+      * 8883 (encrypted)
+      * 443 (websockets)
+    * Device ID: d:_org_id:device_type:device_id_
+    * User name: use-token-auth
+    * Password: _Authentication token_
+    * Event topic format: iot-2/evt/_event_id/fmt/format_string_
+
+      Where _event_id_ specifies the event name that's shown in {{site.data.keyword.iot_short_notm}}, and _format_string_ is the format of the event, such as JSON.
+
+    * Message format: JSON
+
+  For more information, see [MQTT connectivity for devices ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/mqtt.html){:new_window}.
+
+
+## What's next  
+{: #index-related .sectiontitle}
+
+Extend the data analytics features by creating and connecting your own apps to consume device data.
+- For more information on how to connect specific device types to {{site.data.keyword.iot_short_notm}}, see [developerWorks recipes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.
+- Check out the [client libraries ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} for tools to build code for integrating and connecting your devices and apps.
+- Explore the [{{site.data.keyword.iot_short_notm}} API Documentation](/docs/IoT/reference/api.html).
+- [Connect a {{site.data.keyword.cloudantfull}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} to your {{site.data.keyword.iot_short_notm}} to store historical device data.
+- To take advantage of the full [{{site.data.keyword.iot_short_notm}} feature set ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}, you can purchase one of the Connection and Analytics Service plans and then migrate your existing environment.
+
+To migrate plans, contact your {{site.data.keyword.IBM}} representative or raise a support ticket.
+
+A more detailed set of getting started guides and sample applications that step through the basics of developing a ready-for-production, end-to-end IoT prototype system with {{site.data.keyword.iot_short_notm}} are also available in the {{site.data.keyword.iot_short_notm}} product documentation on IBM Knowledge Center. If you are a developer who is new to working with {{site.data.keyword.iot_short_notm}}, use the step-by-step processes in the [Getting started guides ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window} section.

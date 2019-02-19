@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-04-26"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # External service integrations
 {: #ref-index}
+
+<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+</p>
+{: important}
 
 External service integration allows you to access data and operations from third-party or external services within your {{site.data.keyword.iot_full}} organization.
 
@@ -27,40 +33,40 @@ Jasper is an administration and management platform for SIM devices. Jasper is i
 The built-in Jasper integration that is provided by our platform provides support for the following Jasper operations:
 
 - View overall Jasper data
-  - Shows: Status, Rate Plan, month-to-date data usage, month-to-date SMS usage, month-to-date voice usage, overage limits, date added, and date modified.
-- Change SIM activation state.
-  - Select from: Inventory, Activation Ready, Activated, Deactivated, and Retired.
-- View SIM Usage
-  - Shows: Cycle start date, billable and total data, billable and total SMS, billable and total voice.
-  - The cycle start date can be set using a YYYY-MM-DD format.
+  - Shows status, rate plan, month-to-date data usage, month-to-date SMS usage, month-to-date voice usage, overage limits, date added, and date modified.
+- Change SIM activation state
+  - Select from inventory, activation ready, activated, deactivated, and retired.
+- View SIM usage
+  - Shows cycle start date, billable and total data, billable and total SMS, billable and total voice.
+  - The cycle start date can be set by using a YYYY-MM-DD date format.
 - Send SMS to SIM
 - Change rate plan
 
-You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
+You can access the supported operations in the device drill-down of a Jasper-connected device after the following configuration steps are completed.
 
 ### REST APIs for Jasper
 To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} documentation.
 
 ### Configuration for Jasper
 
-In order to connect your Jasper service to your {{site.data.keyword.iot_short_notm}} organization there are two stages of configuration that must first be done. First, your {{site.data.keyword.iot_short_notm}} must be connected to your Jasper service, then your {{site.data.keyword.iot_short_notm}} devices must be configured.
+To connect your Jasper service to your {{site.data.keyword.iot_short_notm}} organization, you must complete two stages of configuration. First, your {{site.data.keyword.iot_short_notm}} must be connected to your Jasper service, then your {{site.data.keyword.iot_short_notm}} devices must be configured.
 
 
 1. Enable the Jasper extension. To enable Jasper integration with your {{site.data.keyword.iot_short_notm}} organization, complete the following steps:
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
-  2. In the **Extensions** page, click **Add Extension**.
+  2. On the **Extensions** page, click **Add Extension**.
   3. Click **Add** next to Jasper.
-  4. Enter your Jasper username, password, access key and domain ID.
+  4. Enter your Jasper username, password, access key, and domain ID.
   5. Click **Done**.
 
-2. Configure your devices
+2. Configure your devices.
 You can configure the devices that are connected to both your {{site.data.keyword.iot_short_notm}} organization and your Jasper account to display data from Jasper in the {{site.data.keyword.iot_short_notm}} dashboard.  
-**Important:** The Jasper configuration cannot be applied as part of the Add Device process, only previously connected devices can be configured with Jasper.  
+**Important:** The Jasper configuration cannot be applied as part of the Add Device process. Only previously connected devices can be configured with Jasper.  
 To configure your Jasper-connected devices, complete the following steps:
- 1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Jasper-connected device to be configured.
- 2. Select the device to open the *Device Drilldown* view.
- 3. Scroll down to *Extension Configuration*.
- 4. Enter the extension configuration by using the following JSON format, and then click **Confirm changes** to save your configuration.  
+ 1. In the Devices page of your {{site.data.keyword.iot_short_notm}} dashboard, find the Jasper-connected device to configure.
+ 2. Select the device to open the Device Drilldown view.
+ 3. Scroll down to Extension Configuration.
+ 4. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.  
 
 ```json  
     {
@@ -71,7 +77,7 @@ To configure your Jasper-connected devices, complete the following steps:
 
 ```
 
-When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
 
 ## AT&T
 {: #att}
@@ -81,12 +87,12 @@ When the organization is successfully configured, the *Extensions* section displ
 The AT&T extension enables the following AT&T operations:
 
 - View overall AT&T data
-  - Shows: Status, Rate Plan, month-to-date data usage, month-to-date SMS usage, month-to-date voice usage, overage limits, date added, and date modified.
-- Change SIM activation state.
-  - Select from: Inventory, Activation Ready, Activated, Deactivated, and Retired.
-- View SIM Usage
-  - Shows: Cycle start date, billable and total data, billable and total SMS, billable and total voice.
-  - The cycle start date can be set using a YYYY-MM-DD format.
+  - Shows status, rate plan, month-to-date data usage, month-to-date SMS usage, month-to-date voice usage, overage limits, date added, and date modified.
+- Change SIM activation state
+  - Select from inventory, activation ready, activated, deactivated, and retired.
+- View SIM usage
+  - Shows: cycle start date, billable and total data, billable and total SMS, billable and total voice.
+  - The cycle start date can be set by using a YYYY-MM-DD date format.
 - Send SMS to SIM
 - Change rate plan
 
@@ -95,28 +101,28 @@ To access the REST API for AT&T, see the AT&T Extension section in the [{{site.d
 
 ### Configuration for AT&T
 
-In order to connect your {{site.data.keyword.iot_short_notm}} organization to AT&T you must complete organization configuration and device configuration.
+To connect your {{site.data.keyword.iot_short_notm}} organization to AT&T, you must complete organization configuration and device configuration.
 
-To configure your {{site.data.keyword.iot_short_notm}} platform, complete the following steps.
+To configure your {{site.data.keyword.iot_short_notm}} platform, complete the following steps:
 
 1. Enable the AT&T extension. To enable AT&T integration with your {{site.data.keyword.iot_short_notm}} organization, complete the following steps:
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
-  2. In the **Extensions** page, click **Add Extension**.
+  2. On the **Extensions** page, click **Add Extension**.
   3. Click **Add** next to AT&T.
-  4. Enter your AT&T username, password, access key and domain ID.
+  4. Enter your AT&T username, password, access key, and domain ID.
   5. Click **Done**.
 
-In order to connect your {{site.data.keyword.iot_short_notm}} organization with your AT&T account, there are two stages of configuration that must first be done. Complete the the organization configuration and then configure your devices.
+To connect your {{site.data.keyword.iot_short_notm}} organization with your AT&T account, you must complete two stages of configuration. Complete the the organization configuration and then configure your devices.
 
 
 2. Configure your devices
 You can configure the devices that are connected to both your {{site.data.keyword.iot_short_notm}} organization and your AT&T account to display data from AT&T in the {{site.data.keyword.iot_short_notm}} dashboard.  
-**Important:** The AT&T configuration cannot be applied as part of the Add Device process, only previously connected devices can be configured with AT&T.  
+**Important:** The AT&T configuration cannot be applied as part of the Add Device process. Only previously connected devices can be configured with AT&T.  
 To configure your AT&T-connected devices, complete the following steps:
- 1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the AT&T-connected device to be configured.
- 2. Select the device to open the *Device Drilldown* view.
- 3. Scroll down to *Extension Configuration*.
- 4. Enter the extension configuration by using the following JSON format, and then click **Confirm changes** to save your configuration.  
+ 1. In the Devices page of your {{site.data.keyword.iot_short_notm}} dashboard, find the AT&T-connected device to configure.
+ 2. Select the device to open the Device Drilldown view.
+ 3. Scroll down to Extension Configuration.
+ 4. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.  
 
 ```json  
     {
@@ -127,31 +133,31 @@ To configure your AT&T-connected devices, complete the following steps:
 
 ```
 
-When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
 
 ## Arm Mbed bridge
 {: #arm}
 
-The bridge enables Arm Mbed devices to integrate with IBM Watson IoT Platform and exchange messages bidirectionally. To enable this integration, you first need to sign up for an Arm Mbed Cloud account and then provide the requested connection information for your Watson IoT configuration.
+The bridge enables Arm Mbed devices to integrate with {{site.data.keyword.iot_short_notm}} and exchange messages bidirectionally. To enable this integration, you first need to sign up for an Arm Mbed Cloud account and then provide the requested connection information for your {{site.data.keyword.iot_short_notm}} configuration.
 
-### Setup Configuration
+### Setup configuration
 
 
 1. Enable the Arm Mbed bridge extension. To enable the extension, complete the following steps:
   1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
-  2. In the **Extensions** page, click **+Add Extension**.
+  2. On the Extensions page, click **Add Extension**.
   3. Click **Add** next to the Arm Mbed bridge extension.
-  4. Enter your Arm Mbed access key. You can create it by using the Arm Mbed portal at https://portal.mbedcloud.com.
+  4. Enter your Arm Mbed access key. You can create it by using the Arm Mbed portal at [https://portal.mbedcloud.com ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://portal.mbedcloud.com){: new_window}.
   5. Check the credentials are correct by clicking the **Check Connection** button.
   6. Click **Done**.
 
-### Payload Format
+### Payload format
 
-There are two types of incoming messages from the Arm Mbed platform; notifications and asynchronous responses. {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the Arm Mbed platform.
+The Arm Mbed platform uses two types of incoming messages: notifications and asynchronous responses. {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the Arm Mbed platform.
 
 #### Notifications
 
-Notifications are generated by changes in device or sensor data. After {{site.data.keyword.iot_short_notm}} processes the message, it is sent to the device event topic in the same way as a device connected directly to {{site.data.keyword.iot_short_notm}}. The event type that is used for notifications originating on devices connected to the Arm Mbed platform is `notify`.
+Notifications are generated by changes in device or sensor data. After {{site.data.keyword.iot_short_notm}} processes the message, it is sent to the device event topic in the same way as a device that is connected directly to {{site.data.keyword.iot_short_notm}}. The event type that is used for notifications that originate on devices that are connected to the Arm Mbed platform is `notify`.
 
 The following code sample shows the payload format for a notification sent by the Arm Mbed platform API:
 
@@ -185,7 +191,7 @@ The following code sample shows the payload format for an asynchronous response 
 
 #### Sending commands to the Arm Mbed platform
 
-{{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the Arm Mbed platform. Commands sent to the Arm Mbed platform must use the following JSON format.
+{{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the Arm Mbed platform. Commands that are sent to the Arm Mbed platform must use the following JSON format:
 
 ```
 {
@@ -195,7 +201,7 @@ The following code sample shows the payload format for an asynchronous response 
   "payload": <Base64 encoded payload>
 }
 ```
-The method chosen is case sensitive. The initial '/' of the resource path must be skipped.
+The method chosen is case sensitive. The initial `/` of the resource path must be skipped.
 
 
 The payload must be published on the following topic:
@@ -208,13 +214,11 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ## Orange
 {: #orange}
 
-The Orange extension allows you to view SIM card data from devices which are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
-
-https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration-with-orange-beta/
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
 ### Supported operations for Orange
 
-If you have a device which is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
 - SIM serial number
 - Activation status
@@ -230,18 +234,18 @@ To access the REST API for Orange, see the Orange Extension section in the [{{si
 To enable the Orange extension:
 
 1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
-2. In the **Extensions** page, click **Add Extension**.
+2. On the **Extensions** page, click **Add Extension**.
 3. Click **Add** next to the Orange extension.
 4. Enter your Orange user name and password.
 6. Click **Done**.
 
-After the Orange extension has been enabled, each device with an Orange SIM card must be configured to display Orange SIM data.
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to be configured.
-2. Select the device and scroll down to *Extension Configuration*.
-3. Enter the extension configuration by using the following JSON format, and then click **Confirm changes** to save your configuration.
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
-```  
+```json
     {
         "orange": {
             "serialnumber": "<serial number of Orange SIM>"
@@ -249,23 +253,23 @@ After the Orange extension has been enabled, each device with an Orange SIM card
     }
 
 ```
-When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
 
-## Historical Data Storage
+## Historical data storage
 {: #historical_data}
 
-The historical data storage extension lets you locate and configure compatible message storage services such as [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) or [{{site.data.keyword.messagehub_full}}](../../message_hub.html) for your IoT data.
+The historical data storage extension lets you locate and configure compatible message storage services, such as [{{site.data.keyword.cloudantfull}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){: new_window} or [{{site.data.keyword.messagehub_full}} ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){: new_window}, for your IoT data.
 
 ## Custom device management packages
 {: #device_mgmt}
 
 Device management is a core feature of {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality. Custom device management packages must consist of valid JSON and define at least one custom device management action.
 
-For more information on custom device management functions, including an example of the required JSON format, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
+For more information on custom device management functions, including an example of the required JSON format, see [device management custom extensions ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}.
 
 ### Adding a custom device management package
 
-Custom device management packages can be added either by using the {{site.data.keyword.iot_short_notm}} dashboard, or by using the API.
+Custom device management packages can be added either by using the {{site.data.keyword.iot_short_notm}} dashboard or by using the API.
 
 To add a custom device management package by using the {{site.data.keyword.iot_short_notm}} dashboard:
 
@@ -276,39 +280,10 @@ To add a custom device management package by using the {{site.data.keyword.iot_s
 
 To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
-<!-- ## The Weather Company
-{: #weathercompany}
-
-The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
-
-**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
-
-### REST APIs for The Weather Company
-To access the REST API for The Weather Company, see the
-Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
-
-### Weather Data
-
-To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
-
-- Current weather.
-- Current temperature.
-- Predicted maximum and minimum temperature.
-- Relative humidity.
-- Pressure.
-- Visibility.
-- Wind speed.
-- Wind direction.
-- Latitude.
-- Longitude.
--->
-
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
-
 ## Email
 {: #email}
 
-Users can be added to {{site.data.keyword.iot_short_notm}} by using email invitations. For information, see  [Managing user access](../../add_users.html).
+Users can be added to {{site.data.keyword.iot_short_notm}} by using email invitations. For information, see  [Managing user access](/docs/IoT/add_users.html).
 
 To use the email invitation feature, an email extension must be configured to use the SendGrid online service or a Simple Mail Transfer Protocol (SMTP) service. The extension can also use the SendGrid {{site.data.keyword.Bluemix_notm}} application.
 
@@ -320,7 +295,7 @@ To configure the email extension for use with the SendGrid online service, follo
 2. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Extensions** from the navigation bar.
 3. In the **Email** section, click **Setup**.
 4. Select **SendGrid with API key**
-5. Enter the name and email address of your site administrator, and the authorized API key.
+5. Enter the name and email address of your site administrator and the authorized API key.
 
 ### SMTP service
 
@@ -336,17 +311,17 @@ To configure the email extension for use with an SMTP service, follow these step
 To configure the email extension for use with the SendGrid {{site.data.keyword.Bluemix_notm}} application, follow these steps:
 
 1. Create a dummy application and bind the SendGrid service.  
-In order to retrieve the configuration credentials, add and bind the SendGrid service to a dummy app.
+In order to retrieve the configuration credentials, add and bind the SendGrid service to a dummy application.
 
  1. From your {{site.data.keyword.Bluemix_notm}} dashboard, click **Create Service**.
  2. Select the SendGrid service from the catalog and click **Create**.
- 3. From the {{site.data.keyword.Bluemix_notm}} dashboard add the {{site.data.keyword.sdk4nodefull}} application.
- 4. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard and click **Bind a service or API**.
+ 3. From the {{site.data.keyword.Bluemix_notm}} dashboard, add the {{site.data.keyword.runtime_nodejs_full}} application.
+ 4. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.Bluemix_notm}} dashboard and click **Bind a service or API**.
  5. Select the SendGrid service and click **Add**.
- 6. The {{site.data.keyword.sdk4nodefull}} application must now be restaged.
+ 6. Restage the {{site.data.keyword.runtime_nodejs_notm}} application.
 2. Prepare to configure the {{site.data.keyword.iot_short_notm}} service.  
 {{site.data.keyword.iot_short_notm}} can be configured by using the {{site.data.keyword.iot_short_notm}} dashboard or by using the {{site.data.keyword.iot_short_notm}} API.  
- 1. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
+ 1. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
  2. Click **Environment Variables** from the navigation bar.
  3. Copy the displayed JSON to a temporary text file.  
  The JSON should have the following format:

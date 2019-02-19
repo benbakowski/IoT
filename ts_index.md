@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2017-11-03"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2017-11-03"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # {{site.data.keyword.iot_short_notm}} troubleshooting
 {: #ts}
+
+<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+</p>
+{: important}
 
 Here are the answers to common troubleshooting questions about using {{site.data.keyword.iot_full}} on {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -35,7 +41,7 @@ You can resolve this problem by accessing your {{site.data.keyword.iot_short_not
 1. From your {{site.data.keyword.Bluemix_notm}} dashboard, open your {{site.data.keyword.iot_short_notm}} service.
 2. Click **Members** from the navigation bar.
 3. Click the **Edit** icon.
-4. Clear the **Access expires** box and click **Save**.
+4. Clear the **Access expires** check box and click **Save**.
 {: tsResolve}
 
 ## Problem connecting to the {{site.data.keyword.iot_short_notm}}
@@ -47,10 +53,10 @@ Your connection to the {{site.data.keyword.iot_short_notm}} drops or disconnects
 When you attempt to connect to the {{site.data.keyword.iot_short_notm}}, your device or application receives an error.
 {: tsSymptoms}
 
-You might have two devices trying to connect with the same clientID and credentials.Only one unique connection is allowed per clientID. You cannot have two concurrent connections using the same ID. Applications can share the same API key, but MQTT requires that the client ID is always unique.
+You might have more than one device that is trying to connect with the same client ID and credentials. Only one unique connection is allowed per clientID. You cannot have multiple concurrent connections that use the same ID. Applications can share the same API key, but MQTT requires that the client ID is always unique.
 {: tsCauses}
 
-You can resolve this problem by confirming that you don't have two devices trying to connect by  using the same credentials.
+You can rule out this reason by verifying that you don't have multiple devices that are trying to connect by using the same credentials.
 {: tsResolve}
 
 ## Device intermittently disconnects from {{site.data.keyword.iot_short_notm}}
@@ -67,4 +73,3 @@ It might be that when you connect, you are using a value for an MQTT ping option
 
 You can fix this problem by confirming that you have properly set the ping and KeepAlive parameters for your connection.   
 {: tsResolve}
-

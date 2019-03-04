@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-03"
 
 ---
 
@@ -43,11 +43,6 @@ To connect device, application, and gateway clients to your {{site.data.keyword.
 **Notes**
 - Where *orgId* is the unique organization ID that was generated when you registered the service instance.
 - If you are connecting a device or application to the Quickstart service, specify 'quickstart' as the *orgId* value.
-
-## Firewall configuration
-{: #firewall_configuration}
-
-To connect devices and applications to {{site.data.keyword.iot_short_notm}}, you must ensure that any firewall is configured to allow traffic on specific ports. A firewall might reside on your local machine, on your router, or as part of your corporate network.
 
 ### Port security
 {: #client_port_security}

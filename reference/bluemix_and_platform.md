@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -32,7 +32,7 @@ Instances of the {{site.data.keyword.iot_short_notm}} can be created in the {{si
 ## {{site.data.keyword.iot_short_notm}} service level agreement
 {: #iot-sla}
 
-The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/62a7eae9288fddcc862581d0007c2583/$FILE/i126-6738-05_12-2017_en_US.pdf){: new_window}.
+The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/overview/zero_downtime.html#SLAs){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}} service level agreement
 

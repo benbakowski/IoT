@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-01-17"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,11 +11,17 @@ lastupdated: "2018-01-17"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
-# 联系 {{site.data.keyword.iot_short_notm}} 支持
+# 联系 {{site.data.keyword.iot_short_notm}} 支持人员
 {: #gettinghelp}
 
-使用 {{site.data.keyword.iot_full}}，您有很多选项可联系支持人员，如通过论坛或通过 Slack，或者开具支持凭单，来获取帮助。您甚至可以使用构想门户网站来提交自己的有关 {{site.data.keyword.iot_short_notm}} 增强功能的构想。
+<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+</p>
+{: important}
+
+使用 {{site.data.keyword.iot_full}} 时，要获取支持，您有几种选择，例如，通过论坛、Slack 或通过开具支持凭单来获取帮助。您甚至可以使用构想门户网站来提交自己对于如何增强 {{site.data.keyword.iot_short_notm}} 的构想。
 
 ## 论坛
 
@@ -23,7 +29,7 @@ lastupdated: "2018-01-17"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - 使用“ibm-cloud”和“watson-iot”标记您的帖子。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)。
+有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/support/index.html#getting-help){:new_window}。
 
 
 ## Slack
@@ -33,7 +39,7 @@ lastupdated: "2018-01-17"
 
 ## 支持凭单
 
-* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/support/index.html#contacting-support){:new_window}
 
 
 ## 构想门户网站

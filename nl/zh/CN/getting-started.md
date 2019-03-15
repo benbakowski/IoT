@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-02-22"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,41 +12,63 @@ lastupdated: "2018-02-22"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
+
 
 # 入门教程
-{: #getting-started-with-iotp}
+{: #gettingstartedtemplate .task}
 
-在此 {{site.data.keyword.iot_full}} 入门教程中，我们将 IoT 设备连接到 {{site.data.keyword.iot_short_notm}}。
+<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+</p>
+{: important}
+
+在此 {{site.data.keyword.iot_short_notm}} 入门教程中，我们将 IoT 设备连接到 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
 
-<div id="prerequisites"></div>
+## 关于此任务
+{: #about .sectiontitle}  
+
+必须先将 IoT 设备连接到 {{site.data.keyword.iot_short_notm}}，然后才能开始从这些设备接收数据。将设备连接到 {{site.data.keyword.iot_short_notm}} 的过程包括向 {{site.data.keyword.iot_short_notm}} 注册该设备，然后使用注册信息来配置该设备以连接到 {{site.data.keyword.iot_short_notm}}。
+
 
 ## 开始之前
-{: #prereqs}
+{: #byb .sectiontitle}  
 
-您将需要 [IBM Cloud 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}、{{site.data.keyword.iot_short_notm}} 服务的实例和满足以下需求的设备：
+要能够开始使用 {{site.data.keyword.iot_short_notm}}，必须先拥有以下项：  
+* [{{site.data.keyword.Bluemix}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}。
+* {{site.data.keyword.iot_short_notm}} 实例。  
+您可以直接从 [{{site.data.keyword.Bluemix_short}} 服务目录中的 {{site.data.keyword.iot_short_notm}} 页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window} 创建 {{site.data.keyword.iot_short_notm}} 实例。  
+* 满足以下需求的设备：  
+  *	您的设备必须能够使用 HTTP 或 MQTT 协议进行通信。
+  * 设备消息必须符合 {{site.data.keyword.iot_short_notm}} 消息有效内容需求。  
+有关更多信息，请参阅 [在 {{site.data.keyword.iot_short_notm}} 上开发设备 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_dev_index.html){: new_window}。
 
-*	您的设备必须能够使用 HTTP 或 MQTT 协议进行通信。
+根据具体情况研究以下选项：
 
-* 设备消息必须符合 {{site.data.keyword.iot_short_notm}} 消息有效内容需求。
+ |  |已部署此服务|未部署此服务
+ | -------------| ------------- | -------------
+  |**我有要连接的设备**|请遵循本主题中概述的过程。|了解[使用 {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中的设备连接。
+  |**我没有要连接的设备**| [模拟设备数据](/docs/IoT/devices/device_sim.html)或者[连接智能手机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|开始使用 [{{site.data.keyword.iot_short_notm}} 入门模板](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}。
 
-有关更多信息，请参阅[在 Watson IoT Platform 上开发设备](/docs/services/IoT/devices/device_dev_index.html)。
+
 
 ## 步骤 1：注册设备
+{: #step1 .sectiontitle}  
+注册设备包括将设备归类为某种设备类型、为设备命名，以及提供设备信息。然后，提供连接令牌，或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
 
-可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次添加一个设备，也可使用 [Watson IoT Platform API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
+**提示：**您可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次注册一个设备，也可使用 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
-
 1. 在 {{site.data.keyword.Bluemix_notm}} 控制台中，单击 {{site.data.keyword.iot_short_notm}} 服务详细信息页面上的**启动**。
 
     此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
 
     ```
-    https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
-    ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
 
-    其中，*org_id* 是 [{{site.data.keyword.iot_short_notm}} 组织](iotplatform_overview.html#organizations){: new_window}的标识。
+    其中，*org_id* 是 {{site.data.keyword.iot_short_notm}} 组织的标识。
 
 2. 在“概述”仪表板中，从菜单窗格选择**设备**，然后单击**添加设备**。
 
@@ -56,7 +78,7 @@ lastupdated: "2018-02-22"
 
     1. 单击**创建设备类型**。
     2. 输入设备名称（如 `my_device_type`）以及设备类型描述。
-    
+
         > **注：**设备类型名称不得超过 36 个字符，仅可包含字母数字字符（a-z、A-Z、0-9）和以下任何字符：`_`、`.` 和 `-`。
 
     3. 可选：输入设备类型属性和元数据。
@@ -68,7 +90,7 @@ lastupdated: "2018-02-22"
 
 5. 输入设备标识，例如 `my_first_device`。
 
-    设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识设备，还是用于将设备连接到 {{site.data.keyword.iot_short_notm}} 的必需参数。
+    设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识设备，也是将设备连接到 {{site.data.keyword.iot_short_notm}} 时必需的参数。
 
     > **注：**设备类型名称不得超过 36 个字符，仅可包含字母数字字符（a-z、A-Z、0-9）和以下任何字符：`_`、`.` 和 `-`。
 
@@ -76,7 +98,7 @@ lastupdated: "2018-02-22"
 
 5. 单击**下一步**以完成该过程。
 
-6. 提供认证令牌或接受自动生成的令牌。如果选择创建自己的令牌，请确保令牌的长度在 8 到 36 个字符之间，并且仅包含字母数字字符和以下字符：`_`、`.`、`!`、`&`、`@`、`?`、`\*`、`+`、`(`、`)` 和 `-`。
+6. 提供认证令牌或接受自动生成的令牌。如果选择创建您自己的令牌，请确保令牌的长度在 8 到 36 个字符之间，并且仅包含字母数字字符和以下字符：`_`、`.`、`!`、`&`、`@`、`?`、`\*`、`+`、`(`、`)` 和 `-`。
 
     此令牌不得包含重复的字符序列、字典单词、用户名或其他预定义序列。
 
@@ -90,11 +112,17 @@ lastupdated: "2018-02-22"
     * 认证方法
     * 认证令牌
 
-    您将需要“组织标识”、“设备类型”、“设备标识”和“认证令牌”来配置设备以连接到 {{site.data.keyword.iot_short_notm}}。
+    您将需要组织标识、设备类型、设备标识和认证令牌来配置设备以连接到 {{site.data.keyword.iot_short_notm}}。
 
 ## 步骤 2：将设备连接到 {{site.data.keyword.iot_short_notm}}
+{: #step2 .sectiontitle}  
 
-1. 设置您的设备以实现 MQTT 消息传递并使用“组织标识”、“设备类型”、“设备标识”和“认证令牌”以进行认证。
+向 {{site.data.keyword.iot_short_notm}} 注册设备后，可使用注册信息来连接该设备并开始接收设备数据。
+
+**提示：**{{site.data.keyword.IBM_notm}}.com 上的[设备连接诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} 中提供了针对一些常用设备的连接诀窍。
+
+要将设备连接到 {{site.data.keyword.iot_short_notm}}：
+1. 设置设备以实现 MQTT 消息传递，并使用组织标识、设备类型、设备标识和认证令牌进行认证。
 
 2. 通过使用 MQTT 协议将设备消息发送到 {{site.data.keyword.iot_short_notm}} 组织。
 
@@ -117,113 +145,19 @@ lastupdated: "2018-02-22"
 
     * 消息格式：JSON
 
-  有关更多信息，请参阅[设备的 MQTT 连接](/docs/services/IoT/devices/mqtt.html)。
+  有关更多信息，请参阅[设备的 MQTT 连接 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/mqtt.html){:new_window}。
 
-<!--## Step 3: Create boards and cards to keep track of device data
 
-By using boards and cards, you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.
+## 后续步骤  
+{: #related .sectiontitle}
 
-1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Create New Board**.
+通过创建并连接您自己的应用程序以使用设备数据，从而扩展数据分析功能。
+- 有关如何将特定设备类型连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅 [developerWorks 诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。
+- 检查[客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} 以获取工具来构建用于集成并连接设备和应用程序的代码。
+- 探索 [{{site.data.keyword.iot_short_notm}} API 文档](/docs/IoT/reference/api.html)。
+- [连接 {{site.data.keyword.cloudantfull}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} 到 {{site.data.keyword.iot_short_notm}} 以存储历史设备数据。
+- 要利用完整的 [{{site.data.keyword.iot_short_notm}} 功能集 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}，您可以购买一个 Connection and Analytics Service 套餐，然后迁移现有环境。
 
-2. Enter a name and description for the board.
+要迁移套餐，请联系 {{site.data.keyword.IBM}} 代表或发出支持凭单。
 
-3. Click **Next** and then **Create**.
-
-4. Click the board you just created, and then click **Add New Card**. Select Devices as the card type. The following table describes the visualization options you can choose from.
-
-| Type | Data that is displayed |
-| Generic visualization | The value of one or more data sets. Choose the large widget size to see up to three data point values in a small table. |
-| Line chart | One or more data sets in a real-time scrolling chart. Use the Settings menu to set the data range and retention, the look and feel of the graphs, and more. |
-| Bar chart | Data set values in labelled bars. Use the Settings menu to toggle horizontal or vertical bar direction. |
-| Donut chart | Two or more data sets in a circular representation. |
-| Value | The raw value of one or more data sets. |
-| Gauge | The value of a data set shown as a gauge. Use the Settings menu to optionally set gauge thresholds for lower, middle, and upper data ranges. |
-| Device properties | Specific properties for one or more devices. |
-| All device properties | All properties for one or more devices. |
-| Device list | A list to monitor multiple devices. A list can be used as a data source for other cards. |
-| Device info | Basic information for a single device. |
-| Device map | The location of devices in a device list. |
-
-{: caption="Table 1. Visualization options" caption-side="top"}
-
-## Step 4: Create device type schemas
-
-At this point, you need to create a device type schema and map device properties to then create rules that are triggered based on the datapoints from your mapped device properties.
-
-1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Devices > Manage Schemas** and click **Add Schema**.
-
-2. Select a device type to associate with the message schema. Only one schema can be defined for a device type.
-
-3. Click **Add property** and add one or more properties.
-
-    You can select properties from a connected device, create virtual properties that modify or combine existing properties, or add properties manually.
-
-    The available properties are defined in the payload of the messages that are sent by a device.
-    {: tip}
-
-    * To add a property manually, select the **Manual tab** and define the following property details:
-        * Name
-        * Data type
-        * Property
-        * Data unit (optional)
-        * Decimal places (optional)
-
-    * To create a virtual property, select the **Virtual Property** tab and define the following property details:
-        * Name
-        * Data type
-        * Property
-        * Calculation
-        * Data unit (optional)
-        * Decimal places
-
-    * To select properties from a connected device, select the **From Connected** tab, and then select one or more properties to add to the schema. The selected properties are added and the description is set to the name of the property.
-
-4. Click **Finish** to create the properties.
-
-## Step 5: Create rules and actions
-
-Rules are condition-based decision points that match real-time device data with predefined threshold values or other property data to trigger an alert if a condition is met. In addition to the alert that's displayed in the {{site.data.keyword.iot_short_notm}} dashboard, you can add one or more actions to run business logic when a rule is triggered.
-
-1. In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Rules** and click **Create Cloud Rule**.
-
-2. Enter a name and description for the rule, select a device type that the rule applies to, and click **Next**.
-
-3. To set up the rule logic, add one or more IF conditions to use as triggers for the rule.
-
-    You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions. Take a look at the following examples:
-
-      * A simple rule might trigger an alert if a parameter value is larger than a specified value: Condition = `temp_cpu>80`
-      * A more complex rule might trigger when a combination of thresholds are met: Condition = `temp_cpu>60 AND cpu_load>90`
-
-    To trigger a condition that compares two properties, or to trigger two or more property conditions that are combined sequentially by using AND, include the triggering data points in the same device message. If the data is received in more than one message, the condition or sequential conditions don't trigger.
-    {: tip}
-
-4. Configure conditional trigger requirements for your rule.
-
-    You can use conditional trigger requirements to control the number of alerts that are triggered for a rule over a time period. The conditional triggering acts on any condition in the rule. For example, if a rule has five parallel conditions set by using OR, each condition that's true counts towards the conditional trigger count.
-
-      1. In the rule editor, click the default **Trigger each time conditions are met** link to open the set frequency requirement dialog.
-      2. Select and configure the conditional trigger you want to use in the rule.
-
-        * Trigger every time conditions are met
-        * Trigger if conditions are met N times in M _Unit of time_
-
-5. Create or select one or more actions that occur if the rule conditions are met.
-
-    For example, an action can be to send an email or post a webhook.
-
-6. Optional: Select an alert priority for the rule.
-
-    The priority is used to classify the alerts that are displayed in the **Boards > Rule-Based Analytics** board. The default priority is Low.
-
-7. Click **Save** to save without activating,  or click **Activate** to save and activate your rule.
-
-    When you activate the rule, an alert is added to the **Rule-Based Analytics** board when the conditions are met, and any rule action is run. -->
-
-## 后续步骤
-
-创建并连接您自己的应用程序，以使用实时和历史设备数据。
-
-  * 检查[客户机库](/docs/services/IoT/iot_platform_client_lib.html)，以获取构建代码的工具，用于集成和连接设备和应用程序。
-
-  * 探索 [Watson IoT Platform 诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window}，以获取将高级分析嵌入到所连接设备和应用程序的更多教程。
+{{site.data.keyword.IBM_notm}} Knowledge Center 上的 {{site.data.keyword.iot_short_notm}} 产品文档中还提供了一组更详细的入门指南和样本应用程序，用于逐步完成使用 {{site.data.keyword.iot_short_notm}} 开发生产就绪型端到端 IoT 原型系统的基本过程。如果您是使用 {{site.data.keyword.iot_short_notm}} 的新开发者，请使用[入门指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window} 部分中的逐步过程。

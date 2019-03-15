@@ -1,73 +1,172 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-08-29"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
+{:important: .important}
 
-# 開始使用 {{site.data.keyword.iot_short_notm}}
-{: #gettingstartedtemplate}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 提供一個多用途的工具箱，其包含閘道裝置、裝置管理，以及功能強大的應用程式存取權。您可以使用 {{site.data.keyword.iot_short_notm}}，收集連接裝置的資料以及分析組織產生的即時資料。
+# 入門指導教學
+{: #getting-started-with-iotp .task}
+
+<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+</p>
+{: important}
+
+在此 {{site.data.keyword.iot_full}} 入門指導教學中，我們將 IoT 裝置連接至 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
 
-## 開始之前
-{: #byb}
-
-在連接裝置及使用資料之前，請登錄 {{site.data.keyword.Bluemix_notm}} 帳戶，並在 {{site.data.keyword.Bluemix_notm}} 組織中建立 {{site.data.keyword.iot_short_notm}} 服務實例。您可以直接從 [IBM Cloud 服務型錄中的 {{site.data.keyword.iot_short_notm}} 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window} 建立 {{site.data.keyword.iot_short_notm}} 實例。  
-
-如需如何在 {{site.data.keyword.Bluemix_notm}} 上註冊帳戶、配置地區以及其他帳戶管理設定的詳細資訊，請參閱[註冊 IBM Cloud](https://console.bluemix.net/docs/account/adminpublic.html#signing-up-for-ibm-cloud)。
-
-
-您可以從儀表板設定及配置 {{site.data.keyword.iot_short_notm}} 實例。若要開啟儀表板，請移至 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.iot_short_notm}} 服務實例，然後按一下**啟動**。
-
 ## 關於此作業
+{: #index-about .sectiontitle}  
 
-下列步驟說明如何快速開始使用 {{site.data.keyword.iot_short_notm}} 服務。
+您必須先將 IoT 裝置連接至 {{site.data.keyword.iot_full}}，才能開始接收來自 IoT 裝置的資料。若要將裝置連接至 {{site.data.keyword.iot_short_notm}}，需要向 {{site.data.keyword.iot_short_notm}} 登錄裝置，然後使用登錄資訊配置裝置，以便連接至 {{site.data.keyword.iot_short_notm}}。
 
-同時提供一組更詳細的開始使用手冊及範例應用程式，可逐步完成使用 {{site.data.keyword.iot_short_notm}} 來開發現成可用的端對端 IoT 原型系統的基本觀念。如果您是使用 {{site.data.keyword.iot_short_notm}} 的新手開發人員，請使用[開始使用手冊](https://console.bluemix.net/docs/services/IoT/getting_started/getting-started-iot-overview.html#getting-started)小節中的逐步程序。
 
-## 步驟 1：連接您的裝置
-{: #up_and_running}
+## 開始之前
+{: #index-byb .sectiontitle}  
 
-若要使用服務開始進行，請根據您的狀況來探索下列選項：
+開始使用 {{site.data.keyword.iot_short_notm}} 之前，需要下列項目：  
+* [IBM Cloud 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/registration/){: new_window}。
+* {{site.data.keyword.iot_short_notm}} 實例。  
+您可以直接從 [IBM Cloud Services 型錄的 {{site.data.keyword.iot_short_notm}} 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window} 建立 {{site.data.keyword.iot_short_notm}} 實例。  
+* 符合下列需求的裝置：  
+  *	您的裝置必須能夠使用 HTTP 或 MQTT 通訊協定進行通訊。
+  * 裝置訊息必須符合 {{site.data.keyword.iot_short_notm}} 訊息有效負載需求。  
+如需相關資訊，請參閱[在 Watson IoT Platform 上開發裝置 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_dev_index.html){: new_window}。
 
-|  |已部署的服務|未部署的服務
+根據您的狀況來探索下列選項：
+
+ |  |已部署的服務|未部署的服務
  | -------------| ------------- | -------------
-  |**我有要連接的裝置**|[將您的裝置連接至 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。|在 [Play with {{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中探索裝置連線。
-  |**我沒有要連接的裝置** | [建立並連接 Node-RED 裝置模擬器](nodereddevice_sample.html){:new_window}。或[連接智慧型手機 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|開始使用 [Watson IoT Platform 入門範本](https://console.bluemix.net/docs/starters/IoT-starter/iot500.html)。
+  |**我有要連接的裝置**|請遵循本主題中所概述的程序。|在 [Play with {{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中探索裝置連線。
+  |**我沒有要連接的裝置**|[模擬裝置資料](/docs/IoT/devices/device_sim.html)或 [Connect your Smartphone ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|開始使用 [Watson IoT Platform 入門範本](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}。
 
+
+
+
+## 步驟 1：登錄裝置
+{: #index-step1 .sectiontitle}  
+若要登錄裝置，需要將裝置分類成裝置類型、為裝置命名，並提供裝置資訊。然後，您可以提供連線記號，或是接受 {{site.data.keyword.iot_short_notm}} 產生的記號。
+
+**提示：**您可以從 [{{site.data.keyword.iot_short_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://internetofthings.ibmcloud.com){: new_window} 一次登錄一台裝置，或是使用 [ Watson IoT Platform API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}，以新增多台裝置。
+
+若要從 {{site.data.keyword.iot_short_notm}} 儀表板新增裝置，請執行下列動作：
+1. 在 {{site.data.keyword.Bluemix_notm}} 主控台中，按一下 {{site.data.keyword.iot_short_notm}} 服務詳細資料頁面上的**啟動**。
+
+    {{site.data.keyword.iot_short_notm}} Web 主控台會在新瀏覽器分頁中開啟，其 URL 為：
+
+    ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
+
+    其中 *org_id* 是 {{site.data.keyword.iot_short_notm}} 組織的 ID。
+
+2. 在「概觀」儀表板中，從功能表窗格中選取**裝置**，然後按一下**新增裝置**。
+
+3. 建立您要新增之裝置的裝置類型。
+
+    連接至 {{site.data.keyword.iot_short_notm}} 的每一個裝置都必須與裝置類型相關聯。裝置類型是一群共用相同性質的裝置。
+
+    1. 按一下**建立裝置類型**。
+    2. 輸入裝置名稱（例如 `my_device_type`）及裝置類型的說明。
+
+        > **附註：**裝置類型名稱不得超過 36 個字元，且只能包含英數字元（a-z、A-Z、0-9）及下列任何字元：`_`、`.` 和 `-`。
+
+
+
+    3. 選用項目：輸入裝置類型屬性和 meta 資料。  
+ 
+
+        您可以稍後再新增及編輯屬性和 meta 資料。
+        {: tip}
+
+4. 按**下一步**，開始新增所選取裝置類型的裝置。
+
+5. 輸入裝置 ID（例如 `my_first_device`）。
+
+    裝置 ID 可用來識別 {{site.data.keyword.iot_short_notm}} 儀表板中的裝置，它也是將裝置連接至 {{site.data.keyword.iot_short_notm}} 的必要參數。
+
+    > **附註：**裝置類型名稱不得超過 36 個字元，且只能包含英數字元（a-z、A-Z、0-9）及下列任何字元：`_`、`.` 和 `-`。
+
+
+
+    若為連接網路的裝置，裝置 ID 可以是不含任何分隔冒號的裝置 MAC 位址。
+
+5. 按**下一步**，以完成處理程序。
+
+6. 提供鑑別記號，或接受自動產生的記號。如果您選擇建立自己的記號，請確定其長度為 8 到 36 個字元，並且只包含英數字元及下列字元：`_`、`.`、`!`、`&`、`@`、`?`、`\*`、`+`、`(`、`)` 及 `-`。
+
+    記號不得包含重複的字元順序、字典單字、使用者名稱或其他預先定義的順序。
+
+7. 驗證摘要資訊正確無誤，然後按一下**新增**，以新增連線。
+
+8. 在裝置資訊頁面中，複製並儲存下列詳細資料：
+
+    * 組織 ID
   
-如需如何將特定裝置類型連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [developerWorks 秘訣 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。  
+    * 裝置類型
+    * 裝置 ID
+    * 鑑別方法
+  
+    * 鑑別記號
+  
 
-如需裝置連線開發人員文件，請參閱：
-- [裝置的 MQTT 連線功能](devices/mqtt.html)。
-- [閘道的 MQTT 連線功能](gateways/mqtt.html)。
+    您需要有「組織 ID」、「裝置類型」、「裝置 ID」及「鑑別記號」，才能配置您的裝置來連接至 {{site.data.keyword.iot_short_notm}}。
 
-<!--
-## Step 2: Analyze your device data
-{: #analyzing_data}
-Start exploring the real-time data that the devices are sending to {{site.data.keyword.iot_short_notm}}.
-{{site.data.keyword.iot_short_notm}} includes the following analytics tools:  
-- [Boards and cards](data_visualization.html) to visualize your real-time device data.
-- [Rules and actions](analytics.html) that are triggered by real-time device data.
-For a quick getting started example, see the [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks recipe.
--->
+## 步驟 2：將您的裝置連接至 {{site.data.keyword.iot_short_notm}}
+{: #index-step2 .sectiontitle}  
 
-## 步驟 2：建立應用程式來使用您的裝置資料
-{: #develop_applications}
+向 {{site.data.keyword.iot_short_notm}} 登錄裝置之後，您可以使用登錄資訊來連接裝置，並開始接收裝置資料。
 
-建立並連接您自己的應用程式來使用裝置資料。
+**提示：**在 IBM.com 中的 [裝置連線秘訣 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} 提供某些常用裝置的連線秘訣。
 
-如需相關資訊，請參閱下列主題：   
-- 探索[應用程式開發人員文件](applications/api.html)和 [{{site.data.keyword.iot_short_notm}} API 文件](reference/api.html)。
-- 探索 [{{site.data.keyword.iot_short_notm}} 用戶端程式庫](iot_platform_client_lib.html)，其提供建置及開發程式碼的工具和檔案，可用來整合及連接裝置與應用程式。
-- [將 {{site.data.keyword.cloudantfull}} 服務](cloudant_connector.html)連接至 {{site.data.keyword.iot_short_notm}}，以儲存歷程裝置資料。
-- 使用新的[內嵌規則（測試版）](information_management/im_rules.html)特性建立自己的規則。
+若要將裝置連接至 {{site.data.keyword.iot_short_notm}}，請執行下列動作：
+1. 設定裝置來進行 MQTT 傳訊，並使用「組織 ID」、「裝置類型」、「裝置 ID」及「鑑別記號」進行鑑別。
+
+2. 使用 MQTT 通訊協定將裝置訊息傳送至 {{site.data.keyword.iot_short_notm}} 組織。
+
+    連接裝置時，需要下列資訊：
+
+    * URL：*org_id*.messaging.internetofthings.ibmcloud.com
+
+      其中 *org_id* 是 {{site.data.keyword.iot_short_notm}} 組織的 ID。
+
+    * 埠：
+      * 1883
+      * 8883（已加密）
+      * 443 (websockets)
+    * 裝置 ID：d:_org_id:device_type:device_id_
+    * 使用者名稱：use-token-auth
+    * 密碼：_鑑別記號_
+    * 事件主題格式：iot-2/evt/_event_id/fmt/format_string_
+
+      其中 _event_id_ 指定顯示在 {{site.data.keyword.iot_short_notm}} 中的事件名稱，而 _format_string_ 是事件的格式，例如 JSON。
+
+    * 訊息格式：JSON
+
+  如需相關資訊，請參閱 [裝置的 MQTT 連線功能 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/mqtt.html){:new_window}。
+
+
+## 下一步為何？  
+{: #index-related .sectiontitle}
+
+建立並連接您自己的應用程式來使用裝置資料，以延伸資料分析特性。
+- 如需如何將特定裝置類型連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [developerWorks 秘訣 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。
+- 移出工具的[用戶端程式庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} 來建置程式碼，以整合及連接裝置和應用程式。
+- 探索 [{{site.data.keyword.iot_short_notm}} API 文件](/docs/IoT/reference/api.html)。
+- [將 {{site.data.keyword.cloudantfull}} 服務連接 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} 至您的 {{site.data.keyword.iot_short_notm}}，以儲存歷程裝置資料。
+- 如果要利用完整的 [{{site.data.keyword.iot_short_notm}} 特性集 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}，您可以購買其中一個「連線與分析服務」方案，然後移轉現有的環境。
+
+如果要移轉方案，請聯絡您的 {{site.data.keyword.IBM}} 代表或提出支援問題單。
+
+在 IBM Knowledge Center 的 {{site.data.keyword.iot_short_notm}} 產品說明文件中，也提供了一組更詳細的「入門手冊」和範例應用程式，介紹使用 {{site.data.keyword.iot_short_notm}} 逐步開發現成可用的端對端 IoT 原型系統的基本觀念。如果您是使用 {{site.data.keyword.iot_short_notm}} 的新手開發人員，請使用[入門手冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window} 小節中的逐步程序。

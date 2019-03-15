@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-04-26"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # 外部服務整合
 {: #ref-index}
+
+<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+</p>
+{: important}
 
 外部服務整合可讓您從協力廠商或 {{site.data.keyword.iot_full}} 組織中的外部服務存取資料與作業。
 
@@ -27,12 +33,12 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 我們平台所提供的內建 Jasper 整合為下列 Jasper 作業提供支援：
 
 - 檢視整體 Jasper 資料
-  - 顯示：狀態、費率方案、月初至今的資料使用情形、月初至今的 SMS 使用情形、月初至今的語音使用情形、超額限制、新增日期和修改日期。
-- 變更 SIM 啟動狀態。
+  - 顯示狀態、費率方案、月初至今的資料使用情形、月初至今的 SMS 使用情形、月初至今的語音使用情形、超額限制、新增日期和修改日期。
+- 變更 SIM 啟動狀態
   - 從下列項目中選取：庫存、啟動就緒、已啟動、已關閉、已淘汰。
 - 檢視 SIM 使用情形
-  - 顯示：週期開始日期、可入帳資料和資料總計、可入帳 SMS 和 SMS 總計、可入帳語音和語音總計。
-  - 週期開始日期可使用 YYYY-MM-DD 格式來設定。
+  - 顯示週期開始日期、可計費資料和資料總計、可計費 SMS 和 SMS 總計、可計費語音和語音總計。
+  - 週期開始日期可使用 YYYY-MM-DD 資料格式來設定。
 - 傳送 SMS 至 SIM
 - 變更費率方案
 
@@ -43,25 +49,23 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 
 ### Jasper 的配置
 
-為了能夠將 Jasper 服務連接至 {{site.data.keyword.iot_short_notm}} 組織，必須先完成兩個配置階段。首先，{{site.data.keyword.iot_short_notm}} 必須連接至 Jasper 裝置，然後必須配置 {{site.data.keyword.iot_short_notm}} 裝置。
+若要將 Jasper 服務連接至 {{site.data.keyword.iot_short_notm}} 組織，您必須完成兩個配置階段。首先，{{site.data.keyword.iot_short_notm}} 必須連接至 Jasper 裝置，然後必須配置 {{site.data.keyword.iot_short_notm}} 裝置。
 
 
 1. 啟用 Jasper 延伸規格。若要讓 Jasper 與 {{site.data.keyword.iot_short_notm}} 組織整合，請完成下列步驟：
   1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
-  2. 在**延伸規格**頁面中，按一下**新增延伸規格**。
+  2. 在**延伸規格**頁面上，按一下**新增延伸規格**。
   3. 按一下 Jasper 旁的**新增**。
-  4. 輸入 Jasper 使用者名稱、密碼、存取鍵及網域 ID。
+  4. 輸入您的 Jasper 使用者名稱、密碼、存取金鑰及網域 ID。
   5. 按一下**完成**。
 
-2. 配置您的裝置  
-您可以配置同時連接 {{site.data.keyword.iot_short_notm}} 組織和 Jasper 帳戶的裝置，以在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示 Jasper 的資料。  
-  
-**重要事項：**在「新增裝置」程序中無法套用 Jasper 配置，只有先前已連接的裝置可以用 Jasper 來配置。  
+2. 配置裝置。您可以配置同時連接 {{site.data.keyword.iot_short_notm}} 組織和 Jasper 帳戶的裝置，以在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示 Jasper 的資料。  
+**重要事項：**在「新增裝置」程序中無法套用 Jasper 配置。只有先前已連接的裝置可以用 Jasper 來配置。  
 若要配置 Jasper 連接的裝置，請完成下列步驟：
- 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的裝置標籤中，尋找要配置的 Jasper 連接裝置。
- 2. 選取裝置，以開啟*裝置往下探查*視圖。
- 3. 向下捲動至*延伸配置*。
- 4. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**，以儲存配置。  
+ 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的「裝置」頁面中，尋找要配置的 Jasper 連接裝置。
+ 2. 選取裝置，以開啟「裝置往下探查」視圖。
+ 3. 向下捲動至延伸配置。
+ 4. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**以儲存配置。  
 
 ```json  
     {
@@ -72,7 +76,7 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 
 ```
 
-順利配置組織之後，*延伸規格*區段會顯示在*裝置往下探查*視圖中的*延伸配置*區段之下。
+順利配置組織之後，「延伸規格」區段會顯示在「裝置往下探查」視圖的「延伸規格配置」區段下。
 
 ## AT&T
 {: #att}
@@ -82,12 +86,12 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 AT&T 延伸規格可讓您執行下列 AT&T 作業：
 
 - 檢視整體 AT&T 資料
-  - 顯示：狀態、費率方案、月初至今的資料使用情形、月初至今的 SMS 使用情形、月初至今的語音使用情形、超額限制、新增日期和修改日期。
-- 變更 SIM 啟動狀態。
+  - 顯示狀態、費率方案、月初至今的資料使用情形、月初至今的 SMS 使用情形、月初至今的語音使用情形、超額限制、新增日期和修改日期。
+- 變更 SIM 啟動狀態
   - 從下列項目中選取：庫存、啟動就緒、已啟動、已關閉、已淘汰。
 - 檢視 SIM 使用情形
-  - 顯示：週期開始日期、可入帳資料和資料總計、可入帳 SMS 和 SMS 總計、可入帳語音和語音總計。
-  - 週期開始日期可使用 YYYY-MM-DD 格式來設定。
+  - 顯示：週期開始日期、可計費資料和資料總計、可計費 SMS 和 SMS 總計、可計費語音和語音總計。
+  - 週期開始日期可使用 YYYY-MM-DD 資料格式來設定。
 - 傳送 SMS 至 SIM
 - 變更費率方案
 
@@ -96,28 +100,28 @@ AT&T 延伸規格可讓您執行下列 AT&T 作業：
 
 ### AT&T 的配置
 
-為了能夠將 {{site.data.keyword.iot_short_notm}} 組織連接至 AT&T，您必須完成組織配置和裝置配置。
+若要將 {{site.data.keyword.iot_short_notm}} 組織連接至 AT&T，您必須完成組織配置及裝置配置。
 
-若要配置 {{site.data.keyword.iot_short_notm}} 平台，請完成下列步驟。
+若要配置 {{site.data.keyword.iot_short_notm}} 平台，請完成下列步驟：
 
 1. 啟用 AT&T 延伸規格。若要讓 AT&T 與 {{site.data.keyword.iot_short_notm}} 組織整合，請完成下列步驟：
   1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
-  2. 在**延伸規格**頁面中，按一下**新增延伸規格**。
+  2. 在**延伸規格**頁面上，按一下**新增延伸規格**。
   3. 按一下 AT&T 旁的**新增**。
-  4. 輸入 AT&T 使用者名稱、密碼、存取鍵及網域 ID。
+  4. 輸入 AT&T 使用者名稱、密碼、存取金鑰及網域 ID。
   5. 按一下**完成**。
 
-為了能夠將 {{site.data.keyword.iot_short_notm}} 組織與 AT&T 帳戶連接，必須先完成兩個配置階段。先完成組織配置，然後再配置您的裝置。
+若要將您的 {{site.data.keyword.iot_short_notm}} 組織與 AT&T 帳戶連接，您必須完成兩個配置階段。先完成組織配置，然後再配置您的裝置。
 
 
 2. 配置您的裝置
 您可以配置同時連接 {{site.data.keyword.iot_short_notm}} 組織和 AT&T 帳戶的裝置，以在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示 AT&T 的資料。  
-**重要事項：**在「新增裝置」處理程序中無法套用 AT&T 配置，只有先前已連接的裝置可以用 AT&T 來配置。  
+**重要事項：在「新增裝置」程序中無法套用 **AT&T 配置。只有先前已連接的裝置可以用 AT&T 來配置。  
 若要配置 AT&T 連接的裝置，請完成下列步驟：
- 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的裝置標籤中，尋找要配置的 AT&T 連接裝置。
- 2. 選取裝置，以開啟*裝置往下探查*視圖。
- 3. 向下捲動至*延伸配置*。
- 4. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**，以儲存配置。  
+ 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的「裝置」頁面中，尋找要配置的 AT&T 連接裝置。
+ 2. 選取裝置，以開啟「裝置往下探查」視圖。
+ 3. 向下捲動至延伸配置。
+ 4. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**以儲存配置。  
 
 ```json  
     {
@@ -128,27 +132,27 @@ AT&T 延伸規格可讓您執行下列 AT&T 作業：
 
 ```
 
-順利配置組織之後，*延伸規格*區段會顯示在*裝置往下探查*視圖中的*延伸配置*區段之下。
+順利配置組織之後，「延伸規格」區段會顯示在「裝置往下探查」視圖的「延伸規格配置」區段下。
 
 ## Arm Mbed 橋接器
 {: #arm}
 
-此橋接器可讓 Arm Mbed 裝置與 IBM Watson IoT Platform 整合，並雙向交換訊息。若要啟用此整合，您首先需要註冊 Arm Mbed Cloud 帳戶，然後為 Watson IoT 配置提供所要求的連線資訊。
+橋接器可讓 Arm Mbed 裝置與 {{site.data.keyword.iot_short_notm}} 整合，並雙向交換訊息。若要啟用此整合，您首先需要註冊 Arm Mbed Cloud 帳戶，然後為 {{site.data.keyword.iot_short_notm}} 配置提供所要求的連線資訊。
 
 ### 設定配置
 
 
 1. 啟用 Arm Mbed 橋接器延伸規格。若要啟用此延伸規格，請完成下列步驟：
   1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
-  2. 在**延伸規格**頁面中，按一下 **+新增延伸規格**。
+  2. 在「延伸規格」頁面上，按一下**新增延伸規格**。
   3. 按一下 Arm Mbed 橋接器延伸規格旁的**新增**。
-  4. 輸入 Arm Mbed 存取鍵。您可以使用 Arm Mbed 入口網站（網址為 https://portal.mbedcloud.com）來建立它。
+  4. 輸入 Arm Mbed 存取金鑰。您可以使用 Arm Mbed 入口網站（網址為 [https://portal.mbedcloud.com![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://portal.mbedcloud.com){: new_window}）來建立它。
   5. 按一下**檢查連線**按鈕，以檢查認證正確無誤。
   6. 按一下**完成**。
 
 ### 有效負載格式
 
-Arm Mbed 平台有兩種類型的送入訊息：通知及非同步回應。{{site.data.keyword.iot_short_notm}} 可以將指令傳送給連接至 Arm Mbed 平台的裝置。
+Arm Mbed 平台使用兩種類型的送入訊息：通知及非同步回應。{{site.data.keyword.iot_short_notm}} 可以將指令傳送給連接至 Arm Mbed 平台的裝置。
 
 #### 通知
 
@@ -186,7 +190,7 @@ Arm Mbed 平台有兩種類型的送入訊息：通知及非同步回應。{{sit
 
 #### 將指令傳送至 Arm Mbed 平台
 
-{{site.data.keyword.iot_short_notm}} 可以將指令傳送給連接至 Arm Mbed 平台的裝置。傳送至 Arm Mbed 平台的指令必須使用下列 JSON 格式。
+{{site.data.keyword.iot_short_notm}} 可以將指令傳送給連接至 Arm Mbed 平台的裝置。傳送至 Arm Mbed 平台的指令必須使用下列 JSON 格式：
 
 ```
 {
@@ -196,10 +200,7 @@ Arm Mbed 平台有兩種類型的送入訊息：通知及非同步回應。{{sit
   "payload": <Base64 encoded payload>
 }
 ```
-選擇的方法區分大小寫。必須跳過資源路徑的起始 '/'。
-
-
-
+選擇的方法區分大小寫。必須跳過資源路徑的起始 `/`。
 
 
 有效負載必須發佈於下列主題：
@@ -212,9 +213,7 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ## Orange
 {: #orange}
 
-Orange 延伸規格可讓您檢視連接至 {{site.data.keyword.iot_short_notm}} 並已安裝 Orange SIM 卡之裝置中的 SIM 卡資料。
-
-https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration-with-orange-beta/
+Orange 延伸規格可讓您檢視已連接至 {{site.data.keyword.iot_short_notm}} 且已安裝 Orange SIM 卡之裝置中的 SIM 卡資料。
 
 ### 支援的 Orange 作業
 
@@ -234,18 +233,18 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 若要啟用 Orange 延伸規格，請執行下列動作：
 
 1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
-2. 在**延伸規格**頁面中，按一下**新增延伸規格**。
+2. 在**延伸規格**頁面上，按一下**新增延伸規格**。
 3. 按一下 Orange 延伸規格旁的**新增**。
 4. 輸入您的 Orange 使用者名稱和密碼。
 6. 按一下**完成**。
 
-啟用 Orange 延伸規格之後，必須配置含有 Orange SIM 卡的每一個裝置，以顯示 Orange SIM 資料。
+啟用 Orange 延伸規格之後，必須將含有 Orange SIM 卡的每一個裝置配置為顯示 Orange SIM 資料。
 
 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的裝置標籤中，尋找要配置的 Orange SIM 裝置。
-2. 選取裝置，然後向下捲動至*延伸配置*。
-3. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**，以儲存配置。
+2. 選取裝置，然後向下捲動至**延伸配置**。
+3. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**以儲存配置。
 
-```  
+```json
     {
         "orange": {
             "serialnumber": "<serial number of Orange SIM>"
@@ -253,23 +252,23 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
     }
 
 ```
-順利配置組織之後，*延伸規格*區段會顯示在*裝置往下探查*視圖中的*延伸配置*區段之下。
+順利配置組織之後，「延伸規格」區段會顯示在「裝置往下探查」視圖的「延伸規格配置」區段下。
 
 ## 歷程資料儲存
 {: #historical_data}
 
-歷程資料儲存延伸規格可讓您尋找及配置 IoT 資料的相容訊息儲存服務（例如 [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) 或 [{{site.data.keyword.messagehub_full}}](../../message_hub.html)）。
+歷程資料儲存延伸規格可讓您尋找及配置 IoT 資料的相容訊息儲存服務（例如 [{{site.data.keyword.cloudantfull}} ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){: new_window} 或 [{{site.data.keyword.messagehub_full}} ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){: new_window}。
 
 ## 自訂裝置管理套件
 {: #device_mgmt}
 
 裝置管理是 {{site.data.keyword.iot_short_notm}} 的核心特性，不過，可以加以延伸，以開發其他功能。自訂裝置管理套件必須包含有效的 JSON，並定義至少一個自訂裝置管理動作。
 
-如需自訂裝置管理功能（包括所需 JSON 格式的範例）的相關資訊，請參閱[裝置管理自訂延伸規格](../../devices/device_mgmt/custom_actions.html){: new_window}。
+如需自訂裝置管理功能（包括所需 JSON 格式的範例）的相關資訊，請參閱[裝置管理自訂延伸規格 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}。
 
 ### 新增自訂裝置管理套件
 
-使用 {{site.data.keyword.iot_short_notm}} 儀表板，或使用 API，即可新增自訂裝置管理套件。
+使用 {{site.data.keyword.iot_short_notm}} 儀表板或 API，即可新增自訂裝置管理套件。
 
 若要使用 {{site.data.keyword.iot_short_notm}} 儀表板新增自訂裝置管理套件，請執行下列動作：
 
@@ -280,39 +279,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 
 若要使用 API 新增自訂裝置管理套件，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}。
 
-<!-- ## The Weather Company
-{: #weathercompany}
-
-The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
-
-**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
-
-### REST APIs for The Weather Company
-To access the REST API for The Weather Company, see the
-Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
-
-### Weather Data
-
-To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
-
-- Current weather.
-- Current temperature.
-- Predicted maximum and minimum temperature.
-- Relative humidity.
-- Pressure.
-- Visibility.
-- Wind speed.
-- Wind direction.
-- Latitude.
-- Longitude.
--->
-
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
-
 ## 電子郵件
 {: #email}
 
-使用電子郵件邀請，即可將使用者新增至 {{site.data.keyword.iot_short_notm}}。如需相關資訊，請參閱[管理使用者存取權](../../add_users.html)。
+使用電子郵件邀請，即可將使用者新增至 {{site.data.keyword.iot_short_notm}}。如需相關資訊，請參閱[管理使用者存取權](/docs/IoT/add_users.html)。
 
 若要使用電子郵件邀請功能，必須將電子郵件延伸規格配置為使用 SendGrid 線上服務或「簡易郵件傳送通訊協定 (SMTP)」服務。延伸規格也可以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 應用程式。
 
@@ -324,7 +294,7 @@ To view the weather data retrieved for a device location, find the device in the
 2. 在 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下導覽列中的**延伸規格**。
 3. 在**電子郵件**區段中，按一下**設定**。
 4. 選取**具有 API 金鑰的 SendGrid**。
-5. 輸入網站管理者的名稱和電子郵件位址，以及經授權的 API 金鑰。
+5. 輸入網站管理者的姓名及電子郵件位址，以及經授權的 API 金鑰。
 
 ### SMTP 服務
 
@@ -344,13 +314,13 @@ To view the weather data retrieved for a device location, find the device in the
 
  1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下**建立服務**。
  2. 從型錄中選取 SendGrid 服務，然後按一下**建立**。
- 3. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，新增 {{site.data.keyword.sdk4nodefull}} 應用程式。
- 4. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下 {{site.data.keyword.sdk4nodefull}} 應用程式，然後按一下**連結服務或 API**。
+ 3. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，新增 {{site.data.keyword.runtime_nodejs_full}} 應用程式。
+ 4. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下 {{site.data.keyword.runtime_nodejs_notm}} 應用程式，然後按一下**連結服務或 API**。
  5. 選取 SendGrid 服務，然後按一下**新增**。
- 6. 現在必須重新編譯打包 {{site.data.keyword.sdk4nodefull}} 應用程式。
+ 6. 重新編譯打包 {{site.data.keyword.runtime_nodejs_notm}} 應用程式。
 2. 準備配置 {{site.data.keyword.iot_short_notm}} 服務。  
 使用 {{site.data.keyword.iot_short_notm}} 儀表板或使用 {{site.data.keyword.iot_short_notm}} API，即可配置 {{site.data.keyword.iot_short_notm}}。  
- 1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下 {{site.data.keyword.sdk4nodefull}} 應用程式。
+ 1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下 {{site.data.keyword.runtime_nodejs_notm}} 應用程式。
  2. 從導覽列中，按一下**環境變數**。
  3. 將顯示的 JSON 複製到暫存文字檔。  
 JSON 的格式應該如下：

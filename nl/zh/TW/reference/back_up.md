@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017, 2018
-lastupdated: "2018-01-11"
+years: 2017, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,10 +12,17 @@ lastupdated: "2018-01-11"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
+
 
 
 # 資料備份
 {: #back_up}
+
+<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+</p>
+{: important}
 
 使用下列資訊，以瞭解 {{site.data.keyword.iot_full}} 的資料備份策略。
 
@@ -27,7 +34,7 @@ lastupdated: "2018-01-11"
 - 裝置資訊
 - API 金鑰及記號
 - 使用者資訊
-- 所有裝置管理要求記錄，包括任何起始要求的歷程 - 例如，要求的現行狀態
+- 裝置管理要求的所有記錄（包括所有起始要求的歷程），例如：要求的現行狀態
 - 自訂裝置管理要求組合的定義
 
 **附註：**取消佈建服務之後，會將組織的所有資料保留 14 天。在 14 天的時間範圍內與支援中心聯絡，以還原組織。
@@ -37,7 +44,7 @@ lastupdated: "2018-01-11"
 在 {{site.data.keyword.iot_short_notm}} 中，不備份下列類型的資料：
 
 - 裝置事件
-- 暫時性傳訊狀態，例如進行中資料
+- 暫時性傳訊狀態，例如：資料進行中
 - 在裝置管理要求中，傳送及接收的 MQTT 訊息
 <!-- - Analytics rules and alert configuration -->
 

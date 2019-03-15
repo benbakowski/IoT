@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2017-11-03"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2017-11-03"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # {{site.data.keyword.iot_short_notm}} 故障诊断
 {: #ts}
+
+<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+</p>
+{: important}
 
 此处提供了有关在 {{site.data.keyword.Bluemix_notm}} 上使用 {{site.data.keyword.iot_full}} 的常见故障诊断问题的解答。
 {:shortdesc}
@@ -35,7 +41,7 @@ lastupdated: "2017-11-03"
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，打开 {{site.data.keyword.iot_short_notm}} 服务。
 2. 单击导航栏中的**成员**。
 3. 单击**编辑**图标。
-4. 清除**访问权到期**框，然后单击**保存**。
+4. 清除**访问权到期**复选框，然后单击**保存**。
 {: tsResolve}
 
 ## 连接到 {{site.data.keyword.iot_short_notm}} 时发生问题
@@ -47,10 +53,10 @@ lastupdated: "2017-11-03"
 尝试连接到 {{site.data.keyword.iot_short_notm}} 时，设备或应用程序收到错误。
 {: tsSymptoms}
 
-可能有两个设备尝试使用相同的 clientID 和凭证进行连接。每个 clientID 仅允许一个唯一连接。不能有两个并行连接使用相同的标识。应用程序可共享相同 API 密钥，但 MQTT 需要客户机标识始终唯一。
+您可能有多个设备尝试使用相同客户机标识和凭证进行连接。每个客户机标识只允许一个唯一连接。不能有多个并行连接使用相同的标识。应用程序可共享相同 API 密钥，但 MQTT 需要客户机标识始终唯一。
 {: tsCauses}
 
-您可以通过确认不会有两个设备尝试使用相同凭证进行连接来解决此问题。
+您可以通过验证不会有多个设备尝试使用相同凭证进行连接来排除此原因。
 {: tsResolve}
 
 ## 设备从 {{site.data.keyword.iot_short_notm}} 间歇性断开连接
@@ -67,4 +73,3 @@ lastupdated: "2017-11-03"
 
 您可以通过确认为连接正确设置 ping 和 KeepAlive 参数来解决此问题。   
 {: tsResolve}
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-04-26"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,9 +11,15 @@ lastupdated: "2018-04-26"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
 
 # 外部服务集成
 {: #ref-index}
+
+<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+</p>
+{: important}
 
 通过外部服务集成，可在 {{site.data.keyword.iot_full}} 组织中访问第三方或外部服务中的数据和操作。
 
@@ -27,12 +33,12 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 我们的平台所提供的内置 Jasper 集成提供了对以下 Jasper 操作的支持：
 
 - 查看总体 Jasper 数据
-  - 显示：状态、套餐、本月至今数据使用情况、本月至今 SMS 使用情况、本月至今语音使用情况、超额限制、添加日期和修改日期。
-- 更改 SIM 激活状态。
-  - 选择：库存、可随时激活、已激活、已取消激活和已废弃。
+  - 显示状态、费率套餐、本月至今数据使用情况、本月至今 SMS 使用情况、本月至今语音使用情况、超额限制、添加日期和修改日期。
+- 更改 SIM 激活状态
+  - 从以下选项中进行选择：库存、可随时激活、已激活、已取消激活和已废弃。
 - 查看 SIM 使用情况
-  - 显示：周期开始日期、计费数据和数据总量、计费 SMS 和 SMS 总量、计费语音和语音总量。
-  - 可以使用 YYYY-MM-DD 格式设置周期开始日期。
+  - 显示周期开始日期、计费数据和数据总量、计费 SMS 和 SMS 总量、计费语音和语音总量。
+  - 可以使用 YYYY-MM-DD 日期格式设置周期开始日期。
 - 将 SMS 发送到 SIM
 - 更改套餐
 
@@ -43,7 +49,7 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 
 ### Jasper 的配置
 
-要将 Jasper 服务连接到 {{site.data.keyword.iot_short_notm}} 组织，必须首先完成两个配置阶段。首先，必须将 {{site.data.keyword.iot_short_notm}} 连接到 Jasper 服务，然后必须配置 {{site.data.keyword.iot_short_notm}} 设备。
+要将 Jasper 服务连接到 {{site.data.keyword.iot_short_notm}} 组织，必须完成两个配置阶段。首先，必须将 {{site.data.keyword.iot_short_notm}} 连接到 Jasper 服务，然后必须配置 {{site.data.keyword.iot_short_notm}} 设备。
 
 
 1. 启用 Jasper 扩展。要启用 Jasper 与 {{site.data.keyword.iot_short_notm}} 组织的集成，请完成以下步骤：
@@ -53,13 +59,13 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
   4. 输入 Jasper 用户名、密码、访问键和域标识。
   5. 单击**完成**。
 
-2. 配置设备
+2. 配置设备。
 您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 Jasper 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 Jasper 中的数据。  
-**重要信息：**在执行“添加设备”过程时，无法应用 Jasper 配置，只有先前连接的设备可使用 Jasper 进行配置。  
+**重要信息：**在“添加设备”过程中，无法应用 Jasper 配置。只能使用 Jasper 配置先前已连接的设备。  
 要配置连接了 Jasper 的设备，请完成以下步骤：
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的连接了 Jasper 的设备。
- 2. 选择此设备以打开*设备向下钻取*视图。
- 3. 向下滚动到*扩展配置*。
+ 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”页面中，查找要配置的连接了 Jasper 的设备。
+ 2. 选择设备以打开“设备向下钻取”视图。
+ 3. 向下滚动到“扩展配置”。
  4. 通过使用以下 JSON 格式输入扩展配置，然后单击**确认更改**以保存配置。  
 
 ```json  
@@ -71,7 +77,7 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 
 ```
 
-成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
+成功配置组织后，会在“设备向下钻取”视图中“扩展配置”部分下显示“扩展”部分。
 
 ## AT&T
 {: #att}
@@ -81,12 +87,12 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 AT&T 扩展支持以下 AT&T 操作：
 
 - 查看总体 AT&T 数据
-  - 显示：状态、套餐、本月至今数据使用情况、本月至今 SMS 使用情况、本月至今语音使用情况、超额限制、添加日期和修改日期。
-- 更改 SIM 激活状态。
-  - 选择：库存、可随时激活、已激活、已取消激活和已废弃。
+  - 显示状态、费率套餐、本月至今数据使用情况、本月至今 SMS 使用情况、本月至今语音使用情况、超额限制、添加日期和修改日期。
+- 更改 SIM 激活状态
+  - 从以下选项中进行选择：库存、可随时激活、已激活、已取消激活和已废弃。
 - 查看 SIM 使用情况
   - 显示：周期开始日期、计费数据和数据总量、计费 SMS 和 SMS 总量、计费语音和语音总量。
-  - 可以使用 YYYY-MM-DD 格式设置周期开始日期。
+  - 可以使用 YYYY-MM-DD 日期格式设置周期开始日期。
 - 将 SMS 发送到 SIM
 - 更改套餐
 
@@ -97,7 +103,7 @@ AT&T 扩展支持以下 AT&T 操作：
 
 要将 {{site.data.keyword.iot_short_notm}} 组织连接到 AT&T，必须完成组织配置和设备配置。
 
-要配置 {{site.data.keyword.iot_short_notm}} 平台，请完成以下步骤。
+要配置 {{site.data.keyword.iot_short_notm}} 平台，请完成以下步骤：
 
 1. 启用 AT&T 扩展。要启用 AT&T 与 {{site.data.keyword.iot_short_notm}} 组织的集成，请完成以下步骤：
   1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
@@ -106,16 +112,16 @@ AT&T 扩展支持以下 AT&T 操作：
   4. 输入 AT&T 用户名、密码、访问键和域标识。
   5. 单击**完成**。
 
-要将您的 {{site.data.keyword.iot_short_notm}} 组织与 AT&T 帐户相连接，首先必须完成两个配置阶段。完成组织配置，然后配置设备。
+要将 {{site.data.keyword.iot_short_notm}} 组织与 &T 帐户相连接，必须完成两个配置阶段。完成组织配置，然后配置设备。
 
 
 2. 配置设备
 您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 AT&T 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 AT&T 中的数据。  
-**重要信息：**在执行“添加设备”过程时，无法应用 AT&T 配置，只有先前连接的设备可使用 AT&T 进行配置。  
+**重要信息：**在“添加设备”过程中，无法应用 AT&T 配置。只能使用 AT&T 配置先前已连接的设备。  
 要配置连接了 AT&T 的设备，请完成以下步骤：
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的连接了 AT&T 的设备。
- 2. 选择此设备以打开*设备向下钻取*视图。
- 3. 向下滚动到*扩展配置*。
+ 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”页面中，查找要配置的连接了 AT&T 的设备。
+ 2. 选择设备以打开“设备向下钻取”视图。
+ 3. 向下滚动到“扩展配置”。
  4. 通过使用以下 JSON 格式输入扩展配置，然后单击**确认更改**以保存配置。  
 
 ```json  
@@ -127,27 +133,27 @@ AT&T 扩展支持以下 AT&T 操作：
 
 ```
 
-成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
+成功配置组织后，会在“设备向下钻取”视图中“扩展配置”部分下显示“扩展”部分。
 
 ## Arm Mbed 网桥
 {: #arm}
 
-该网桥使 Arm Mbed 设备能够与 IBM Watson IoT Platform 集成，并双向交换消息。要启用此集成，首先需要注册 Arm Mbed 云帐户，然后为 Watson IoT 配置提供请求的连接信息。
+该网桥使 Arm Mbed 设备能够与 {{site.data.keyword.iot_short_notm}} 集成，并双向交换消息。要启用此集成，首先需要注册 Arm Mbed 云帐户，然后为 {{site.data.keyword.iot_short_notm}} 配置提供请求的连接信息。
 
 ### 安装配置
 
 
 1. 启用 Arm Mbed 网桥扩展。要启用该扩展，请完成以下步骤：
   1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
-  2. 在**扩展**页面上，单击 **+添加扩展**。
+  2. 在“扩展”页面上，单击**添加扩展**。
   3. 单击“Arm Mbed 网桥”扩展旁的**添加**。
-  4. 输入 Arm Mbed 访问密钥。可以使用 Arm Mbed 门户网站 (https://portal.mbedcloud.com) 来创建此密钥。
+  4. 输入 Arm Mbed 访问密钥。可以使用 [https://portal.mbedcloud.com ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://portal.mbedcloud.com){: new_window} 中的 Arm Mbed 门户网站来创建此密钥。
   5. 通过单击**检查连接**按钮来检查凭证。
   6. 单击**完成**。
 
 ### 有效内容格式
 
-来自 Arm Mbed 平台的入局消息有两种类型：通知和异步响应。{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。
+Arm Mbed 平台使用两种类型的入局消息：通知和异步响应。{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。
 
 #### 通知
 
@@ -185,7 +191,7 @@ AT&T 扩展支持以下 AT&T 操作：
 
 #### 向 Arm Mbed 平台发送命令
 
-{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。向 Arm Mbed 平台发送的命令必须使用以下 JSON 格式。
+{{site.data.keyword.iot_short_notm}} 可以向已连接到 Arm Mbed 平台的设备发送命令。向 Arm Mbed 平台发送的命令必须使用以下 JSON 格式：
 
 ```
 {
@@ -195,10 +201,7 @@ AT&T 扩展支持以下 AT&T 操作：
   "payload": <Base64 encoded payload>
 }
 ```
-所选择的方法是区分大小写的。必须跳过资源路径的第一个“/”。
-
-
-
+所选择的方法是区分大小写的。必须跳过资源路径的第一个 `/`。
 
 
 有效内容必须发布到以下主题：
@@ -212,8 +215,6 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 {: #orange}
 
 通过 Orange 扩展，可从连接到 {{site.data.keyword.iot_short_notm}} 且安装了 Orange SIM 卡的设备查看 SIM 卡数据。
-
-https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration-with-orange-beta/
 
 ### Orange 的受支持操作
 
@@ -241,10 +242,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 启用 Orange 扩展后，必须配置具有 Orange SIM 卡的每个设备以显示 Orange SIM 数据。
 
 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的 Orange SIM 设备。
-2. 选择此设备并向下滚动到*扩展配置*。
+2. 选择此设备并向下滚动到**扩展配置**。
 3. 通过使用以下 JSON 格式输入扩展配置，然后单击**确认更改**以保存配置。
 
-```  
+```json
     {
         "orange": {
             "serialnumber": "<serial number of Orange SIM>"
@@ -252,19 +253,19 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
     }
 
 ```
-成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
+成功配置组织后，会在“设备向下钻取”视图中“扩展配置”部分下显示“扩展”部分。
 
 ## 历史数据存储
 {: #historical_data}
 
-通过历史数据存储扩展，可以找到并配置 IoT 数据的兼容消息存储服务，例如 [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) 或 [{{site.data.keyword.messagehub_full}}](../../message_hub.html)。
+通过历史数据存储扩展，可以找到并配置 IoT 数据的兼容消息存储服务，例如 [{{site.data.keyword.cloudantfull}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){: new_window} 或 [{{site.data.keyword.messagehub_full}} ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){: new_window}。
 
 ## 定制设备管理软件包
 {: #device_mgmt}
 
 设备管理是 {{site.data.keyword.iot_short_notm}} 的核心功能，但是，也可以对其进行扩展以开发其他功能。定制设备管理软件包必须由有效的 JSON 构成，并至少定义一个定制设备管理操作。
 
-有关定制设备管理功能的更多信息（包括必需 JSON 格式的示例），请参阅[设备管理定制扩展](../../devices/device_mgmt/custom_actions.html){: new_window}。
+有关定制设备管理功能的更多信息（包括必需 JSON 格式的示例），请参阅[设备管理定制扩展 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}。
 
 ### 添加定制设备管理软件包
 
@@ -279,39 +280,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 
 要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}。
 
-<!-- ## The Weather Company
-{: #weathercompany}
-
-The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
-
-**Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
-
-### REST APIs for The Weather Company
-To access the REST API for The Weather Company, see the
-Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
-
-### Weather Data
-
-To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
-
-- Current weather.
-- Current temperature.
-- Predicted maximum and minimum temperature.
-- Relative humidity.
-- Pressure.
-- Visibility.
-- Wind speed.
-- Wind direction.
-- Latitude.
-- Longitude.
--->
-
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
-
 ## 电子邮件
 {: #email}
 
-使用电子邮件邀请，可以将用户添加到 {{site.data.keyword.iot_short_notm}}。有关信息，请参阅[管理用户访问权](../../add_users.html)。
+使用电子邮件邀请，可以将用户添加到 {{site.data.keyword.iot_short_notm}}。有关信息，请参阅[管理用户访问权](/docs/IoT/add_users.html)。
 
 要使用电子邮件邀请功能，必须配置电子邮件扩展，以使用 SendGrid 在线服务或简单电子邮件传输协议 (SMTP) 服务。扩展还可以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序。
 
@@ -343,13 +315,13 @@ To view the weather data retrieved for a device location, find the device in the
 
  1. 在 {{site.data.keyword.Bluemix_notm}} 仪表板中，单击**创建服务**。
  2. 从目录选择 SendGrid 服务并单击**创建**。
- 3. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，添加 {{site.data.keyword.sdk4nodefull}} 应用程序。
- 4. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.sdk4nodefull}} 应用程序，然后单击**绑定服务或 API**。
+ 3. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，添加 {{site.data.keyword.runtime_nodejs_full}} 应用程序。
+ 4. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序，然后单击**绑定服务或 API**。
  5. 选择 SendGrid 服务并单击**添加**。
- 6. 现在，{{site.data.keyword.sdk4nodefull}} 应用程序必须重新编译打包。
+ 6. 重新编译打包 {{site.data.keyword.runtime_nodejs_notm}} 应用程序。
 2. 准备配置 {{site.data.keyword.iot_short_notm}} 服务。  
 可以使用 {{site.data.keyword.iot_short_notm}} 仪表板或使用 {{site.data.keyword.iot_short_notm}} API 对 {{site.data.keyword.iot_short_notm}} 进行配置。  
- 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.sdk4nodefull}} 应用程序。
+ 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序。
  2. 单击导航栏中的**环境变量**。
  3. 将显示的 JSON 复制到临时文本文件。  
 此 JSON 应该具有以下格式：

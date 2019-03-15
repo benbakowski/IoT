@@ -2,8 +2,8 @@
 
 copyright:
 
-years: 2017, 2018
-lastupdated: "2018-01-11"
+years: 2017, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,10 +12,17 @@ lastupdated: "2018-01-11"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:important: .important}
+
 
 
 # 数据备份
 {: #back_up}
+
+<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+</p>
+{: important}
 
 使用以下信息来了解 {{site.data.keyword.iot_full}} 的数据备份策略。
 
@@ -27,7 +34,7 @@ lastupdated: "2018-01-11"
 - 设备信息
 - API 密钥和令牌
 - 用户信息
-- 设备管理请求的所有记录，包括任何初始请求的历史记录，例如请求的当前状态
+- 设备管理请求的所有记录，包括发起的任何请求的历史记录，例如：请求的当前状态
 - 定制设备管理请求束的定义
 
 **注：**在服务取消供应后，组织的所有数据将保留 14 天。请在 14 天内联系支持人员以复原组织。
@@ -37,7 +44,7 @@ lastupdated: "2018-01-11"
 {{site.data.keyword.iot_short_notm}} 中不备份以下类型的数据：
 
 - 设备事件
-- 瞬态消息传递状态，例如，进行中的数据
+- 瞬态消息传递状态，例如：动态数据
 - 作为设备管理请求一部分发送和接收的 MQTT 消息
 <!-- - Analytics rules and alert configuration -->
 

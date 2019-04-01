@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -31,15 +31,15 @@ The HTTP APIs are protected with HTTP basic authentication. When you generate an
 ## About HTTP APIs
 {: #api_about}
 
-After registering for your own organization, you are provided with a 6-character organization ID, which is required in the hostname for any HTTP API calls. The base URL for your organization can be accessed at the following address:
+After registering for your own organization, you are provided with a 6 character organization ID which is required in the hostname for any HTTP API calls. The base URL for your organization can be accessed at the following address:
 
-https://<**orgId**>.internetofthings.ibmcloud.com/api/v0002
+https://<**orgId**>.internetofthings.ibmcloud.com/docs/index.html
 
-To authenticate requests to the application API, set the username to the API key and the password to the authentication token.
+From this landing page you can access the documentation for the available {{site.data.keyword.iot_short_notm}} APIs.
 
-For Messaging APIs, use the following address:
+You will be prompted to log in to your organization, and when logged in you have access to execute API calls directly from the documentation.
 
-https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
+<!-- To authenticate requests to the application API, set the username to the API key and the password to the authentication token. -->
 
 ## HTTP APIs
 {: #api_http}
@@ -68,4 +68,5 @@ API                     | Use to ...
 
 API                     | Use to ...       
 ------------- | -------------
+[Client Connection Status ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/clientstate-beta.html#/){: new_window}   | Retrieve and query the client connection state for devices, gateways and applications that have connected to {{site.data.keyword.iot_short_notm}}.
 [Restore Deleted Devices ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   | If a device deleted by mistake, you can restore it within 14 days.

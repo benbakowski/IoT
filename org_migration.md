@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-17"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-02-17"
 {: #org_migration}
 
 <p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
-For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on {{site.data.keyword.IBM}} Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on {{site.data.keyword.IBM}} Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -45,7 +49,7 @@ This document describes the types of data you might want to migrate from an exis
 
 If, however, you want to transfer some of your existing Lite settings, the following sections take you through the process.
 
-Documentation on the [{{site.data.keyword.iot_short_notm}} APIs](/docs/IoT/reference/api.html#api_overview) provides instructions on how to invoke the APIs and their full set of parameters.
+Documentation on the [{{site.data.keyword.iot_short_notm}} APIs]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) provides instructions on how to invoke the APIs and their full set of parameters.
 
 
 ## Before you begin

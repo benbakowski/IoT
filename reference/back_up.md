@@ -3,7 +3,11 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Data backup Use, data backup strategy, records of device management requests
+
+subcollection: iot-platform
 
 ---
 
@@ -20,7 +24,7 @@ lastupdated: "2019-02-13"
 {: #back_up}
 
 <p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
-For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 

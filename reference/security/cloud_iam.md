@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Cloud IAM Authentication, IAM OAuth token, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-02-13"
 {: #cloud_iam}
 
 <p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
-For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on {{site.data.keyword.IBM_notm}} Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/IoT/plans_overview.html#plans_overview). 
+For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on {{site.data.keyword.IBM_notm}} Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -68,7 +72,7 @@ When you create your access token, the body information that is included in your
 Example:
 `POST https://iam.<region>.bluemix.net/oidc/token`
 
-To specify an {{site.data.keyword.Bluemix_notm}} region, review the region abbreviations that are used in the API endpoints. See [{{site.data.keyword.Bluemix_notm}} region API endpoints ![External link icon](../../../../icons/launch-glyph.svg)](https://console.bluemix.net/docs/containers/cs_regions.html#bluemix_regions){: new_window} for more information.
+To specify an {{site.data.keyword.Bluemix_notm}} region, review the region abbreviations that are used in the API endpoints. See [{{site.data.keyword.Bluemix_notm}} region API endpoints ![External link icon](../../../../icons/launch-glyph.svg)](https://cloud.ibm.com/docs/containers/cs_regions.html#bluemix_regions){: new_window} for more information.
 
 Input parameter	 | Values
 ---------------- | -----------

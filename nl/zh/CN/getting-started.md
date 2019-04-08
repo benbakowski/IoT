@@ -16,7 +16,7 @@ lastupdated: "2019-02-13"
 
 
 # 入门教程
-{: #gettingstartedtemplate .task}
+{: #getting-started .task}
 
 <p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
 有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。

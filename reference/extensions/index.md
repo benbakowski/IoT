@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-10"
 
 keywords: IoT Platform organization, SIM devices, IBM Watson
 
@@ -214,7 +214,7 @@ The payload must be published on the following topic:
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
@@ -258,6 +258,7 @@ After the Orange extension has been enabled, each device that has an Orange SIM 
 
 ```
 When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## Historical data storage
 {: #historical_data}

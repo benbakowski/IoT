@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-10"
 
 keywords: own organization, Extension HTTP APIs, API Use, AT&T Extension, Administer AT&T
 
@@ -65,7 +65,7 @@ API                     | Use to ...
 ------------- | -------------
 [AT&T Extension ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | Administer AT&T devices.
 [Jasper Extension  ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Administer Jasper devices.
-[Orange Extension  ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | View SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} organization and have an Orange SIM card installed.
+<!--[Orange Extension  ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | View SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} organization and have an Orange SIM card installed.-->
 
 ## Beta HTTP APIs
 {: #api_beta}

@@ -33,7 +33,7 @@ You have several options for getting support when using {{site.data.keyword.iot_
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - tag your posts with "ibm-cloud" and "watson-iot".
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question ){:new_window} for more details about using the forums.
+See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window} for more details about using the forums.
 
 
 ## Slack
@@ -43,7 +43,7 @@ See [Getting help ![External link icon](../../icons/launch-glyph.svg "External l
 
 ## Support tickets
 
-* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar ){:new_window}
+* [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## Ideas portal

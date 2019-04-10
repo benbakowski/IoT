@@ -29,7 +29,7 @@ Vous disposez de plusieurs options pour obtenir de l'aide lorsque vous utilisez 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - ajoutez les balises "ibm-cloud" et "watson-iot" à votre publication.
 
-Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliquant [comment obtenir de l'aide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question ){:new_window}.
+Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliquant [comment obtenir de l'aide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window}.
 
 
 ## Slack
@@ -39,7 +39,7 @@ Pour plus d'informations sur l'utilisation des forums, voir la rubrique expliqua
 
 ## Tickets de demande de service
 
-* [Contactez le support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar ){:new_window}
+* [Contactez le support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## Portail d'idées

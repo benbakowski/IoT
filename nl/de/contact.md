@@ -29,7 +29,7 @@ Ihnen stehen verschiedene Optionen zum Anfordern von Unterstützung bei der Verw
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW-Antworten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - Markieren Sie Ihre Beiträge mit "ibm-cloud" und "watson-iot".
 
-[Hilfe anfordern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question ){:new_window} enthält weitere Details zur Verwendung der Foren. 
+[Hilfe anfordern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window} enthält weitere Details zur Verwendung der Foren. 
 
 
 ## Slack
@@ -39,7 +39,7 @@ Ihnen stehen verschiedene Optionen zum Anfordern von Unterstützung bei der Verw
 
 ## Support-Tickets
 
-* [Unterstützung anfordern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar ){:new_window}
+* [Unterstützung anfordern ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## Portal für Vorschläge

@@ -29,7 +29,7 @@ lastupdated: "2019-02-13"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW 대답 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - 게시물에 "ibm-cloud" 및 "watson-iot"로 태그 지정.
 
-포럼 사용에 대한 세부사항은 [도움 받기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question ){:new_window}를 참조하십시오. 
+포럼 사용에 대한 세부사항은 [도움 받기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window}를 참조하십시오. 
 
 
 ## Slack
@@ -39,7 +39,7 @@ lastupdated: "2019-02-13"
 
 ## 지원 티켓
 
-* [지원 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar ){:new_window}
+* [지원 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## 아이디어 포털

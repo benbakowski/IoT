@@ -29,7 +29,7 @@ lastupdated: "2019-02-13"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - 投稿に「ibm-cloud」と「watson-iot」のタグを付けてください。
 
-フォーラムの使用について詳しくは、[ヘルプの取得 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/support/index.html#getting-help){:new_window} を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの取得 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question ){:new_window} を参照してください。
 
 
 ## Slack
@@ -39,7 +39,7 @@ lastupdated: "2019-02-13"
 
 ## サポート・チケット
 
-* [サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar ){:new_window}
 
 
 ## アイデア・ポータル

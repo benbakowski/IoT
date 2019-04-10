@@ -29,7 +29,7 @@ Tiene varias opciones para obtener soporte cuando utilice {{site.data.keyword.io
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Etiquete sus publicaciones con "ibm-cloud" y "watson-iot".
 
-Consulte [Obtención de ayuda ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/support/index.html#getting-help){:new_window} para obtener más información sobre el uso de los foros.
+Consulte [Obtención de ayuda ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window} para obtener más información sobre el uso de los foros.
 
 
 ## Slack
@@ -39,7 +39,7 @@ Consulte [Obtención de ayuda ![Icono de enlace externo](../../icons/launch-glyp
 
 ## Incidencia de soporte
 
-* [Cómo ponerse en contacto con el equipo de soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [Cómo ponerse en contacto con el equipo de soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## Portal de ideas

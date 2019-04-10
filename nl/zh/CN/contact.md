@@ -29,7 +29,7 @@ lastupdated: "2019-02-13"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} - 使用“ibm-cloud”和“watson-iot”标记您的帖子。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/support/index.html#getting-help){:new_window}。
+有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#asking-a-question){:new_window}。
 
 
 ## Slack
@@ -39,7 +39,7 @@ lastupdated: "2019-02-13"
 
 ## 支持凭单
 
-* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/support/index.html#contacting-support){:new_window}
+* [联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}
 
 
 ## 构想门户网站

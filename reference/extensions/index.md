@@ -20,7 +20,7 @@ subcollection: iot-platform
 # External service integrations
 {: #ref-index}
 
-<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+<p>This {{site.data.keyword.cloud}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
 For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
@@ -290,7 +290,7 @@ To add a custom device management package by using the API, see the [{{site.data
 
 Users can be added to {{site.data.keyword.iot_short_notm}} by using email invitations. For information, see  [Managing user access](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access).
 
-To use the email invitation feature, an email extension must be configured to use the SendGrid online service or a Simple Mail Transfer Protocol (SMTP) service. The extension can also use the SendGrid {{site.data.keyword.Bluemix_notm}} application.
+To use the email invitation feature, an email extension must be configured to use the SendGrid online service or a Simple Mail Transfer Protocol (SMTP) service. The extension can also use the SendGrid {{site.data.keyword.cloud_notm}} application.
 
 ### SendGrid online service
 
@@ -311,22 +311,22 @@ To configure the email extension for use with an SMTP service, follow these step
 3. Select **SMTP**.
 4. Enter the configuration details of your SMTP service.
 
-### SendGrid {{site.data.keyword.Bluemix_notm}} application
+### SendGrid {{site.data.keyword.cloud_notm}} application
 
-To configure the email extension for use with the SendGrid {{site.data.keyword.Bluemix_notm}} application, follow these steps:
+To configure the email extension for use with the SendGrid {{site.data.keyword.cloud_notm}} application, follow these steps:
 
 1. Create a dummy application and bind the SendGrid service.  
 In order to retrieve the configuration credentials, add and bind the SendGrid service to a dummy application.
 
- 1. From your {{site.data.keyword.Bluemix_notm}} dashboard, click **Create Service**.
+ 1. From your {{site.data.keyword.cloud_notm}} dashboard, click **Create Service**.
  2. Select the SendGrid service from the catalog and click **Create**.
- 3. From the {{site.data.keyword.Bluemix_notm}} dashboard, add the {{site.data.keyword.runtime_nodejs_full}} application.
- 4. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.Bluemix_notm}} dashboard and click **Bind a service or API**.
+ 3. From the {{site.data.keyword.cloud_notm}} dashboard, add the {{site.data.keyword.runtime_nodejs_full}} application.
+ 4. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.cloud_notm}} dashboard and click **Bind a service or API**.
  5. Select the SendGrid service and click **Add**.
  6. Restage the {{site.data.keyword.runtime_nodejs_notm}} application.
 2. Prepare to configure the {{site.data.keyword.iot_short_notm}} service.  
 {{site.data.keyword.iot_short_notm}} can be configured by using the {{site.data.keyword.iot_short_notm}} dashboard or by using the {{site.data.keyword.iot_short_notm}} API.  
- 1. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
+ 1. Click the {{site.data.keyword.runtime_nodejs_notm}} application from the {{site.data.keyword.cloud_notm}} dashboard.
  2. Click **Environment Variables** from the navigation bar.
  3. Copy the displayed JSON to a temporary text file.  
  The JSON should have the following format:

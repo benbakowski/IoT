@@ -21,7 +21,7 @@ subcollection: iot-platform
 # Migrating {{site.data.keyword.iot_short_notm}} Lite to {{site.data.keyword.iot_short_notm}} Non-production or Production
 {: #org_migration}
 
-<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+<p>This {{site.data.keyword.cloud}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
 For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on {{site.data.keyword.IBM}} Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
@@ -78,7 +78,7 @@ The users now have access to the new org, which will show up in the org selector
 Migrating devices may be accomplished in these steps:  
 1. Migrate the Device Types that you wish to preserve to the new org.  
 2. Migrate the devices themselves to the new org.  
-3. Update the hostname that the devices use to connect to {{site.data.keyword.Bluemix_short}} to start with your new org id.
+3. Update the hostname that the devices use to connect to {{site.data.keyword.cloud_notm}} to start with your new org id.
 4. Migrate any Data Management information you created in the Lite platform.   
 This might include Device Physical and Logical Interfaces, Things, and Rules.
 
@@ -190,7 +190,7 @@ If your application uses one of the {{site.data.keyword.iot_short_notm}} SDKs, t
 
 ### Updating an application that uses a Cloud Foundry binding
 
-{{site.data.keyword.Bluemix_short}} provides a mechanism to bind Cloud Foundry Applications to one or more Cloud Foundry services. Bindings can be established using the {{site.data.keyword.Bluemix_short}} CLI, or by creating a `Connection` between Application and Service in the {{site.data.keyword.Bluemix_short}} dashboard.
+{{site.data.keyword.cloud_notm}} provides a mechanism to bind Cloud Foundry Applications to one or more Cloud Foundry services. Bindings can be established using the {{site.data.keyword.cloud_notm}} CLI, or by creating a `Connection` between Application and Service in the {{site.data.keyword.cloud_notm}} dashboard.
 
 When an Application is bound to a service, the service API Key and Authentication Token credentials are copied into the `VCAP_SERVICES` environment variable from where the application can retrieve them.
 

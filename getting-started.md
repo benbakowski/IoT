@@ -22,7 +22,7 @@ subcollection: iot-platform
 # Getting started tutorial
 {: #getting-started}
 
-<p>This {{site.data.keyword.Bluemix}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
+<p>This {{site.data.keyword.cloud}} documentation collection pertains to the {{site.data.keyword.iot_full}} Lite pricing plan and includes basic getting started information, API references, and general troubleshooting information. 
 For the full {{site.data.keyword.iot_short_notm}} feature documentation, see the [{{site.data.keyword.iot_short_notm}} product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) on IBM Knowledge Center. More information about the various plans can be found in [{{site.data.keyword.iot_short_notm}} service plans](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
@@ -39,9 +39,9 @@ Before you can begin receiving data from your IoT devices, you must connect them
 {: #byb .sectiontitle}  
 
 Before you can start using {{site.data.keyword.iot_short_notm}}, you must have the following items:  
-* An [{{site.data.keyword.Bluemix}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration/){: new_window}.
+* An [{{site.data.keyword.cloud}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration/){: new_window}.
 * A {{site.data.keyword.iot_short_notm}} instance.  
-You can create a {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the {{site.data.keyword.Bluemix_short}} Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+You can create a {{site.data.keyword.iot_short_notm}} instance directly from the [{{site.data.keyword.iot_short_notm}} page in the {{site.data.keyword.cloud_notm}} Services Catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 * A device that meets the following requirements:  
   *	Your device must be able to communicate by using HTTP or MQTT protocols.
   * The device messages must conform to the {{site.data.keyword.iot_short_notm}} message payload requirements.  
@@ -63,7 +63,7 @@ Registering a device involves classifying the device as a device type, giving th
 **Tip:** You can register your devices one at a time from the [{{site.data.keyword.iot_short_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://internetofthings.ibmcloud.com){: new_window}, or you can use the [{{site.data.keyword.iot_short_notm}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} to add multiple devices.
 
 To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
-1. In the {{site.data.keyword.Bluemix_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Launch** on the {{site.data.keyword.iot_short_notm}} service details page.
 
     The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
 

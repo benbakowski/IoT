@@ -49,7 +49,7 @@ This document describes the types of data you might want to migrate from an exis
 
 If, however, you want to transfer some of your existing Lite settings, the following sections take you through the process.
 
-Documentation on the [{{site.data.keyword.iot_short_notm}} APIs]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) provides instructions on how to invoke the APIs and their full set of parameters.
+Documentation on the [{{site.data.keyword.iot_short_notm}} APIs](/docs/services/IoT?topic=iot-platform-api_overview#api_overview) provides instructions on how to invoke the APIs and their full set of parameters.
 
 
 ## Before you begin

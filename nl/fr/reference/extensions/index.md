@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # Intégrations de service externe
 {: #ref-index}
 
-<p>Cette série de documents {{site.data.keyword.Bluemix}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
-Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir la [documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [Plans de service {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview).
+<p>Cette série de documents {{site.data.keyword.cloud}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
+Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir la [documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [{{site.data.keyword.iot_short_notm}}Plans de service](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -30,7 +34,7 @@ Jasper est une plateforme de gestion et d'administration des terminaux SIM. Elle
 
 ### Opérations prises en charge pour Jasper
 
-L'intégration Jasper fournie par notre plateforme assure la prise en charge des opérations Jasper suivantes : 
+L'intégration Jasper fournie par notre plateforme assure la prise en charge des opérations Jasper suivantes :
 
 - Affichage de l'ensemble des données Jasper
   - Affiche le statut, le plan tarifaire, l'utilisation mensuelle des données à ce jour, l'utilisation mensuelle des SMS à ce jour, l'utilisation mensuelle de la voix à ce jour, les limites de dépassement, les dates d'ajout et les dates de modification.
@@ -61,11 +65,11 @@ Pour connecter votre terminal Jasper à votre organisation {{site.data.keyword.i
 
 2. Configurez vos terminaux.
 Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte Jasper afin d'afficher les données provenant de Jasper dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
-**Important :** la configuration de Jasper ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec Jasper.   
+**Important :** la configuration de Jasper ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec Jasper.  
 Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
  1. Dans la page Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via Jasper à configurer.
  2. Sélectionnez le terminal pour ouvrir la vue Exploration du terminal.
- 3. Faites défiler l'écran jusqu'à Configuration d'une extension. 
+ 3. Faites défiler l'écran jusqu'à Configuration d'une extension.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
 ```json  
@@ -77,14 +81,14 @@ Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
 
 ```
 
-Une fois l'organisation correctement configurée, la section Extensions s'affiche sous la section Configuration des extensions dans la vue Exploration du terminal. 
+Une fois l'organisation correctement configurée, la section Extensions s'affiche sous la section Configuration des extensions dans la vue Exploration du terminal.
 
 ## AT&T
 {: #att}
 
 ### Opérations prises en charge pour AT&T
 
-L'extension AT&T permet d'effectuer les opérations AT&T suivantes : 
+L'extension AT&T permet d'effectuer les opérations AT&T suivantes :
 
 - Affichage de l'ensemble des données AT&T
   - Affiche le statut, le plan tarifaire, l'utilisation mensuelle des données à ce jour, l'utilisation mensuelle des SMS à ce jour, l'utilisation mensuelle de la voix à ce jour, les limites de dépassement, les dates d'ajout et les dates de modification.
@@ -109,7 +113,7 @@ Pour configurer votre plateforme {{site.data.keyword.iot_short_notm}}, procédez
   1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
   2. Dans la page **Extensions**, cliquez sur **Ajouter une extension**.
   3. Cliquez sur **Ajouter** en regard de AT&T.
-  4. Entrez vos nom d'utilisateur, mot de passe, clé d'accès et ID de domaine. 
+  4. Entrez vos nom d'utilisateur, mot de passe, clé d'accès et ID de domaine.
   5. Cliquez sur **Terminé**.
 
 Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre compte AT&T, vous devez suivre deux étapes de configuration. Exécutez la configuration de l'organisation, puis configurez vos terminaux.
@@ -117,11 +121,11 @@ Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre 
 
 2. Configurez vos terminaux.
 Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
-**Important :** la configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.   
+**Important :** la configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.  
 Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
  1. Dans la page Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via AT&T à configurer.
  2. Sélectionnez le terminal pour ouvrir la vue Exploration du terminal.
- 3. Faites défiler l'écran jusqu'à Configuration d'une extension. 
+ 3. Faites défiler l'écran jusqu'à Configuration d'une extension.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
 ```json  
@@ -133,21 +137,21 @@ Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
 
 ```
 
-Une fois l'organisation correctement configurée, la section Extensions s'affiche sous la section Configuration des extensions dans la vue Exploration du terminal. 
+Une fois l'organisation correctement configurée, la section Extensions s'affiche sous la section Configuration des extensions dans la vue Exploration du terminal.
 
 ## Pont Arm Mbed
 {: #arm}
 
-Le pont permet aux terminaux Arm Mbed de s'intégrer à {{site.data.keyword.iot_short_notm}} et d'échanger des messages de façon bidirectionnelle. Pour permettre cette intégration, vous devez d'abord vous inscrire afin d'obtenir un compte Arm Mbed Cloud, puis fournir les informations de connexion demandées pour votre configuration {{site.data.keyword.iot_short_notm}}. 
+Le pont permet aux terminaux Arm Mbed de s'intégrer à {{site.data.keyword.iot_short_notm}} et d'échanger des messages de façon bidirectionnelle. Pour permettre cette intégration, vous devez d'abord vous inscrire afin d'obtenir un compte Arm Mbed Cloud, puis fournir les informations de connexion demandées pour votre configuration {{site.data.keyword.iot_short_notm}}.
 
-### Configuration 
+### Configuration
 
 
 1. Activez l'extension de pont Arm Mbed. Pour activer l'extension, procédez comme suit :
   1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
   2. Dans la page Extensions, cliquez sur **Ajouter une extension**.
   3. Cliquez sur **Ajouter** en regard de l'extension de pont Arm Mbed.
-  4. Saisissez votre clé d'accès Arm Mbed. Vous pouvez créer cette clé sur le portail Arm Mbed à l'adresse [https://portal.mbedcloud.com ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://portal.mbedcloud.com){: new_window}. 
+  4. Saisissez votre clé d'accès Arm Mbed. Vous pouvez créer cette clé sur le portail Arm Mbed à l'adresse [https://portal.mbedcloud.com ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://portal.mbedcloud.com){: new_window}.
   5. Vérifiez que les données d'identification sont correctes en cliquant sur le bouton **Vérifier la connexion**.
   6. Cliquez sur **Terminé**.
 
@@ -210,40 +214,40 @@ Le contenu doit être publié dans le sujet suivant :
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-L'extension Orange vous permet d'afficher des données de carte SIM à partir de terminaux qui sont connectés à votre instance {{site.data.keyword.iot_short_notm}} et sur lesquels une carte SIM Orange est installée.
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Opérations prises en charge pour Orange
+### Supported operations for Orange
 
-Si vous disposez d'un terminal qui est connecté à votre service {{site.data.keyword.iot_short_notm}} et qui possède une carte SIM Orange, vous pouvez utiliser l'extension Orange pour afficher les données de carte SIM suivantes :
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- Numéro de série SIM
-- Statut d'activation
-- Dernier changement de statut
-- Dernière actualisation de statut
-- Statut d'emplacement
+- SIM serial number
+- Activation status
+- Last status change
+- Last status refresh
+- Location status
 
-### API REST pour Orange
-Pour accéder à l'API REST pour Orange, voir la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window}.
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Configuration pour Orange
+### Configuration for Orange
 
-Pour activer l'extension Orange :
+To enable the Orange extension:
 
-1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
-2. Dans la page **Extensions**, cliquez sur **Ajouter une extension**.
-3. Cliquez sur **Ajouter** en regard de l'extension Orange.
-4. Entrez votre nom d'utilisateur et votre mot de passe Orange.
-6. Cliquez sur **Terminé**.
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-Une fois l'extension Orange activée, chaque terminal possédant une carte SIM Orange doit être configuré pour afficher des données SIM Orange.
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. Dans l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal SIM Orange à configurer.
-2. Sélectionnez le terminal, puis faites défiler l'écran jusqu'à **Configuration d'une extension**.
-3. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
@@ -253,19 +257,20 @@ Une fois l'extension Orange activée, chaque terminal possédant une carte SIM O
     }
 
 ```
-Une fois l'organisation correctement configurée, la section Extensions s'affiche sous la section Configuration des extensions dans la vue Exploration du terminal. 
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## Stockage de données historiques
 {: #historical_data}
 
-L'extension de stockage de données historiques vous permet de localiser et de configurer des services de stockage de message compatibles, par exemple [{{site.data.keyword.cloudantfull}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/cloudant_connector.html){: new_window} ou [{{site.data.keyword.messagehub_full}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/message_hub.html){: new_window}, pour vos données IoT. 
+L'extension de stockage de données historiques vous permet de localiser et de configurer des services de stockage de message compatibles, par exemple [{{site.data.keyword.cloudantfull}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/cloudant_connector.html){: new_window} ou [{{site.data.keyword.messagehub_full}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/message_hub.html){: new_window}, pour vos données IoT.
 
 ## Packages de gestion des terminaux personnalisés
 {: #device_mgmt}
 
 La gestion des terminaux est une fonction de base de {{site.data.keyword.iot_short_notm}} mais elle peut être étendue pour développer des fonctions supplémentaires. Les packages de gestion des terminaux personnalisés doivent être composés d'un document JSON valide et définir au moins une action de gestion des terminaux personnalisée.
 
-Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, y compris un exemple du format JSON requis, voir [Extensions personnalisées de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}. 
+Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, y compris un exemple du format JSON requis, voir [Extensions personnalisées de gestion des terminaux ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}.
 
 ### Ajout d'un package de gestion des terminaux personnalisé
 
@@ -278,14 +283,14 @@ Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tabl
 3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
-Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation d'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}. 
+Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation d'API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 ## Courrier électronique
 {: #email}
 
-Les utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](/docs/IoT/add_users.html).
+Les utilisateurs peuvent être ajoutés à {{site.data.keyword.iot_short_notm}} via des invitations par courrier électronique. Pour plus d'informations, voir  [Gestion des accès utilisateur](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access).
 
-L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.Bluemix_notm}} SendGrid.
+L'utilisation de la fonction d'invitation par courrier électronique nécessite de configurer une extension de messagerie pour utiliser le service en ligne SendGrid ou un service SMTP (Simple Mail Transfer Protocol). L'extension peut également utiliser l'application {{site.data.keyword.cloud_notm}} SendGrid.
 
 ### Service en ligne SendGrid
 
@@ -306,22 +311,22 @@ Pour configurer l'extension de messagerie à utiliser avec un service SMTP, proc
 3. Sélectionnez **SMTP**.
 4. Entrez les détails de configuration pour votre service SMTP.
 
-### Application {{site.data.keyword.Bluemix_notm}} SendGrid
+### Application {{site.data.keyword.cloud_notm}} SendGrid
 
-Pour configurer l'extension de messagerie à utiliser avec l'application {{site.data.keyword.Bluemix_notm}} SendGrid, procédez comme suit :
+Pour configurer l'extension de messagerie à utiliser avec l'application {{site.data.keyword.cloud_notm}} SendGrid, procédez comme suit :
 
 1. Créez une application factice et établissez une liaison au service SendGrid.  
 Pour récupérer les données d'identification de configuration, ajoutez et liez le service SendGrid à une application factice.
 
- 1. Depuis votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur **Créer un service**.
+ 1. Depuis votre tableau de bord {{site.data.keyword.cloud_notm}}, cliquez sur **Créer un service**.
  2. Sélectionnez le service SendGrid dans le catalogue, puis cliquez sur **Créer**.
- 3. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, ajoutez l'application {{site.data.keyword.runtime_nodejs_full}}.
- 4. Cliquez sur l'application {{site.data.keyword.runtime_nodejs_notm}} à partir du tableau de bord {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Lier un service ou une API**.
+ 3. Dans le tableau de bord {{site.data.keyword.cloud_notm}}, ajoutez l'application {{site.data.keyword.runtime_nodejs_full}}.
+ 4. Cliquez sur l'application {{site.data.keyword.runtime_nodejs_notm}} à partir du tableau de bord {{site.data.keyword.cloud_notm}}, puis cliquez sur **Lier un service ou une API**.
  5. Sélectionnez le service SendGrid, puis cliquez sur **Ajouter**.
- 6. Reconstituez en production l'application {{site.data.keyword.runtime_nodejs_notm}}. 
+ 6. Reconstituez en production l'application {{site.data.keyword.runtime_nodejs_notm}}.
 2. Préparez-vous à configurer le service {{site.data.keyword.iot_short_notm}}.  
 {{site.data.keyword.iot_short_notm}} peut être configuré depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou à l'aide de l'API {{site.data.keyword.iot_short_notm}}.  
- 1. Cliquez sur l'application {{site.data.keyword.runtime_nodejs_notm}} dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+ 1. Cliquez sur l'application {{site.data.keyword.runtime_nodejs_notm}} dans le tableau de bord {{site.data.keyword.cloud_notm}}.
  2. Cliquez sur **Variables d'environnement** dans la barre de navigation.
  3. Copiez les données JSON affichées dans un fichier texte temporaire.  
  Les données JSON doivent se présenter au format suivant :

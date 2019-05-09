@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # Integrações de serviços externos
 {: #ref-index}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -210,40 +214,40 @@ A carga útil deve ser publicada no tópico a seguir:
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-A extensão Orange permite visualizar dados do cartão SIM de dispositivos conectados ao seu {{site.data.keyword.iot_short_notm}} e tem um cartão SIM da Orange instalado.
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Operações suportadas para a Orange
+### Supported operations for Orange
 
-Se você tiver um dispositivo conectado ao serviço {{site.data.keyword.iot_short_notm}} e tiver um cartão SIM da Orange, será possível usar a extensão da Orange para visualizar os dados do cartão SIM a seguir:
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- Número de série do SIM
+- SIM serial number
 - Activation status
-- Última alteração do status
-- Última atualização do status
-- Status do Local
+- Last status change
+- Last status refresh
+- Location status
 
-### APIs de REST para Orange
-Para acessar a API de REST para Orange, veja a seção Extensão Orange na documentação [{{site.data.keyword.iot_short_notm}}API de REST HTTP ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window}.
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Configuração para a Orange
+### Configuration for Orange
 
-Para ativar a extensão da Orange:
+To enable the Orange extension:
 
-1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Extensões**.
-2. Na página **Extensões**, clique em **Incluir extensão**.
-3. Clique em **Incluir** ao lado da extensão da Orange.
-4. Insira seu nome do usuário e senha da Orange.
-6. Clique em **Pronto**.
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-Após a ativação da extensão da Orange, cada dispositivo que tiver um cartão SIM da Orange deverá ser configurado para exibir dados do SIM da Orange.
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. Na guia de dispositivos do painel do {{site.data.keyword.iot_short_notm}}, localize o dispositivo SIM da Orange a ser configurado.
-2. Selecione o dispositivo e role para baixo até **Configuração de extensão**.
-3. Insira a configuração de extensão usando o formato de JSON a seguir e, em seguida, clique em **Confirmar mudanças** para salvar a sua configuração.
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
@@ -253,7 +257,8 @@ Após a ativação da extensão da Orange, cada dispositivo que tiver um cartão
     }
 
 ```
-Quando a organização estiver configurada com êxito, a seção Extensões será exibida sob a seção Configuração de extensão na visualização Drilldown do dispositivo.
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## Armazenamento de dados históricos
 {: #historical_data}
@@ -283,9 +288,9 @@ Para incluir um pacote de gerenciamento de dispositivo customizado usando a API,
 ## e-mail
 {: #email}
 
-Os usuários podem ser incluídos no {{site.data.keyword.iot_short_notm}} usando convites de e-mail. Para obter informações, veja [Gerenciando o acesso de usuário](/docs/IoT/add_users.html).
+Os usuários podem ser incluídos no {{site.data.keyword.iot_short_notm}} usando convites de e-mail. Para obter informações, veja [Gerenciando o acesso de usuário](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access).
 
-Para usar o recurso de convite por e-mail, uma extensão de e-mail deve ser configurada para usar o serviço on-line SendGrid ou um serviço de Protocolo Simples de Transporte de Correio (SMTP). A extensão também pode usar o aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}.
+Para usar o recurso de convite por e-mail, uma extensão de e-mail deve ser configurada para usar o serviço on-line SendGrid ou um serviço de Protocolo Simples de Transporte de Correio (SMTP). A extensão também pode usar o aplicativo SendGrid {{site.data.keyword.cloud_notm}}.
 
 ### Serviço on-line SendGrid
 
@@ -306,22 +311,22 @@ Para configurar a extensão de e-mail para uso com um serviço SMTP, siga estas 
 3. Selecione **SMTP**.
 4. Insira os detalhes de configuração do serviço SMTP.
 
-### Aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}
+### Aplicativo SendGrid {{site.data.keyword.cloud_notm}}
 
-Para configurar a extensão de e-mail para uso com o aplicativo SendGrid {{site.data.keyword.Bluemix_notm}}, siga estas etapas:
+Para configurar a extensão de e-mail para uso com o aplicativo SendGrid {{site.data.keyword.cloud_notm}}, siga estas etapas:
 
 1. Crie um aplicativo simulado e ligue-o ao serviço SendGrid.  
 Para recuperar as credenciais de configuração, inclua e ligue o serviço SendGrid a um aplicativo simulado.
 
- 1. No painel do {{site.data.keyword.Bluemix_notm}}, clique em **Criar serviço**.
+ 1. No painel do {{site.data.keyword.cloud_notm}}, clique em **Criar serviço**.
  2. Selecione o serviço SendGrid no catálogo e clique em **Criar**.
- 3. No painel do {{site.data.keyword.Bluemix_notm}}, inclua o aplicativo {{site.data.keyword.runtime_nodejs_full}}.
- 4. Clique no aplicativo {{site.data.keyword.runtime_nodejs_notm}} no painel {{site.data.keyword.Bluemix_notm}} e clique em **Ligar um serviço ou API**.
+ 3. No painel do {{site.data.keyword.cloud_notm}}, inclua o aplicativo {{site.data.keyword.runtime_nodejs_full}}.
+ 4. Clique no aplicativo {{site.data.keyword.runtime_nodejs_notm}} no painel {{site.data.keyword.cloud_notm}} e clique em **Ligar um serviço ou API**.
  5. Selecione o serviço SendGrid e clique em **Incluir**.
  6. Remonte o aplicativo {{site.data.keyword.runtime_nodejs_notm}}.
 2. Prepare-se para configurar o serviço {{site.data.keyword.iot_short_notm}}.  
 O {{site.data.keyword.iot_short_notm}} pode ser configurado usando o painel do {{site.data.keyword.iot_short_notm}} ou usando a API do {{site.data.keyword.iot_short_notm}}.  
- 1. Clique no aplicativo {{site.data.keyword.runtime_nodejs_notm}} no painel {{site.data.keyword.Bluemix_notm}}.
+ 1. Clique no aplicativo {{site.data.keyword.runtime_nodejs_notm}} no painel {{site.data.keyword.cloud_notm}}.
  2. Clique em **Variáveis de ambiente** na barra de navegação.
  3. Copie o JSON exibido para um arquivo de texto provisório.  
  O JSON deve ter o formato a seguir:

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: Watson IoT Platform, IBM Watson, IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} サポートへのお問い合わせ
 {: #gettinghelp}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
-{{site.data.keyword.iot_full}} の使い方についてサポートを受ける方法は幾つかあります。例えば、フォーラムや Slack を使用したり、サポート・チケットを開いたりできます。アイデア・ポータルを使用して、{{site.data.keyword.iot_short_notm}} の機能向上についてのアイデアを投稿することもできます。
+{{site.data.keyword.iot_full}} の使い方についてサポートを受ける方法は幾つかあります。例えば、フォーラムや Slack を使用したり、サポート・チケットを開いたりできます。 アイデア・ポータルを使用して、{{site.data.keyword.iot_short_notm}} の機能向上についてのアイデアを投稿することもできます。
 
 ## フォーラム
 
@@ -44,4 +48,4 @@ lastupdated: "2019-02-13"
 
 ## アイデア・ポータル
 
-* [IBM Cloud – Structured Ideas ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/cloudideas){:new_window}
+* [IBM Cloud – Structured Ideas ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://ibmcloud.ideas.aha.io){:new_window}

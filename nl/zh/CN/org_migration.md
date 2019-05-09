@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-13"
 # 将 {{site.data.keyword.iot_short_notm}} 轻量套餐迁移至 {{site.data.keyword.iot_short_notm}} 非生产或生产套餐
 {: #org_migration}
 
-<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
-有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 {{site.data.keyword.IBM}} Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+<p>该 {{site.data.keyword.cloud}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 {{site.data.keyword.IBM}} Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到有关各种套餐的更多信息。
 </p>
 {: important}
 
@@ -45,7 +49,7 @@ lastupdated: "2019-02-13"
 
 但是，如果想要传输某些现有轻量设置，以下部分指导您完成此过程。
 
-有关 [{{site.data.keyword.iot_short_notm}} API](/docs/IoT/reference/api.html#api_overview) 的文档提供有关如何调用 API 及其完整参数集的指示信息。
+有关 [{{site.data.keyword.iot_short_notm}} APIs]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) 的文档提供有关如何调用 API 及其完整参数集的指示信息。
 
 
 ## 开始之前
@@ -74,7 +78,7 @@ lastupdated: "2019-02-13"
 可通过以下步骤完成设备迁移：  
 1. 将想要保留的设备类型迁移到新组织。  
 2. 将设备自身迁移到新组织。  
-3. 将设备用于连接到 {{site.data.keyword.Bluemix_short}} 的主机名更新为以新的组织标识开头。
+3. 将设备用于连接到 {{site.data.keyword.cloud_notm}} 的主机名更新为以新的组织标识开头。
 4. 迁移在轻量平台中创建的任何数据管理信息。   
 这可能包括设备物理和逻辑接口、事物和规则。
 
@@ -179,15 +183,15 @@ lastupdated: "2019-02-13"
 4. 保存更改并重新部署 Node-RED 流程。
 
 ### 更新不使用 Cloud Foundry 绑定的应用程序
-确定应用程序存储组织标识、API 密钥和授权令牌的位置，并将它们替换为先前保存的值。
+确定应用程序存储组织标识、API 密钥和认证令牌的位置，并将它们替换为先前保存的值。
 
 如果应用程序使用其中一个 {{site.data.keyword.iot_short_notm}} SDK，那么这些值可能保存在“属性”文件中。
 {: tip}
 
 ### 更新使用 Cloud Foundry 绑定的应用程序
 
-{{site.data.keyword.Bluemix_short}} 提供一个机制以将 Cloud Foundry 应用程序绑定到一个或多个 Cloud Foundry 服务。可以使用 {{site.data.keyword.Bluemix_short}} CLI 建立绑定，也可以通过在 {{site.data.keyword.Bluemix_short}} 仪表板中的应用程序和服务之间创建`连接`来建立绑定。
+{{site.data.keyword.cloud_notm}} 提供一个机制以将 Cloud Foundry 应用程序绑定到一个或多个 Cloud Foundry 服务。可以使用 {{site.data.keyword.cloud_notm}} CLI 建立绑定，也可以通过在 {{site.data.keyword.cloud_notm}} 仪表板中的应用程序和服务之间创建`连接`来建立绑定。
 
 在将应用程序绑定到服务时，会将服务“API 密钥”和“认证令牌”凭证复制到 `VCAP_SERVICES` 环境变量，应用程序可从中检索这些凭证。
 
-**重要信息：**此绑定机制无法用于新的 {{site.data.keyword.iot_short_notm}} 服务。您必须在应用程序中找到从 `VCAP_SERVICES` 读取的代码，并将其替换为从现在用于存储 API 密钥和授权令牌的位置读取值的代码。要完成更新，必须重新构建并重新部署应用程序。
+**重要信息：**此绑定机制无法用于新的 {{site.data.keyword.iot_short_notm}} 服务。您必须在应用程序中找到从 `VCAP_SERVICES` 进行读取的代码，并将其替换为从现在用于存储 API 密钥和认证令牌的位置读取值的代码。要完成更新，必须重新构建并重新部署应用程序。

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # 外部サービスの統合
 {: #ref-index}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
@@ -49,7 +53,7 @@ Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot
 
 ### Jasper 用の構成
 
-Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続するには、2 段階の構成を完了する必要があります。まず、{{site.data.keyword.iot_short_notm}} が Jasper サービスに接続されていなければならず、次に {{site.data.keyword.iot_short_notm}} デバイスが構成されていなければなりません。
+Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続するには、2 段階の構成を完了する必要があります。 まず、{{site.data.keyword.iot_short_notm}} が Jasper サービスに接続されていなければならず、次に {{site.data.keyword.iot_short_notm}} デバイスが構成されていなければなりません。
 
 
 1. Jasper 拡張を有効にします。 Jasper と {{site.data.keyword.iot_short_notm}} 組織の統合を有効にするには、以下の手順を実行します。
@@ -112,7 +116,7 @@ AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_s
   4. AT&T ユーザー名、パスワード、アクセス・キー、ドメイン ID を入力します。
   5. **「完了」**をクリックします。
 
-{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントを接続するには、2 段階の構成を完了する必要があります。組織の構成を実行した後、デバイスの構成を実行します。
+{{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントを接続するには、2 段階の構成を完了する必要があります。 組織の構成を実行した後、デバイスの構成を実行します。
 
 
 2. デバイスを構成します
@@ -153,7 +157,7 @@ AT&T 接続済みデバイスを構成するには、以下の手順を実行し
 
 ### ペイロード・フォーマット
 
-Arm Mbed プラットフォームでは、通知と非同期応答という 2 種類の着信メッセージを使用します。{{site.data.keyword.iot_short_notm}} は、Arm Mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。
+Arm Mbed プラットフォームでは、通知と非同期応答という 2 種類の着信メッセージを使用します。 {{site.data.keyword.iot_short_notm}} は、Arm Mbed プラットフォームに接続されているデバイスにコマンドを送信することができます。
 
 #### 通知
 
@@ -210,40 +214,40 @@ Arm Mbed プラットフォームに接続されているデバイスに {{site.
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-Orange 拡張を使用すると、Orange SIM カードが取り付けられた {{site.data.keyword.iot_short_notm}} 接続デバイスの SIM カード・データを表示することができます。
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Orange でサポートされる操作
+### Supported operations for Orange
 
-Orange SIM カードを持つ、{{site.data.keyword.iot_short_notm}} サービスに接続されたデバイスがある場合、Orange 拡張を使用することにより、以下の SIM カード・データを表示することができます。
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- SIM シリアル番号
-- アクティベーション状況
-- 最後の状況変更
-- 最後の状況リフレッシュ
-- ロケーション状況
+- SIM serial number
+- Activation status
+- Last status change
+- Last status refresh
+- Location status
 
-### Orange 用の REST API
-Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} の資料にある Orange 拡張のセクションを参照してください。
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Orange 用の構成
+### Configuration for Orange
 
-Orange 拡張を有効にするには、以下のようにします。
+To enable the Orange extension:
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
-2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
-3. Orange 拡張の横にある**「追加」**をクリックします。
-4. Orange のユーザー名とパスワードを入力します。
-6. **「完了」**をクリックします。
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-Orange 拡張が有効になった後、Orange SIM カードを持つ各デバイスで、Orange SIM データを表示するように構成する必要があります。
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. {{site.data.keyword.iot_short_notm}} ダッシュボードのデバイス・タブで、構成する Orange SIM デバイスを見つけます。
-2. デバイスを選択し、**「拡張構成」**までスクロールダウンします。
-3. 以下の JSON 形式を使用して拡張の構成を入力した後、**「変更の確認」**をクリックして構成を保存します。
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
@@ -253,7 +257,8 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
     }
 
 ```
-組織が正常に構成されると、「デバイス・ドリルダウン (Device Drilldown)」ビューの「拡張構成」セクションに「拡張」セクションが表示されます。
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## 履歴データ・ストレージ
 {: #historical_data}
@@ -283,9 +288,9 @@ API を使用してカスタム・デバイス管理パッケージを追加す�
 ## E メール
 {: #email}
 
-招待メールを使用して、ユーザーを {{site.data.keyword.iot_short_notm}} に追加することができます。 詳しくは、[ユーザーのアクセス権限の管理](/docs/IoT/add_users.html)を参照してください。
+招待メールを使用して、ユーザーを {{site.data.keyword.iot_short_notm}} に追加することができます。 詳しくは、[ユーザーのアクセス権限の管理](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access)を参照してください。
 
-招待メール機能を使用するには、SendGrid オンライン・サービスまたは Simple Mail Transfer Protocol (SMTP) サービスを使用するように E メール拡張機能を構成する必要があります。 この拡張機能では、SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用することもできます。
+招待メール機能を使用するには、SendGrid オンライン・サービスまたは Simple Mail Transfer Protocol (SMTP) サービスを使用するように E メール拡張機能を構成する必要があります。 この拡張機能では、SendGrid {{site.data.keyword.cloud_notm}} アプリケーションを使用することもできます。
 
 ### SendGrid オンライン・サービス
 
@@ -306,22 +311,22 @@ SMTP サービスを使用するように E メール拡張機能を構成する
 3. **「SMTP」**を選択します。
 4. SMTP サービスの構成の詳細を入力します。
 
-### SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーション
+### SendGrid {{site.data.keyword.cloud_notm}} アプリケーション
 
-SendGrid {{site.data.keyword.Bluemix_notm}} アプリケーションを使用するように E メール拡張機能を構成するには、以下の手順に従います。
+SendGrid {{site.data.keyword.cloud_notm}} アプリケーションを使用するように E メール拡張機能を構成するには、以下の手順に従います。
 
 1. ダミー・アプリケーションを作成し、SendGrid サービスをバインドします。  
 構成資格情報を取得するには、SendGrid サービスをダミー・アプリケーションに追加してバインドします。
 
- 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、**「サービスの作成」**をクリックします。
+ 1. {{site.data.keyword.cloud_notm}} ダッシュボードから、**「サービスの作成」**をクリックします。
  2. カタログから SendGrid サービスを選択し、**「作成」**をクリックします。
- 3. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.runtime_nodejs_full}} アプリケーションを追加します。
- 4. {{site.data.keyword.Bluemix_notm}} ダッシュボードから {{site.data.keyword.runtime_nodejs_notm}} アプリケーションをクリックし、**「サービスまたは API のバインド」**をクリックします。
+ 3. {{site.data.keyword.cloud_notm}} ダッシュボードから、{{site.data.keyword.runtime_nodejs_full}} アプリケーションを追加します。
+ 4. {{site.data.keyword.cloud_notm}} ダッシュボードから {{site.data.keyword.runtime_nodejs_notm}} アプリケーションをクリックし、**「サービスまたは API のバインド」**をクリックします。
  5. SendGrid サービスを選択し、**「追加」**をクリックします。
- 6. {{site.data.keyword.runtime_nodejs_notm}} アプリケーションの再ステージ処理を実行します。
+ 6. {{site.data.keyword.runtime_nodejs_notm}} アプリケーションを再ステージングします。
 2. {{site.data.keyword.iot_short_notm}} サービスを構成する準備をします。  
 {{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.iot_short_notm}} ダッシュボードまたは {{site.data.keyword.iot_short_notm}} API を使用して構成することができます。  
- 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードから、{{site.data.keyword.runtime_nodejs_notm}} アプリケーションをクリックします。
+ 1. {{site.data.keyword.cloud_notm}} ダッシュボードから、{{site.data.keyword.runtime_nodejs_notm}} アプリケーションをクリックします。
  2. ナビゲーション・バーから**「環境変数」**をクリックします。
  3. 表示された JSON を一時テキスト・ファイルにコピーします。  
  JSON は次の形式になるはずです。

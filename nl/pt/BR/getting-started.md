@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: IoT device, Watson IoT Platform, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -16,10 +20,10 @@ lastupdated: "2019-02-13"
 
 
 # Tutorial Introdução
-{: #getting-started .task}
+{: #getting-started}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -37,9 +41,9 @@ conectá-los ao {{site.data.keyword.iot_short_notm}}. A conexão de um dispositi
 {: #byb .sectiontitle}  
 
 Antes de poder começar a usar o {{site.data.keyword.iot_short_notm}}, deve-se ter os itens a seguir:  
-* Uma [conta do {{site.data.keyword.Bluemix}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/registration/){: new_window}.
+* Uma [conta do {{site.data.keyword.cloud}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/registration/){: new_window}.
 * Uma instância do {{site.data.keyword.iot_short_notm}}.  
-É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente na [página do {{site.data.keyword.iot_short_notm}} no Catálogo de serviços do {{site.data.keyword.Bluemix_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente por meio da [página do {{site.data.keyword.iot_short_notm}} no catálogo de serviços do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 * Um dispositivo que atende aos requisitos a seguir:  
   *	Seu dispositivo deve poder se comunicar usando os protocolos HTTP ou MQTT.
   * As mensagens do dispositivo devem se adequar aos requisitos de carga útil da mensagem do {{site.data.keyword.iot_short_notm}}.  
@@ -51,7 +55,7 @@ Explore as opções a seguir, dependendo de sua situação:
  | -------------| ------------- | -------------
   |**Eu tenho um dispositivo para conectar** | Siga o processo que está descrito neste tópico. | Explore a conexão de dispositivo no [Play
 com o {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") ](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**Eu não tenho um dispositivo para conectar** | [Simular dados do dispositivo](/docs/IoT/devices/device_sim.html) ou [Conectar seu smartphone ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Introdução ao [{{site.data.keyword.iot_short_notm}} Starter](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}.
+  |**Eu não tenho um dispositivo para conectar** | [Simular dados do dispositivo](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data) ou [Conectar seu smartphone ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Introdução ao [{{site.data.keyword.iot_short_notm}} Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}.
 
 
 
@@ -62,7 +66,7 @@ O registro de um dispositivo envolve classificar o dispositivo como um tipo de d
 **Dica:** é possível registrar seus dispositivos, um de cada vez, por meio do [painel do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://internetofthings.ibmcloud.com){: new_window} ou usar a [API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} para incluir vários dispositivos.
 
 Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_notm}}:
-1. No console do {{site.data.keyword.Bluemix_notm}}, clique em **Ativar** na página de detalhes do serviço {{site.data.keyword.iot_short_notm}}.
+1. No console do {{site.data.keyword.cloud_notm}}, clique em **Ativar** na página de detalhes do serviço {{site.data.keyword.iot_short_notm}}.
 
     O console da web do {{site.data.keyword.iot_short_notm}} é aberto em uma nova guia do navegador na URL a seguir:
 
@@ -156,7 +160,7 @@ Para conectar um dispositivo ao {{site.data.keyword.iot_short_notm}}:
 Estenda os recursos de análise de dados criando e conectando os seus próprios apps para consumir dados do dispositivo.
 - Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, veja [Orientações do developerWorks ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.
 - Verifique as [bibliotecas do cliente ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} para ferramentas para construir código para integrar e conectar os seus dispositivos e apps.
-- Explore a [Documentação da API do {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html).
+- Explore a [Documentação da API do {{site.data.keyword.iot_short_notm}} ](/docs/services/IoT?topic=iot-platform-api_overview#api_overview).
 - [Conecte um serviço {{site.data.keyword.cloudantfull}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} ao {{site.data.keyword.iot_short_notm}} para armazenar dados históricos do dispositivo.
 - Para se aproveitar do [conjunto de recursos integral do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}, é possível comprar um dos planos do Connection and Analytics Service e, em seguida, migrar o seu ambiente existente.
 

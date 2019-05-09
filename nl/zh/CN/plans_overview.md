@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform service plans, IoT Platform service plans, free Lite plan
+
+subcollection: iot-platform
 
 ---
 
@@ -17,7 +21,7 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} 服务套餐
 {: #plans_overview}
 
-<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+<p>该 {{site.data.keyword.cloud}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
 有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。</p>
 {: important}
 
@@ -42,4 +46,4 @@ lastupdated: "2019-02-13"
 要迁移套餐，请联系 {{site.data.keyword.IBM}} 代表或发出支持凭单。
 
 <!--- - To migrate from {{site.data.keyword.iot_short_notm}} Standard and Advanced Security plans, contact your {{site.data.keyword.IBM}} representative or raise a support ticket.--->
-要从 {{site.data.keyword.iot_short_notm}} 轻量套餐进行迁移或者要迁移至仅包含基本配置设置的其他套餐，请参阅[将 {{site.data.keyword.iot_short_notm}} 轻量套餐迁移至 {{site.data.keyword.iot_short_notm}} 非生产或生产](/docs/IoT/org_migration.html)中的指示信息。
+要从 {{site.data.keyword.iot_short_notm}} 轻量套餐进行迁移或者要迁移至仅包含基本配置设置的其他套餐，请参阅[将 {{site.data.keyword.iot_short_notm}} 轻量套餐迁移至 {{site.data.keyword.iot_short_notm}} 非生产或生产](/docs/services/IoT?topic=iot-platform-org_migration#org_migration)中的指示信息。

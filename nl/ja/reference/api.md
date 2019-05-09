@@ -3,7 +3,11 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: own organization, Extension HTTP APIs, API Use, AT&T Extension, Administer AT&T
+
+subcollection: iot-platform
 
 ---
 
@@ -11,6 +15,7 @@ lastupdated: "2019-02-13"
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:tip: .tip}
 {:pre: .pre}
 {:important: .important}
 
@@ -18,54 +23,46 @@ lastupdated: "2019-02-13"
 # API
 {: #api_overview}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
 {{site.data.keyword.iot_full}} に接続するデバイス、ゲートウェイ、アプリケーション向けのコードの開発用に、いくつかの API を使用できます。
 
-HTTP API は、HTTP 基本認証で保護されています。 ダッシュボードを使用して API キーを生成すると、キーと認証トークンが提示されます。 API キーとトークンについて詳しくは、[API キー接続 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key) を参照してください。
+HTTP API は、HTTP 基本認証で保護されています。ダッシュボードを使用して API キーを生成すると、キーと認証トークンが提示されます。 API キーとトークンについて詳しくは、[API キー接続 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key){: new_window} を参照してください。
 
 
 ## HTTP API について
 {: #api_about}
 
-対象の組織の登録が済むと、すべての HTTP API 呼び出しのホスト名で必要な、6 文字の組織 ID が提示されます。 組織のベース URL には、以下のアドレスでアクセスできます。
+それぞれの {{site.data.keyword.iot_short_notm}} 組織は、あらゆる HTTP API 呼び出しのためにホスト名に必要な 6 文字の組織 ID で識別されます。   
 
-https://<**orgId**>.internetofthings.ibmcloud.com/api/v0002
+### API 資料
+{: #api_docs}
 
-アプリケーション API に対する要求を認証するには、ユーザー名を API キーに設定し、パスワードを認証トークンに設定します。
+API 資料を見るには、[IBM Watson IoT Platform REST APIs ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/index.html){: new_window} ページを参照してください。このランディング・ページから、使用可能な {{site.data.keyword.iot_short_notm}} API の資料にアクセスできます。
 
-Messaging API の場合は、以下のアドレスを使用します。
+### 対話式の API 資料
 
-https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
+対話式の API 資料を表示および使用する場合、組織のベース URL には、以下のアドレスでアクセスできます。
 
-## HTTP API
-{: #api_http}
+`https://<orgId>.internetofthings.ibmcloud.com/docs/index.html`
 
-API                     | 使用目的       
-------------- | -------------
-[組織管理![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 組織を構成し (デバイスの作成と削除を含む)、使用量とサービス状況を確認し、デバイス接続の問題を診断します。
-[セキュリティー![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | ユーザー、API キー、およびデバイスの認証および許可を管理します。
-[情報管理![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} | デバイス・イベント・データにアクセスし、デバイス・ロケーションを取得して更新し、そのロケーションの気象情報を取得します。
-[データ管理![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   {{site.data.keyword.iot_short_notm}} の着信データと発信データを編成して統合します。
-[デバイス管理 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | デバイス管理プロトコルを使用して、管理対象デバイスとやり取りします。
-[メッセージング ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP を使用して、イベントをパブリッシュし、コマンドを送信します。
-[リスク管理 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | リスク管理のポリシーとレポートを管理します。
+このランディング・ページから、使用可能な {{site.data.keyword.iot_short_notm}} API の資料にアクセスできます。API 呼び出しを資料から直接実行するためのアクセス権限を得るには、許可を受ける必要があります。
 
-## 拡張 HTTP API
-{: #api_extension}
+自動的に許可されるようにするには、以下のステップを実行します。
 
-API                     | 使用目的       
-------------- | -------------
-[AT&T 拡張 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | AT&T デバイスを管理します。
-[Jasper 拡張  ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Jasper デバイスを管理します。
-[Orange 拡張  ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | {{site.data.keyword.iot_short_notm}} 組織に接続されている Orange SIM カード装着デバイスの SIM カード・データを表示します。
+1. {{site.data.keyword.iot_short_notm}} ダッシュボードにログインします。
+2. 同じブラウザーで、新しいタブを開き、対話式の API 資料のランディング・ページに移動します。
 
-## ベータ HTTP API
-{: #api_beta}
+{{site.data.keyword.iot_short_notm}} ダッシュボードにログインしていない場合は、以下のステップを実行します。
 
-API                     | 使用目的       
-------------- | -------------
-[削除されたデバイスのリストア ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   | 間違えてデバイスを削除した場合、14 日以内であれば復元できます。
+1. 対話式の API 資料のランディング・ページに移動します。
+2. `「許可」`を選択します。
+3. `「使用可能な許可 (Available authorizations)」`ボックスで、ユーザー名を API キーに設定し、パスワードを認証トークンに設定します。`「許可」`を選択します。
+4. `「使用可能な許可 (Available authorizations)」`ボックスを閉じます。**重要:** `「ログアウト」`を選択しないでください。
+
+許可されたら、特定の API 呼び出しに移動し、`「試してみる (Try it out)」`ボタンを使用して、API 呼び出しを資料から直接実行します。
+
+<!-- To authenticate requests to the application API, set the username to the API key and the password to the authentication token. -->

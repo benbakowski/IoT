@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -13,11 +17,11 @@ lastupdated: "2019-02-13"
 {:pre: .pre}
 {:important: .important}
 
-# Informations de connexion pour les applications, les terminaux et les passerelles 
+# Informations de connexion pour les applications, les terminaux et les passerelles
 {: #connect_devices_apps_gw}
 
-<p>Cette série de documents {{site.data.keyword.Bluemix}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
-Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir la [documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [Plans de service {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview).
+<p>Cette série de documents {{site.data.keyword.cloud}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
+Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir la [documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [{{site.data.keyword.iot_short_notm}}Plans de service](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -44,15 +48,10 @@ Pour connecter des clients de terminal, d'application et de passerelle à votre 
 - Où *orgId* est l'ID d'organisation unique qui a été généré lorsque vous avez enregistré l'instance de service.
 - Si vous connectez un terminal ou une application au service Quickstart, spécifiez 'quickstart' comme valeur *orgId*.
 
-## Configuration du pare-feu
-{: #firewall_configuration}
-
-Pour connecter des terminaux et des applications à {{site.data.keyword.iot_short_notm}}, vous devez vous assurer que votre éventuel pare-feu est configuré pour autoriser le trafic sur des ports spécifiques. Un pare-feu peut se trouver sur votre machine locale, sur votre routeur ou faire partie de votre réseau d'entreprise. 
-
 ### Sécurité du port
 {: #client_port_security}
 
-Les terminaux, les passerelles et les applications se connectent à {{site.data.keyword.iot_short_notm}} avec le protocole MQTT ou HTTP. Les connexions peuvent être sécurisées ou non. 
+Les terminaux, les passerelles et les applications se connectent à {{site.data.keyword.iot_short_notm}} avec le protocole MQTT ou HTTP. Les connexions peuvent être sécurisées ou non.
 
 |Type de connexion |Protocole|Numéro de port|
 |:---|:---|:---|
@@ -63,23 +62,23 @@ Les terminaux, les passerelles et les applications se connectent à {{site.data.
 
 MQTT est pris en charge via TCP et des WebSockets. Les clients MQTT se connectent en utilisant des données d'identification appropriées, telles que des jetons d'authentification pour les terminaux et des clés et des jetons d'API pour les applications. Etant donné que la messagerie MQTT via le port non sécurisé 1883 envoie ces données d'identification sous forme de texte brut, utilisez toujours les alternatives sécurisées 8883 ou 443 à la place. Les données d'identification TLS sont toujours chiffrées lorsqu'elles sont envoyées via des ports sécurisés. N'oubliez pas que vous devez activer TLS dans l'application (par exemple, en utilisant la méthode `tls_set()` dans la bibliothèque Python MQTT). A défaut, les données seront peut-être envoyées de manière non sécurisée.
 
-Lorsque vous utilisez la messagerie MQTT sécurisée sur les ports 8883 ou 443, les bibliothèques client plus récentes font automatiquement confiance au certificat par défaut qui est présenté par {{site.data.keyword.iot_short_notm}}. Si ce n'est pas le cas pour votre environnement client, vous pouvez télécharger et utiliser la chaîne de certificats complète à partir de [messaging.pem ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-python/blob/master/src/wiotp/sdk/messaging.pem){: new_window}. Si vous avez téléchargé un certificat personnalisé, il peut être nécessaire de vérifier que la chaîne de confiance appropriée a été ajoutée à votre environnement client. 
+Lorsque vous utilisez la messagerie MQTT sécurisée sur les ports 8883 ou 443, les bibliothèques client plus récentes font automatiquement confiance au certificat par défaut qui est présenté par {{site.data.keyword.iot_short_notm}}. Si ce n'est pas le cas pour votre environnement client, vous pouvez télécharger et utiliser la chaîne de certificats complète à partir de [messaging.pem ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-watson-iot/iot-python/blob/master/src/wiotp/sdk/messaging.pem){: new_window}. Si vous avez téléchargé un certificat personnalisé, il peut être nécessaire de vérifier que la chaîne de confiance appropriée a été ajoutée à votre environnement client.
 
 ## Configuration du pare-feu
 {: #firewall_configuration .sectiontitle}
 
-Pour connecter des terminaux et des applications à {{site.data.keyword.iot_short_notm}}, vous devez vous assurer que votre éventuel pare-feu est configuré pour autoriser le trafic sur des ports spécifiques. Un pare-feu peut se trouver sur votre machine locale, sur votre routeur ou faire partie de votre réseau d'entreprise. 
+Pour connecter des terminaux et des applications à {{site.data.keyword.iot_short_notm}}, vous devez vous assurer que votre éventuel pare-feu est configuré pour autoriser le trafic sur des ports spécifiques. Un pare-feu peut se trouver sur votre machine locale, sur votre routeur ou faire partie de votre réseau d'entreprise.
 
-Assurez-vous que les adresses IP requises sont ouvertes et activées pour la communication. 
+Assurez-vous que les adresses IP requises sont ouvertes et activées pour la communication.
 
-|Région | Adresse IP|Ports de messagerie</br> (non sécurisés) | Ports de messagerie (sécurisés) |
+|Région | Adresse IP|Ports de messagerie</br> (non sécurisés) | Ports de messagerie (sécurisés)|
 |:---|:---|:---| :---|
 |us-south|169.45.2.16/28* </br>169.46.7.56/29</br>169.48.234.208/29</br>169.62.202.128/29|1883,80 | 8883,443|
 |eu-gb|159.8.169.208/28* </br>158.175.111.152/29</br>158.176.104.24/29</br>141.125.70.152/29|1883,80 | 8883,443|
 |eu-de|159.122.121.80/28* </br>149.81.125.176/29</br>158.177.82.208/29</br>161.156.96.80/29|1883,80 | 8883,443|
 |Quickstart|169.45.2.16/28* </br>169.46.7.56/29</br>169.48.234.208/29</br>169.62.202.128/29|1883,80 | non disponible|
 |Dedicated {{site.data.keyword.iot_short_notm}}|Contactez votre interlocuteur {{site.data.keyword.IBM}}.|-| - |
-&ast; N'est plus valable après le premier trimestre 2019. 
+&ast; N'est plus valable après le premier trimestre 2019.
 
 ## Exigences TLS
 {: #tls_requirements}
@@ -175,7 +174,7 @@ Lorsque vous établissez une connexion MQTT à l'aide d'une clé d'API, assurez-
 
 - L'ID de client MQTT doit être au format suivant : a:*orgId*:*appId*
 - Le nom d'utilisateur MQTT doit correspondre à la clé d'API, par exemple, a-*orgId*-a84ps90Ajs
-- Le mot de passe MQTT doit correspondre au jeton d'authentification, par exemple, *MP$08VKz!8rXwnR-Q** 
+- Le mot de passe MQTT doit correspondre au jeton d'authentification, par exemple, *MP$08VKz!8rXwnR-Q**
 
 Pour plus d'informations, voir [Connectivité MQTT pour les applications ![Icône de lien externe](../../../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/applications/mqtt.html){: new_window}.
 

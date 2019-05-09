@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform service plans, IoT Platform service plans, free Lite plan
+
+subcollection: iot-platform
 
 ---
 
@@ -17,7 +21,7 @@ lastupdated: "2019-02-13"
 # Planos de serviços do {{site.data.keyword.iot_short_notm}}
 {: #plans_overview}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
 Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center.
 </p>
 {: important}
@@ -43,4 +47,4 @@ Se você for um cliente existente e desejar aproveitar o [conjunto de recursos c
 Para migrar planos, entre em contato com seu representante {{site.data.keyword.IBM}} ou levante um chamado de suporte.
 
 <!--- - To migrate from {{site.data.keyword.iot_short_notm}} Standard and Advanced Security plans, contact your {{site.data.keyword.IBM}} representative or raise a support ticket.--->
-Para migrar do plano Lite do {{site.data.keyword.iot_short_notm}} ou para migrar para outros planos com apenas as definições de configuração essenciais incluídas, consulte as instruções em [Migrando o {{site.data.keyword.iot_short_notm}} Lite para o {{site.data.keyword.iot_short_notm}} Non-production ou Production](/docs/IoT/org_migration.html).
+Para migrar do plano Lite do {{site.data.keyword.iot_short_notm}} ou para migrar para outros planos com apenas as definições de configuração essenciais incluídas, consulte as instruções em [Migrando o {{site.data.keyword.iot_short_notm}} Lite para o {{site.data.keyword.iot_short_notm}} Non-production ou Production](/docs/services/IoT?topic=iot-platform-org_migration#org_migration).

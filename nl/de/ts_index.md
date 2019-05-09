@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} - Fehlerbehebung
 {: #ts}
 
-<p>Diese {{site.data.keyword.Bluemix}}-Dokumentationssammlung bezieht sich auf den Lite-Preisstrukturplan von {{site.data.keyword.iot_full}} und enthält grundlegende Informationen zum Einstieg, API-Referenzinformationen und allgemeine Informationen zur Fehlerbehebung.
-Die vollständige Dokumentation zum {{site.data.keyword.iot_short_notm}}-Feature finden Sie in der [{{site.data.keyword.iot_short_notm}}-Produktdokumentation![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) im IBM Knowledge Center. Weitere Informationen zu den verschiedenen Plänen finden Sie in [{{site.data.keyword.iot_short_notm}}-Servicepläne](/docs/IoT/plans_overview.html#plans_overview).
+<p>Diese {{site.data.keyword.cloud}}-Dokumentationssammlung bezieht sich auf den Lite-Preisstrukturplan von {{site.data.keyword.iot_full}} und enthält grundlegende Informationen zum Einstieg, API-Referenzinformationen und allgemeine Informationen zur Fehlerbehebung.
+Die vollständige Dokumentation zum {{site.data.keyword.iot_short_notm}}-Feature finden Sie in der [{{site.data.keyword.iot_short_notm}}-Produktdokumentation![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) im IBM Knowledge Center. Weitere Informationen zu den verschiedenen Plänen finden Sie in [{{site.data.keyword.iot_short_notm}}-Servicepläne](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview).
 </p>
 {: important}
 
-Hier finden Sie Antworten auf allgemeine Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.iot_full}} in {{site.data.keyword.Bluemix_notm}}.
+Hier finden Sie Antworten auf allgemeine Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.iot_full}} in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 ## Fehler beim Zugriff auf Ihre {{site.data.keyword.iot_short_notm}}-Organisation
@@ -33,12 +37,12 @@ Sie können sich bei einer {{site.data.keyword.iot_short_notm}}-Organisation nic
 Sie können sich bei Ihrer {{site.data.keyword.iot_short_notm}}-Organisation weder mit der URL der Organisation noch über die Webadresse `https://internetofthings.ibmcloud.com` direkt anmelden.
 {: tsSymptoms}
 
-Die Zugriffsberechtigung für Ihre {{site.data.keyword.iot_short_notm}}-Organisation ist möglicherweise abgelaufen. Für {{site.data.keyword.iot_short_notm}}-Organisationen, die unter Verwendung von {{site.data.keyword.Bluemix}} erstellt wurden, werden standardmäßig temporäre Benutzerprofile verwendet.
+Die Zugriffsberechtigung für Ihre {{site.data.keyword.iot_short_notm}}-Organisation ist möglicherweise abgelaufen. Für {{site.data.keyword.iot_short_notm}}-Organisationen, die unter Verwendung von {{site.data.keyword.cloud}} erstellt wurden, werden standardmäßig temporäre Benutzerprofile verwendet.
 {: tsCauses}
 
-Zur Behebung dieses Problem können Sie über {{site.data.keyword.Bluemix_notm}} auf Ihre {{site.data.keyword.iot_short_notm}} zugreifen und die Ablaufeinstellungen für Ihr Benutzerprofil ändern. Gehen Sie wie folgt vor, um die Ablaufeinstellungen für Ihr Benutzerprofil zu ändern:
+Zur Behebung dieses Problem können Sie über {{site.data.keyword.cloud_notm}} auf Ihre {{site.data.keyword.iot_short_notm}}-Organisation zugreifen und die Ablaufeinstellungen für Ihr Benutzerprofil ändern. Gehen Sie wie folgt vor, um die Ablaufeinstellungen für Ihr Benutzerprofil zu ändern:
 
-1. Öffnen Sie in Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard Ihren {{site.data.keyword.iot_short_notm}}-Service.
+1. Öffnen Sie in Ihrem {{site.data.keyword.cloud_notm}}-Dashboard Ihren {{site.data.keyword.iot_short_notm}}-Service.
 2. Klicken Sie in der Navigationsleiste auf **Mitglieder**.
 3. Klicken Sie auf das Bearbeitungssymbol****.
 4. Löschen Sie den Inhalt des Kontrollkästchens **Zugriff läuft ab** und klicken Sie auf **Speichern**.

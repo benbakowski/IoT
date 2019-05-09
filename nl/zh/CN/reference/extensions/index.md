@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # 外部服务集成
 {: #ref-index}
 
-<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
-有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+<p>该 {{site.data.keyword.cloud}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到有关各种套餐的更多信息。
 </p>
 {: important}
 
@@ -210,40 +214,40 @@ Arm Mbed 平台使用两种类型的入局消息：通知和异步响应。{{sit
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-通过 Orange 扩展，可从连接到 {{site.data.keyword.iot_short_notm}} 且安装了 Orange SIM 卡的设备查看 SIM 卡数据。
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Orange 的受支持操作
+### Supported operations for Orange
 
-如果您的设备连接到 {{site.data.keyword.iot_short_notm}} 服务且具有 Orange SIM 卡，那么可使用 Orange 扩展来查看以下 SIM 卡数据：
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- SIM 序列号
-- 激活状态
-- 上次状态更改
-- 上次状态刷新
-- 位置状态
+- SIM serial number
+- Activation status
+- Last status change
+- Last status refresh
+- Location status
 
-### 用于 Orange 的 REST API
-要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} 文档的“Orange 扩展”部分。
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Orange 的配置
+### Configuration for Orange
 
-要启用 Orange 扩展，请执行以下操作：
+To enable the Orange extension:
 
-1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
-2. 在**扩展**页面上，单击**添加扩展**。
-3. 单击 Orange 扩展旁的**添加**。
-4. 输入 Orange 用户名和密码。
-6. 单击**完成**。
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-启用 Orange 扩展后，必须配置具有 Orange SIM 卡的每个设备以显示 Orange SIM 数据。
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的 Orange SIM 设备。
-2. 选择此设备并向下滚动到**扩展配置**。
-3. 通过使用以下 JSON 格式输入扩展配置，然后单击**确认更改**以保存配置。
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
@@ -253,7 +257,8 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
     }
 
 ```
-成功配置组织后，会在“设备向下钻取”视图中“扩展配置”部分下显示“扩展”部分。
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## 历史数据存储
 {: #historical_data}
@@ -283,9 +288,9 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ## 电子邮件
 {: #email}
 
-使用电子邮件邀请，可以将用户添加到 {{site.data.keyword.iot_short_notm}}。有关信息，请参阅[管理用户访问权](/docs/IoT/add_users.html)。
+使用电子邮件邀请，可以将用户添加到 {{site.data.keyword.iot_short_notm}}。有关信息，请参阅[管理用户访问权](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access)。
 
-要使用电子邮件邀请功能，必须配置电子邮件扩展，以使用 SendGrid 在线服务或简单电子邮件传输协议 (SMTP) 服务。扩展还可以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序。
+要使用电子邮件邀请功能，必须配置电子邮件扩展，以使用 SendGrid 在线服务或简单电子邮件传输协议 (SMTP) 服务。扩展还可以使用 SendGrid {{site.data.keyword.cloud_notm}} 应用程序。
 
 ### SendGrid 在线服务
 
@@ -306,22 +311,22 @@ iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 3. 选择 **SMTP**。
 4. 输入 SMTP 服务的配置详细信息。
 
-### SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序
+### SendGrid {{site.data.keyword.cloud_notm}} 应用程序
 
-要配置电子邮件扩展以使用 SendGrid {{site.data.keyword.Bluemix_notm}} 应用程序，请遵循以下步骤：
+要配置电子邮件扩展以使用 SendGrid {{site.data.keyword.cloud_notm}} 应用程序，请遵循以下步骤：
 
 1. 创建哑元应用程序，并绑定 SendGrid 服务。  
 要检索配置凭证，请添加 SendGrid 服务并将其绑定到哑元应用程序。
 
- 1. 在 {{site.data.keyword.Bluemix_notm}} 仪表板中，单击**创建服务**。
+ 1. 在 {{site.data.keyword.cloud_notm}} 仪表板中，单击**创建服务**。
  2. 从目录选择 SendGrid 服务并单击**创建**。
- 3. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，添加 {{site.data.keyword.runtime_nodejs_full}} 应用程序。
- 4. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序，然后单击**绑定服务或 API**。
+ 3. 在 {{site.data.keyword.cloud_notm}}“仪表板”中，添加 {{site.data.keyword.runtime_nodejs_full}} 应用程序。
+ 4. 在 {{site.data.keyword.cloud_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序，然后单击**绑定服务或 API**。
  5. 选择 SendGrid 服务并单击**添加**。
  6. 重新编译打包 {{site.data.keyword.runtime_nodejs_notm}} 应用程序。
 2. 准备配置 {{site.data.keyword.iot_short_notm}} 服务。  
 可以使用 {{site.data.keyword.iot_short_notm}} 仪表板或使用 {{site.data.keyword.iot_short_notm}} API 对 {{site.data.keyword.iot_short_notm}} 进行配置。  
- 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序。
+ 1. 在 {{site.data.keyword.cloud_notm}}“仪表板”中，单击 {{site.data.keyword.runtime_nodejs_notm}} 应用程序。
  2. 单击导航栏中的**环境变量**。
  3. 将显示的 JSON 复制到临时文本文件。  
 此 JSON 应该具有以下格式：

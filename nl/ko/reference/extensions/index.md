@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # 외부 서비스 통합
 {: #ref-index}
 
-<p>이 {{site.data.keyword.Bluemix}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
-전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/IoT/plans_overview.html#plans_overview)에서 찾을 수 있습니다.
+<p>이 {{site.data.keyword.cloud}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
+전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)에서 찾을 수 있습니다.
 </p>
 {: important}
 
@@ -117,7 +121,7 @@ AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTT
 
 2. 디바이스를 구성하십시오.
 {{site.data.keyword.iot_short_notm}} 대시보드에서 AT&T의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 AT&T 계정에 모두 연결된 디바이스를 구성할 수 있습니다.  
-**중요:** AT&T 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 AT&T로 구성할 수 있습니다.   
+**중요:** AT&T 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 AT&T로 구성할 수 있습니다.  
 AT&T 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
  1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 페이지에서 구성할 AT&T 연결 디바이스를 찾으십시오.
  2. 디바이스 드릴다운 보기를 열 디바이스를 선택하십시오.
@@ -138,7 +142,7 @@ AT&T 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
 ## Arm Mbed 브릿지
 {: #arm}
 
-브릿지를 사용하여 Arm Mbed 디바이스는 {{site.data.keyword.iot_short_notm}}과 통합하고 메시지를 양방향으로 교환할 수 있습니다. 이 통합을 사용하려면 우선 Arm Mbed Cloud 계정에 등록한 후에 {{site.data.keyword.iot_short_notm}} 구성에 대해 요청된 연결 정보를 제공해야 합니다. 
+브릿지를 사용하여 Arm Mbed 디바이스는 {{site.data.keyword.iot_short_notm}}과 통합하고 메시지를 양방향으로 교환할 수 있습니다. 이 통합을 사용하려면 우선 Arm Mbed Cloud 계정에 등록한 후에 {{site.data.keyword.iot_short_notm}} 구성에 대해 요청된 연결 정보를 제공해야 합니다.
 
 ### 구성 설정
 
@@ -157,7 +161,7 @@ Arm Mbed 플랫폼은 두 가지 유형의 수신 메시지(알림 및 비동기
 
 #### 알림
 
-디바이스 또는 센서 데이터의 변경사항에 의해 알림이 생성됩니다. {{site.data.keyword.iot_short_notm}}에서 메시지를 처리하고 나면 {{site.data.keyword.iot_short_notm}}에 직접 연결된 디바이스와 동일한 방식으로 디바이스 이벤트 주제에 전송됩니다. Arm Mbed 플랫폼에 연결된 디바이스에서 시작되는 알림에 사용되는 이벤트 유형은 `notify`입니다. 
+디바이스 또는 센서 데이터의 변경사항에 의해 알림이 생성됩니다. {{site.data.keyword.iot_short_notm}}에서 메시지를 처리하고 나면 {{site.data.keyword.iot_short_notm}}에 직접 연결된 디바이스와 동일한 방식으로 디바이스 이벤트 주제에 전송됩니다. Arm Mbed 플랫폼에 연결된 디바이스에서 시작되는 알림에 사용되는 이벤트 유형은 `notify`입니다.
 
 다음 코드 샘플은 Arm Mbed 플랫폼 API에서 전송한 알림에 대한 페이로드 형식을 표시합니다.
 
@@ -191,7 +195,7 @@ Arm Mbed 플랫폼은 두 가지 유형의 수신 메시지(알림 및 비동기
 
 #### Arm Mbed 플랫폼에 명령 전송
 
-{{site.data.keyword.iot_short_notm}}은 Arm Mbed 플랫폼에 연결된 디바이스로 명령을 보낼 수 있습니다. Arm Mbed 플랫폼으로 전송되는 명령은 다음 JSON 형식을 사용해야 합니다. 
+{{site.data.keyword.iot_short_notm}}은 Arm Mbed 플랫폼에 연결된 디바이스로 명령을 보낼 수 있습니다. Arm Mbed 플랫폼으로 전송되는 명령은 다음 JSON 형식을 사용해야 합니다.
 
 ```
 {
@@ -210,40 +214,40 @@ Arm Mbed 플랫폼은 두 가지 유형의 수신 메시지(알림 및 비동기
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-Orange 확장기능을 사용하면 {{site.data.keyword.iot_short_notm}}에 연결되어 있으며 Orange SIM 카드가 설치된 디바이스에서 SIM 카드 데이터를 볼 수 있습니다.
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Orange에 지원되는 오퍼레이션
+### Supported operations for Orange
 
-{{site.data.keyword.iot_short_notm}} 서비스에 연결되어 있으며 Orange SIM 카드가 있는 디바이스가 있으면 Orange 확장기능을 사용하여 다음 SIM 카드 데이터를 볼 수 있습니다.
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- SIM 일련 번호
-- 활성화 상태
-- 마지막 상태 변경
-- 마지막 상태 새로 고치기
-- 위치 상태
+- SIM serial number
+- Activation status
+- Last status change
+- Last status refresh
+- Location status
 
-### Orange용 REST API
-Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} 문서에서 Orange 확장기능 섹션을 참조하십시오.
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Orange 구성
+### Configuration for Orange
 
-Orange 확장기능을 사용하려면 다음을 수행하십시오.
+To enable the Orange extension:
 
-1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 선택하십시오.
-2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
-3. Orange 확장기능 옆의 **추가**를 클릭하십시오.
-4. Orange 사용자 이름과 비밀번호를 입력하십시오.
-6. **완료**를 클릭하십시오.
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-Orange 확장기능을 사용으로 설정한 후에는 Orange SIM 데이터를 표시하도록 Orange SIM 카드가 있는 각 디바이스를 구성해야 합니다.
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 Orange SIM 디바이스를 찾으십시오.
-2. 디바이스를 선택하고 **확장기능 구성**까지 아래로 화면이동하십시오.
-3. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
@@ -253,7 +257,8 @@ Orange 확장기능을 사용으로 설정한 후에는 Orange SIM 데이터를 
     }
 
 ```
-조직이 정상적으로 구성되면 확장기능 섹션이 디바이스 드릴 다운 보기의 확장기능 구성 섹션에 표시됩니다.
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## 히스토리 데이터 스토리지
 {: #historical_data}
@@ -283,9 +288,9 @@ API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하�
 ## 이메일
 {: #email}
 
-사용자는 이메일 초대를 사용하여 {{site.data.keyword.iot_short_notm}}에 추가될 수 있습니다. 자세한 정보는 [사용자 액세스 관리](/docs/IoT/add_users.html)를 참조하십시오.
+사용자는 이메일 초대를 사용하여 {{site.data.keyword.iot_short_notm}}에 추가될 수 있습니다. 자세한 정보는 [사용자 액세스 관리](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access)를 참조하십시오.
 
-이메일 초대 기능을 사용하려면, 이메일 확장기능이 SendGrid 온라인 서비스 또는 SMTP(Simple Mail Transfer Protocol) 서비스를 사용하도록 구성되어 있어야 합니다. 이메일 확장기능은 SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션을 사용할 수도 있습니다.
+이메일 초대 기능을 사용하려면, 이메일 확장기능이 SendGrid 온라인 서비스 또는 SMTP(Simple Mail Transfer Protocol) 서비스를 사용하도록 구성되어 있어야 합니다. 이메일 확장기능은 SendGrid {{site.data.keyword.cloud_notm}} 애플리케이션을 사용할 수도 있습니다.
 
 ### SendGrid 온라인 서비스
 
@@ -306,22 +311,22 @@ SMTP 서비스와 함께 사용하도록 이메일 확장기능을 구성하려�
 3. **SMTP**를 선택하십시오.
 4. SMTP 서비스의 구성 세부사항을 입력하십시오.
 
-### SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션
+### SendGrid {{site.data.keyword.cloud_notm}} 애플리케이션
 
-SendGrid {{site.data.keyword.Bluemix_notm}} 애플리케이션과 함께 사용하도록 이메일 확장기능을 구성하려면 다음 단계를 따르십시오.
+SendGrid {{site.data.keyword.cloud_notm}} 애플리케이션과 함께 사용하도록 이메일 확장기능을 구성하려면 다음 단계를 따르십시오.
 
 1. 더미 애플리케이션을 작성하고 SendGrid 서비스를 바인드하십시오.  
-구성 인증 정보를 검색하려면 더미 애플리케이션에 SendGrid 서비스를 추가하고 바인드하십시오. 
+구성 인증 정보를 검색하려면 더미 애플리케이션에 SendGrid 서비스를 추가하고 바인드하십시오.
 
- 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 **서비스 작성**을 클릭하십시오.
+ 1. {{site.data.keyword.cloud_notm}} 대시보드에서 **서비스 작성**을 클릭하십시오.
  2. 카탈로그에서 SendGrid 서비스를 선택하고 **작성**을 클릭하십시오.
- 3. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.runtime_nodejs_full}} 애플리케이션을 추가하십시오.
- 4. {{site.data.keyword.Bluemix_notm}} 대시보드에서  {{site.data.keyword.runtime_nodejs_notm}} 애플리케이션을 클릭하고 **서비스 또는 API 바인드**를 클릭하십시오.
+ 3. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.runtime_nodejs_full}} 애플리케이션을 추가하십시오.
+ 4. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.runtime_nodejs_notm}} 애플리케이션을 클릭하고 **서비스 또는 API 바인드**를 클릭하십시오.
  5. SendGrid 서비스를 선택하고 **추가**를 클릭하십시오.
  6. {{site.data.keyword.runtime_nodejs_notm}} 애플리케이션을 다시 스테이징하십시오.
 2. {{site.data.keyword.iot_short_notm}} 서비스 구성을 준비하십시오.  
 {{site.data.keyword.iot_short_notm}}은 {{site.data.keyword.iot_short_notm}} 대시보드를 사용하거나 {{site.data.keyword.iot_short_notm}} API를 사용하여 구성될 수 있습니다.  
- 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.runtime_nodejs_notm}} 애플리케이션을 클릭하십시오.
+ 1. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.runtime_nodejs_notm}} 애플리케이션을 클릭하십시오.
  2. 탐색줄에서 **환경 변수**를 클릭하십시오.
  3. 임시 텍스트 파일에 표시된 JSON을 복사하십시오.  
  JSON은 다음 형식이어야 합니다.

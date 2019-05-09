@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform service plans, IoT Platform service plans, free Lite plan
+
+subcollection: iot-platform
 
 ---
 
@@ -17,7 +21,7 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} 服務方案
 {: #plans_overview}
 
-<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
+<p>此 {{site.data.keyword.cloud}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包含了基本入門資訊、API 參考資料及一般疑難排解資訊。
 如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。</p>
 {: important}
 
@@ -40,7 +44,7 @@ lastupdated: "2019-02-13"
 
 如果您是現有的客戶，並且想要利用完整的[{{site.data.keyword.iot_short_notm}}特性集![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}，您可以購買其中一個連線及分析服務方案，然後移轉現有的環境。
 
-如果要移轉方案，請聯絡您的 {{site.data.keyword.IBM}} 代表或提出支援問題單。
+如果要移轉方案，請與您的 {{site.data.keyword.IBM}} 代表聯絡，或提出支援問題單。
 
 <!--- - To migrate from {{site.data.keyword.iot_short_notm}} Standard and Advanced Security plans, contact your {{site.data.keyword.IBM}} representative or raise a support ticket.--->
-若要從 {{site.data.keyword.iot_short_notm}} 精簡方案移轉，或移轉至僅包括必要配置設定的其他方案，請參閱[將 {{site.data.keyword.iot_short_notm}} Lite 移轉至{{site.data.keyword.iot_short_notm}}非正式作業或正式作業](/docs/IoT/org_migration.html)中的指示。
+若要從 {{site.data.keyword.iot_short_notm}} 精簡方案移轉，或移轉至僅包括必要配置設定的其他方案，請參閱[將 {{site.data.keyword.iot_short_notm}} Lite 移轉至{{site.data.keyword.iot_short_notm}}非正式作業或正式作業](/docs/services/IoT?topic=iot-platform-org_migration#org_migration)中的指示。

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-10"
+
+keywords: IoT Platform organization, SIM devices, IBM Watson
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # Externe Services integrieren
 {: #ref-index}
 
-<p>Diese {{site.data.keyword.Bluemix}}-Dokumentationssammlung bezieht sich auf den Lite-Preisstrukturplan von {{site.data.keyword.iot_full}} und enthält grundlegende Informationen zum Einstieg, API-Referenzinformationen und allgemeine Informationen zur Fehlerbehebung.
-Die vollständige Dokumentation zum {{site.data.keyword.iot_short_notm}}-Feature finden Sie in der [{{site.data.keyword.iot_short_notm}}-Produktdokumentation![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) im IBM Knowledge Center. Weitere Informationen zu den verschiedenen Plänen finden Sie in [{{site.data.keyword.iot_short_notm}}-Servicepläne](/docs/IoT/plans_overview.html#plans_overview).
+<p>Diese {{site.data.keyword.cloud}}-Dokumentationssammlung bezieht sich auf den Lite-Preisstrukturplan von {{site.data.keyword.iot_full}} und enthält grundlegende Informationen zum Einstieg, API-Referenzinformationen und allgemeine Informationen zur Fehlerbehebung.
+Die vollständige Dokumentation zum {{site.data.keyword.iot_short_notm}}-Feature finden Sie in der [{{site.data.keyword.iot_short_notm}}-Produktdokumentation![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) im IBM Knowledge Center. Weitere Informationen zu den verschiedenen Plänen finden Sie in [{{site.data.keyword.iot_short_notm}}-Servicepläne](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview).
 </p>
 {: important}
 
@@ -33,16 +37,16 @@ Jasper ist eine Verwaltungs- und Managementplattform für SIM-Geräte. Jasper is
 Die von Ihrer Plattform bereitgestellte Integration von Jasper bietet Unterstützung für folgende Jasper-Operationen:
 
 - Gesamte Jasper-Daten anzeigen
-  - Status, Tarifplan, Datennutzung für den Monat bisher, SMS-Nutzung für den Monat bisher, Telefonnutzung für den Monat bisher, Überschreitungsgrenzwerte, Hinzufügungsdatum und Änderungsdatum werden angezeigt. 
+  - Status, Tarifplan, Datennutzung für den Monat bisher, SMS-Nutzung für den Monat bisher, Telefonnutzung für den Monat bisher, Überschreitungsgrenzwerte, Hinzufügungsdatum und Änderungsdatum werden angezeigt.
 - SIM-Aktivierungsstatus ändern
-  - Folgendes kann ausgewählt werden: Bestand, Aktivierungsbereit, Aktiviert, Inaktiviert und Ruhezustand. 
+  - Folgendes kann ausgewählt werden: Bestand, Aktivierungsbereit, Aktiviert, Inaktiviert und Ruhezustand.
 - SIM-Nutzung anzeigen
-  - Zyklusstartdatum, abrechnungsfähige und gesamte Datennutzung, abrechnungsfähige und gesamte SMS-Nutzung, abrechnungsfähige und gesamte Telefonnutzung werden angezeigt. 
-  - Das Zyklusstartdatum kann im Datumsformat JJJJ-MM-TT festgelegt werden. 
+  - Zyklusstartdatum, abrechnungsfähige und gesamte Datennutzung, abrechnungsfähige und gesamte SMS-Nutzung, abrechnungsfähige und gesamte Telefonnutzung werden angezeigt.
+  - Das Zyklusstartdatum kann im Datumsformat JJJJ-MM-TT festgelegt werden.
 - SMS an SIM senden
 - Tarifplan ändern
 
-Sie können auf die unterstützten Operationen im Menü 'Drilldown für Geräte' eines mit Jasper verbundenen Geräts zugreifen, nachdem die nachfolgend beschriebenen Konfigurationsschritte abgeschlossen sind. 
+Sie können auf die unterstützten Operationen im Menü 'Drilldown für Geräte' eines mit Jasper verbundenen Geräts zugreifen, nachdem die nachfolgend beschriebenen Konfigurationsschritte abgeschlossen sind.
 
 ### REST-APIs für Jasper
 Informationen für den Zugriff auf die REST-API für Jasper finden Sie im Abschnitt 'Jasper-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window}.
@@ -54,19 +58,19 @@ Zum Herstellen einer Verbindung vom Jasper-Service zur {{site.data.keyword.iot_s
 
 1. Jasper-Erweiterung aktivieren. Führen Sie folgende Schritte aus, um die Integration von Jasper in Ihre {{site.data.keyword.iot_short_notm}}-Organisation zu ermöglichen.
   1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
-  2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**. 
+  2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
   3. Klicken Sie neben 'Jasper' auf **Hinzufügen**.
   4. Geben Sie Ihren Benutzernamen, das Kennwort, den Zugriffsschlüssel und die Domänen-ID für Jasper ein.
   5. Klicken Sie auf **Fertig**.
 
 2. Geräte konfigurieren.
-Sie können die Geräte, die sowohl mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation als auch mit Ihrem Jasper-Konto verbunden sind, so konfigurieren, dass Daten von Jasper im Dashboard von {{site.data.keyword.iot_short_notm}} angezeigt werden.   
-**Wichtig:** Die Jasper-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden. Nur zuvor bereits verbundene Geräte können mit Jasper konfiguriert werden.   
+Sie können die Geräte, die sowohl mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation als auch mit Ihrem Jasper-Konto verbunden sind, so konfigurieren, dass Daten von Jasper im Dashboard von {{site.data.keyword.iot_short_notm}} angezeigt werden.  
+**Wichtig:** Die Jasper-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden. Nur zuvor bereits verbundene Geräte können mit Jasper konfiguriert werden.  
 Führen Sie folgende Schritte aus, um Ihre mit Jasper verbundenen Geräte zu konfigurieren:
- 1. Suchen Sie auf der Seite 'Geräte' des {{site.data.keyword.iot_short_notm}}-Dashboards nach dem zu konfigurierenden und mit Jasper verbundenen Gerät. 
- 2. Wählen Sie das Gerät aus, um die Ansicht 'Drilldown für Geräte' zu öffnen. 
- 3. Blättern Sie abwärts zur Option 'Erweiterungskonfiguration'. 
- 4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um die Konfiguration zu speichern.   
+ 1. Suchen Sie auf der Seite 'Geräte' des {{site.data.keyword.iot_short_notm}}-Dashboards nach dem zu konfigurierenden und mit Jasper verbundenen Gerät.
+ 2. Wählen Sie das Gerät aus, um die Ansicht 'Drilldown für Geräte' zu öffnen.
+ 3. Blättern Sie abwärts zur Option 'Erweiterungskonfiguration'.
+ 4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um die Konfiguration zu speichern.  
 
 ```json  
     {
@@ -77,7 +81,7 @@ Führen Sie folgende Schritte aus, um Ihre mit Jasper verbundenen Geräte zu kon
 
 ```
 
-Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweiterungen' unterhalb des Abschnitts 'Erweiterungskonfiguration' in der Ansicht 'Drilldown für Geräte' angezeigt. 
+Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweiterungen' unterhalb des Abschnitts 'Erweiterungskonfiguration' in der Ansicht 'Drilldown für Geräte' angezeigt.
 
 ## AT&T
 {: #att}
@@ -87,12 +91,12 @@ Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweit
 Die AT&T-Erweiterung ermöglicht folgende AT&T-Operationen:
 
 - Gesamte AT&T-Daten anzeigen
-  - Status, Tarifplan, Datennutzung für den Monat bisher, SMS-Nutzung für den Monat bisher, Telefonnutzung für den Monat bisher, Überschreitungsgrenzwerte, Hinzufügungsdatum und Änderungsdatum werden angezeigt. 
+  - Status, Tarifplan, Datennutzung für den Monat bisher, SMS-Nutzung für den Monat bisher, Telefonnutzung für den Monat bisher, Überschreitungsgrenzwerte, Hinzufügungsdatum und Änderungsdatum werden angezeigt.
 - SIM-Aktivierungsstatus ändern
-  - Folgendes kann ausgewählt werden: Bestand, Aktivierungsbereit, Aktiviert, Inaktiviert und Ruhezustand. 
+  - Folgendes kann ausgewählt werden: Bestand, Aktivierungsbereit, Aktiviert, Inaktiviert und Ruhezustand.
 - SIM-Nutzung anzeigen
-  - Zyklusstartdatum, abrechnungsfähige und gesamte Datennutzung, abrechnungsfähige und gesamte SMS-Nutzung, abrechnungsfähige und gesamte Telefonnutzung werden angezeigt. 
-  - Das Zyklusstartdatum kann im Datumsformat JJJJ-MM-TT festgelegt werden. 
+  - Zyklusstartdatum, abrechnungsfähige und gesamte Datennutzung, abrechnungsfähige und gesamte SMS-Nutzung, abrechnungsfähige und gesamte Telefonnutzung werden angezeigt.
+  - Das Zyklusstartdatum kann im Datumsformat JJJJ-MM-TT festgelegt werden.
 - SMS an SIM senden
 - Tarifplan ändern
 
@@ -101,15 +105,15 @@ Informationen für den Zugriff auf die REST-API für AT&T finden Sie im Abschnit
 
 ### Konfiguration für AT&T
 
-Wenn Sie Ihre {{site.data.keyword.iot_short_notm}}-Organisation mit AT&T verbinden möchten, müssen Sie eine Organisationskonfiguration und eine Gerätekonfiguration ausführen. 
+Wenn Sie Ihre {{site.data.keyword.iot_short_notm}}-Organisation mit AT&T verbinden möchten, müssen Sie eine Organisationskonfiguration und eine Gerätekonfiguration ausführen.
 
-Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.iot_short_notm}}-Plattform zu konfigurieren: 
+Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.iot_short_notm}}-Plattform zu konfigurieren:
 
 1. AT&T-Erweiterung aktivieren. Führen Sie folgende Schritte aus, um die Integration von AT&T und der {{site.data.keyword.iot_short_notm}}-Organisation zu aktivieren:
   1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
-  2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**. 
+  2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**.
   3. Klicken Sie neben AT&T auf die Option **Hinzufügen**.
-  4. Geben Sie Ihren Benutzernamen, das Kennwort, den Zugriffsschlüssel und die Domänen-ID für AT&T ein. 
+  4. Geben Sie Ihren Benutzernamen, das Kennwort, den Zugriffsschlüssel und die Domänen-ID für AT&T ein.
   5. Klicken Sie auf **Fertig**.
 
 Zum Herstellen einer Verbindung von der {{site.data.keyword.iot_short_notm}}-Organisation zum AT&T-Konto müssen zwei Konfigurationsphasen ausgeführt werden. Führen Sie die Konfiguration der Organisation aus und konfigurieren Sie anschließend Ihre Geräte.
@@ -117,12 +121,12 @@ Zum Herstellen einer Verbindung von der {{site.data.keyword.iot_short_notm}}-Org
 
 2. Geräte konfigurieren
 Sie können die Geräte, die sowohl mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation als auch mit Ihrem AT&T-Konto verbunden sind, so konfigurieren, dass Daten von AT&T im {{site.data.keyword.iot_short_notm}}-Dashboard angezeigt werden.  
-**Wichtig:** Die AT&T-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden. Nur zuvor bereits verbundene Geräte können mit AT&T konfiguriert werden.   
+**Wichtig:** Die AT&T-Konfiguration kann nicht im Rahmen des Prozesses zum Hinzufügen von Geräten angewendet werden. Nur zuvor bereits verbundene Geräte können mit AT&T konfiguriert werden.  
 Führen Sie folgende Schritte aus, um Ihre mit AT&T verbundenen Geräte zu konfigurieren:
- 1. Suchen Sie auf der Seite 'Geräte' des {{site.data.keyword.iot_short_notm}}-Dashboards nach dem zu konfigurierenden und mit AT&T verbundenen Gerät. 
- 2. Wählen Sie das Gerät aus, um die Ansicht 'Drilldown für Geräte' zu öffnen. 
- 3. Blättern Sie abwärts zur Option 'Erweiterungskonfiguration'. 
- 4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um die Konfiguration zu speichern.   
+ 1. Suchen Sie auf der Seite 'Geräte' des {{site.data.keyword.iot_short_notm}}-Dashboards nach dem zu konfigurierenden und mit AT&T verbundenen Gerät.
+ 2. Wählen Sie das Gerät aus, um die Ansicht 'Drilldown für Geräte' zu öffnen.
+ 3. Blättern Sie abwärts zur Option 'Erweiterungskonfiguration'.
+ 4. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um die Konfiguration zu speichern.  
 
 ```json  
     {
@@ -133,21 +137,21 @@ Führen Sie folgende Schritte aus, um Ihre mit AT&T verbundenen Geräte zu konfi
 
 ```
 
-Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweiterungen' unterhalb des Abschnitts 'Erweiterungskonfiguration' in der Ansicht 'Drilldown für Geräte' angezeigt. 
+Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweiterungen' unterhalb des Abschnitts 'Erweiterungskonfiguration' in der Ansicht 'Drilldown für Geräte' angezeigt.
 
 ## Arm Mbed-Bridge
 {: #arm}
 
-Mit der Bridge können Arm Mbed-Geräte in {{site.data.keyword.iot_short_notm}} integriert und bidirektional Nachrichten ausgetauscht werden. Um diese Integration zu ermöglichen, müssen Sie sich zuerst für ein ARM Mbed-Cloud-Konto registrieren und dann die angeforderten Verbindungsinformationen für Ihre {{site.data.keyword.iot_short_notm}}-Konfiguration angeben. 
+Mit der Bridge können Arm Mbed-Geräte in {{site.data.keyword.iot_short_notm}} integriert und bidirektional Nachrichten ausgetauscht werden. Um diese Integration zu ermöglichen, müssen Sie sich zuerst für ein ARM Mbed-Cloud-Konto registrieren und dann die angeforderten Verbindungsinformationen für Ihre {{site.data.keyword.iot_short_notm}}-Konfiguration angeben.
 
 ### Konfiguration für die Einrichtung
 
 
 1. Aktivieren Sie die Erweiterung für die Arm Mbed-Bridge. Führen Sie dazu die folgenden Schritte aus:
   1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
-  2. Klicken Sie auf der Seite 'Erweiterungen' auf **Erweiterung hinzufügen**. 
+  2. Klicken Sie auf der Seite 'Erweiterungen' auf **Erweiterung hinzufügen**.
   3. Klicken Sie neben der Erweiterung für die Arm Mbed-Bridge auf **Hinzufügen**.
-  4. Geben Sie den Zugriffsschlüssel für Arm Mbed ein. Sie können diesen Schlüssel über das Arm Mbed-Portal unter [https://portal.mbedcloud.com ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://portal.mbedcloud.com){: new_window} erstellen. 
+  4. Geben Sie den Zugriffsschlüssel für Arm Mbed ein. Sie können diesen Schlüssel über das Arm Mbed-Portal unter [https://portal.mbedcloud.com ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://portal.mbedcloud.com){: new_window} erstellen.
   5. Prüfen Sie, ob die Berechtigungsnachweise richtig sind, indem Sie auf die Schaltfläche **Verbindung überprüfen** klicken.
   6. Klicken Sie auf **Fertig**.
 
@@ -157,7 +161,7 @@ Die Arm Mbed-Plattform verwendet zwei Typen eingehender Nachrichten: Benachricht
 
 #### Benachrichtigungen
 
-Benachrichtigungen werden durch Änderungen in den Geräte- oder Sensordaten generiert. Nachdem {{site.data.keyword.iot_short_notm}} die Nachricht verarbeitet hat, wird sie auf dieselbe Weise an das Ereignistopic des Geräts gesendet wie bei einem Gerät, das direkt mit {{site.data.keyword.iot_short_notm}} verbunden ist. Der Ereignistyp, der für Benachrichtigungen verwendet wird, die von Geräten stammen, die mit der Arm Mbed-Plattform verbunden sind, lautet `notify`. 
+Benachrichtigungen werden durch Änderungen in den Geräte- oder Sensordaten generiert. Nachdem {{site.data.keyword.iot_short_notm}} die Nachricht verarbeitet hat, wird sie auf dieselbe Weise an das Ereignistopic des Geräts gesendet wie bei einem Gerät, das direkt mit {{site.data.keyword.iot_short_notm}} verbunden ist. Der Ereignistyp, der für Benachrichtigungen verwendet wird, die von Geräten stammen, die mit der Arm Mbed-Plattform verbunden sind, lautet `notify`.
 
 Das folgende Codebeispiel zeigt das Nutzdatenformat für eine Benachrichtigung, die von der API der Arm Mbed-Plattform gesendet wurde:
 
@@ -191,7 +195,7 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort
 
 #### Befehle an die Arm Mbed-Plattform senden
 
-{{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der Arm Mbed-Plattform verbunden sind. An die Arm Mbed-Plattform gesendete Befehle müssen das folgende JSON-Format aufweisen: 
+{{site.data.keyword.iot_short_notm}} kann Befehle an Geräte senden, die mit der Arm Mbed-Plattform verbunden sind. An die Arm Mbed-Plattform gesendete Befehle müssen das folgende JSON-Format aufweisen:
 
 ```
 {
@@ -201,7 +205,7 @@ Das folgende Codebeispiel zeigt das Nutzdatenformat für eine asynchrone Antwort
   "payload": <Nutzdaten mit Base64-Codierung>
 }
 ```
-Bei der gewählten Methode muss die Groß-/Kleinschreibung beachtet werden. Die erste Angabe `/` des Ressourcenpfads muss übersprungen werden. 
+Bei der gewählten Methode muss die Groß-/Kleinschreibung beachtet werden. Die erste Angabe `/` des Ressourcenpfads muss übersprungen werden.
 
 
 Die Nutzdaten müssen im folgenden Topic publiziert werden:
@@ -210,66 +214,67 @@ Die Nutzdaten müssen im folgenden Topic publiziert werden:
 iot-2/type/<Gerätetyp>/id/<Geräte-ID>/cmd/<Befehlstyp>/fmt/<Befehlsformat>
 ```
 
-
+<!--
 ## Orange
 {: #orange}
 
-Die Orange-Erweiterung ermöglicht es Ihnen, die Daten der SIM-Karte von Geräten anzuzeigen, die mit {{site.data.keyword.iot_short_notm}} verbunden sind und in denen eine Orange-SIM-Karte installiert ist. 
+The Orange extension allows you to view SIM card data from devices that are connected to your {{site.data.keyword.iot_short_notm}} and have an Orange SIM card installed.
 
-### Unterstützte Operationen für Orange
+### Supported operations for Orange
 
-Wenn Sie über ein Gerät verfügen, das mit Ihrem {{site.data.keyword.iot_short_notm}}-Service verbunden ist und über eine Orange-SIM-Karte verfügt, können Sie die Orange-Erweiterung verwenden, um die folgenden Daten der SIM-Karte anzuzeigen:
+If you have a device that is connected to your {{site.data.keyword.iot_short_notm}} service and has an Orange SIM card, you can use the Orange extension to view the following SIM card data:
 
-- SIM-Seriennummer
-- Aktivierungsstatus
-- Letzter Änderungsstatus
-- Letzter Aktualisierungsstatus
-- Standortstatus
+- SIM serial number
+- Activation status
+- Last status change
+- Last status refresh
+- Location status
 
-### REST-APIs für Orange
-Informationen für den Zugriff auf die REST-API für Orange finden Sie im Abschnitt 'Orange-Erweiterung' in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window}.
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} documentation.
 
-### Konfiguration für Orange
+### Configuration for Orange
 
-Gehen Sie wie folgt vor, die Orange-Erweiterung zu aktivieren:
+To enable the Orange extension:
 
-1. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Option **Erweiterungen** aus.
-2. Klicken Sie auf der Seite **Erweiterungen** auf **Erweiterung hinzufügen**. 
-3. Klicken Sie neben der Orange-Erweiterung auf **Hinzufügen**.
-4. Geben Sie Ihren Benutzernamen und das Kennwort für Orange ein.
-6. Klicken Sie auf **Fertig**.
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. On the **Extensions** page, click **Add Extension**.
+3. Click **Add** next to the Orange extension.
+4. Enter your Orange user name and password.
+6. Click **Done**.
 
-Nach dem Aktivieren der Orange-Erweiterung muss jedes Gerät mit einer Orange-SIM-Karte für die Anzeige von Daten der Orange-SIM-Karte konfiguriert werden.
+After the Orange extension has been enabled, each device that has an Orange SIM card must be configured to display Orange SIM data.
 
-1. Suchen Sie auf der Registerkarte 'Geräte' in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard nach dem zu konfigurierenden Orange-SIM-Gerät. 
-2. Wählen Sie das Gerät aus und blättern Sie abwärts zu **Erweiterungskonfiguration**.
-3. Geben Sie die Erweiterungskonfiguration ein, indem Sie das folgende JSON-Format verwenden, und klicken Sie anschließend auf **Änderungen bestätigen**, um die Konfiguration zu speichern. 
+1. In the devices tab of your {{site.data.keyword.iot_short_notm}} dashboard, find the Orange SIM device to configure.
+2. Select the device and scroll down to **Extension Configuration**.
+3. Enter the extension configuration by using the following JSON format and then click **Confirm changes** to save your configuration.
 
 ```json
     {
         "orange": {
-            "serialnumber": "<Seriennummer der Orange-SIM>"
+            "serialnumber": "<serial number of Orange SIM>"
         }
     }
 
 ```
-Nach der erfolgreichen Konfiguration der Organisation wird der Abschnitt 'Erweiterungen' unterhalb des Abschnitts 'Erweiterungskonfiguration' in der Ansicht 'Drilldown für Geräte' angezeigt. 
+When the organization is successfully configured, the Extensions section is displayed under the Extensions Configuration section in the Device Drilldown view.
+-->
 
 ## Speicherung von Langzeitdaten
 {: #historical_data}
 
-Die Erweiterung für das Speichern von Langzeitdaten ermöglicht es Ihnen, kompatible Nachrichtenspeicherservices, wie zum Beispiel [{{site.data.keyword.cloudantfull}} ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){: new_window} oder [{{site.data.keyword.messagehub_full}} ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){: new_window}, für Ihre IoT-Daten zu suchen und zu konfigurieren. 
+Die Erweiterung für das Speichern von Langzeitdaten ermöglicht es Ihnen, kompatible Nachrichtenspeicherservices, wie zum Beispiel [{{site.data.keyword.cloudantfull}} ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){: new_window} oder [{{site.data.keyword.messagehub_full}} ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){: new_window}, für Ihre IoT-Daten zu suchen und zu konfigurieren.
 
 ## Angepasste Pakete für das Gerätemanagement
 {: #device_mgmt}
 
 Das Gerätemanagement ist eine zentrale Funktion von {{site.data.keyword.iot_short_notm}}, die jedoch erweitert werden kann, um zusätzliche Funktionen zu entwickeln. Angepasste Pakete für das Gerätemanagement müssen gültiges JSON-Format enthalten und mindestens eine angepasste Gerätemanagementaktion definieren.
 
-Weitere Informationen zu angepassten Gerätemanagementfunktionen sowie ein Beispiel für das erforderliche JSON-Format finden Sie in [Angepasste Erweiterungen für das Gerätemanagement ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}. 
+Weitere Informationen zu angepassten Gerätemanagementfunktionen sowie ein Beispiel für das erforderliche JSON-Format finden Sie in [Angepasste Erweiterungen für das Gerätemanagement ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/device_mgmt/custom_actions.html){: new_window}.
 
 ### Angepasstes Gerätemanagementpaket hinzufügen
 
-Sie können angepasste Pakete für das Gerätemanagement mit dem {{site.data.keyword.iot_short_notm}}-Dashboard hinzufügen oder mithilfe der API. 
+Sie können angepasste Pakete für das Gerätemanagement mit dem {{site.data.keyword.iot_short_notm}}-Dashboard hinzufügen oder mithilfe der API.
 
 Gehen Sie wie folgt vor, um ein angepasstes Paket für das Gerätemanagement mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards hinzuzufügen:
 
@@ -283,9 +288,9 @@ Informationen zum Hinzufügen eines angepassten Gerätemanagementpakets mithilfe
 ## E-Mail
 {: #email}
 
-Benutzer können mithilfe von E-Mail-Einladungen zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Informationen finden Sie in [Benutzerzugriff verwalten](/docs/IoT/add_users.html).
+Benutzer können mithilfe von E-Mail-Einladungen zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden. Informationen finden Sie in [Benutzerzugriff verwalten](/docs/services/IoT?topic=iot-platform-managing-user-access#managing-user-access).
 
-Damit die Funktion für E-Mail-Einladungen verwendet werden kann, muss eine E-Mail-Erweiterung für die Verwendung des SendGrid-Onlineservice oder eines SMTP-Service (Simple Mail Transfer Protocol) konfiguriert sein. Die Erweiterung kann auch die {{site.data.keyword.Bluemix_notm}}-Anwendung SendGrid verwenden.
+Damit die Funktion für E-Mail-Einladungen verwendet werden kann, muss eine E-Mail-Erweiterung für die Verwendung des SendGrid-Onlineservice oder eines SMTP-Service (Simple Mail Transfer Protocol) konfiguriert sein. Die Erweiterung kann auch die {{site.data.keyword.cloud_notm}}-Anwendung SendGrid verwenden.
 
 ### SendGrid-Onlineservice
 
@@ -295,7 +300,7 @@ Führen Sie die folgenden Schritte aus, um die E-Mail-Erweiterung für die Verwe
 2. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard in der Navigationsleiste auf **Erweiterungen**.
 3. Klicken Sie im Abschnitt **E-Mail** auf **Einrichten**.
 4. Wählen Sie **SendGrid mit API-Schlüssel** aus.
-5. Geben Sie den Namen und die E-Mail-Adresse Ihres Siteadministrators und den berechtigten API-Schlüssel ein. 
+5. Geben Sie den Namen und die E-Mail-Adresse Ihres Siteadministrators und den berechtigten API-Schlüssel ein.
 
 ### SMTP-Service
 
@@ -306,22 +311,22 @@ Führen Sie die folgenden Schritte aus, um die E-Mail-Erweiterung für die Verwe
 3. Wählen Sie **SMTP** aus.
 4. Geben Sie die Konfigurationsdetails Ihres SMTP-Service ein.
 
-### {{site.data.keyword.Bluemix_notm}}-Anwendung SendGrid
+### {{site.data.keyword.cloud_notm}}-Anwendung SendGrid
 
-Führen Sie die folgenden Schritte aus, um die E-Mail-Erweiterung für die Verwendung der {{site.data.keyword.Bluemix_notm}}-Anwendung SendGrid zu konfigurieren:
+Führen Sie die folgenden Schritte aus, um die E-Mail-Erweiterung für die Verwendung der {{site.data.keyword.cloud_notm}}-Anwendung SendGrid zu konfigurieren:
 
 1. Erstellen Sie eine Dummy-Anwendung und binden Sie sie an den SendGrid-Service.  
-Fügen Sie den SendGrid-Service zu einer Dummy-Anwendung hinzu und binden Sie ihn an sie, um die Konfigurationsberechtigungsnachweise abzurufen. 
+Fügen Sie den SendGrid-Service zu einer Dummy-Anwendung hinzu und binden Sie ihn an sie, um die Konfigurationsberechtigungsnachweise abzurufen.
 
- 1. Klicken Sie in Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard auf **Service erstellen**.
+ 1. Klicken Sie in Ihrem {{site.data.keyword.cloud_notm}}-Dashboard auf **Service erstellen**.
  2. Wählen Sie den SendGrid-Service aus dem Katalog aus und klicken Sie auf **Erstellen**.
- 3. Fügen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard die Anwendung {{site.data.keyword.runtime_nodejs_full}} hinzu. 
- 4. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendung {{site.data.keyword.runtime_nodejs_notm}} und klicken Sie auf **Service oder API binden**. 
+ 3. Fügen Sie im {{site.data.keyword.cloud_notm}}-Dashboard die Anwendung {{site.data.keyword.runtime_nodejs_full}} hinzu.
+ 4. Klicken Sie im {{site.data.keyword.cloud_notm}}-Dashboard auf die Anwendung {{site.data.keyword.runtime_nodejs_notm}} und klicken Sie auf **Service oder API binden**. 
  5. Wählen Sie den SendGrid-Service aus und klicken Sie auf **Hinzufügen**.
- 6. Führen Sie ein erneutes Staging für die Anwendung {{site.data.keyword.runtime_nodejs_notm}} durch. 
+ 6. Führen Sie ein erneutes Staging für die Anwendung {{site.data.keyword.runtime_nodejs_notm}} durch.
 2. Bereiten Sie die Konfiguration des {{site.data.keyword.iot_short_notm}}-Service vor.  
 {{site.data.keyword.iot_short_notm}} kann mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API konfiguriert werden.  
- 1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die {{site.data.keyword.runtime_nodejs_notm}}-Anwendung. 
+ 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Dashboard auf die {{site.data.keyword.runtime_nodejs_notm}}-Anwendung. 
  2. Klicken Sie in der Navigationsleiste auf **Umgebungsvariablen**.
  3. Kopieren Sie die angezeigte JSON in eine temporäre Textdatei.  
  Die JSON sollte folgendes Format aufweisen:

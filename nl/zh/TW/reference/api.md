@@ -3,7 +3,11 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: own organization, Extension HTTP APIs, API Use, AT&T Extension, Administer AT&T
+
+subcollection: iot-platform
 
 ---
 
@@ -11,6 +15,7 @@ lastupdated: "2019-02-13"
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:tip: .tip}
 {:pre: .pre}
 {:important: .important}
 
@@ -18,58 +23,46 @@ lastupdated: "2019-02-13"
 # API
 {: #api_overview}
 
-<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
-如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+<p>此 {{site.data.keyword.cloud}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包含了基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到各種方案的相關資訊。
 </p>
 {: important}
 
 數個 API 適用於開發連接至 {{site.data.keyword.iot_full}} 的裝置、閘道及應用程式的程式碼。
 
-HTTP API 是以 HTTP 基本鑑別來進行保護。當您使用儀表板來產生 API 金鑰時，會出現金鑰及鑑別記號。如需 API 金鑰及記號的相關資訊，請參閱 [API 金鑰連線![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key)。
+HTTP API 是藉由 HTTP 基本鑑別來保護。當您使用儀表板來產生 API 金鑰時，會出現金鑰及鑑別記號。如需 API 金鑰及記號的相關資訊，請參閱 [API 金鑰連線 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key){: new_window}。
 
 
 ## 關於 HTTP API
 {: #api_about}
 
-針對您自己的組織進行登錄之後，會提供您 6 個字元的組織 ID，在用於任何 HTTP API 呼叫的主機名稱中，都需要此 ID。您可以在下列位址存取您組織的基本 URL：
+每一個 {{site.data.keyword.iot_short_notm}} 組織都是藉由 6 字元組織 ID 加以識別，主機名稱中需有此 ID，才能進行任何 HTTP API 呼叫。   
 
-https://<**orgId**>.internetofthings.ibmcloud.com/api/v0002
+### API 文件
+{: #api_docs}
 
-若要向應用程式 API 鑑別要求，請將使用者名稱設為 API 金鑰，將密碼設為鑑別記號。
+若要檢視 API 文件，請移至 [IBM Watson IoT Platform REST APIs ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/index.html){: new_window} 頁面。從這個登陸頁面中，您可以存取可用 {{site.data.keyword.iot_short_notm}} API 的文件。
 
-如需「傳訊 API」，請使用下列位址：
+### 互動式 API 文件
 
-https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
+若要檢視及使用互動式 API 文件，可在下列位址存取您組織的基本 URL：
 
-## HTTP API
-{: #api_http}
+`https://<orgId>.internetofthings.ibmcloud.com/docs/index.html`
 
-API|用來...
-------------- | -------------
-[組織管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} |配置組織（包括建立及刪除裝置）、檢查用法、查看服務狀態，以及診斷裝置連線問題。
-[安全 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} |管理使用者、API 金鑰和裝置的鑑別與授權。
-[資訊管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |存取裝置事件資料，同時取得並更新裝置位置，以及取得該位置的天氣資訊。
-[Data Management ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |組織及整合在 {{site.data.keyword.iot_short_notm}} 之間往返的資料。
-[裝置管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} |使用裝置管理通訊協定來與受管理裝置互動。
-[傳訊 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   |使用 HTTP 來發佈事件及傳送指令。
-[風險管理 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   |管理風險管理原則及報告。
+從這個登陸頁面中，您可以存取可用 {{site.data.keyword.iot_short_notm}} API 的文件。若要具有存取權，直接從文件執行 API 呼叫，您必須獲得授權。
 
-## 延伸規格 HTTP API
-{: #api_extension}
+若要自動獲得授權，請完成下列步驟：
 
-API|用來...
-------------- | -------------
-[AT&T 延伸規格 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} |管理 AT&T 裝置。
+1. 登入 {{site.data.keyword.iot_short_notm}} 儀表板。
+2. 在同一個瀏覽器中，開啟新標籤並移至互動式 API 文件登陸頁面。
 
-[Jasper 延伸規格  ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} |管理 Jasper 裝置。
+如果您未登入 {{site.data.keyword.iot_short_notm}} 儀表板，請完成下列步驟：
 
-[Orange 延伸規格 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} |從連接至 {{site.data.keyword.iot_short_notm}} 組織的裝置檢視 SIM 卡資料，以及安裝 Orange SIM 卡。
+1. 移至互動式 API 文件登陸頁面。
+2. 選取`授權`。
+3. 在`可用授權`方框中，將使用者名稱設為 API 金鑰，並將密碼設為鑑別記號。選取`授權`。
+4. 關閉`可用授權`方框。**重要事項：**請不要選取`登出`。
 
+在獲得授權之後，請移至特定的 API 呼叫，並使用`試用`按鈕，直接從文件執行 API 呼叫。
 
-
-## 測試版 HTTP API
-{: #api_beta}
-
-API|用來...
-------------- | -------------
-[還原已刪除的裝置 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   |如果誤刪了裝置，您可以在 14 天內將它還原。
+<!-- To authenticate requests to the application API, set the username to the API key and the password to the authentication token. -->

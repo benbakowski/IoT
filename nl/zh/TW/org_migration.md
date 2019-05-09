@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,12 +21,13 @@ lastupdated: "2019-02-13"
 # 將 {{site.data.keyword.iot_short_notm}} Lite 移轉至 {{site.data.keyword.iot_short_notm}} 非正式作業或正式作業
 {: #org_migration}
 
-<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
-如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 {{site.data.keyword.IBM}} Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+<p>此 {{site.data.keyword.cloud}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包含了基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 {{site.data.keyword.IBM}} Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到各種方案的相關資訊。
 </p>
 {: important}
 
-在您嘗試使用 Watson IoT Platform Lite 之後，了解此產品如何在您的 IoT 環境中運作，您可以升級至 [Watson IoT Platform 非正式作業或至其中一個正式作業方案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){: new_window}。{:shortdesc}
+在您嘗試使用 Watson IoT Platform Lite 之後，了解此產品如何在您的 IoT 環境中運作，您可以升級至 [Watson IoT Platform 非正式作業或至其中一個正式作業方案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){: new_window}。
+{:shortdesc}
 
 **附註：**本文件僅適用於具有「精簡」實例的使用者。如果您先前已使用「標準」或「進階」安全方案建立 IoT Platform 的實例，則 {{site.data.keyword.IBM}} 會與您一同將現有的 {{site.data.keyword.iot_short_notm}} 實例移轉至新的非正式作業或正式作業方案。
 
@@ -44,7 +49,7 @@ lastupdated: "2019-02-13"
 
 不過，如果您想要轉移部分現有的「精簡」設定，下列各節將指導您完成整個程序。
 
-關於 [{{site.data.keyword.iot_short_notm}} API](/docs/IoT/reference/api.html#api_overview) 的文件，提供了如何呼叫 API 及其完整參數集的指示。
+關於 [{{site.data.keyword.iot_short_notm}} API](/docs/services/IoT?topic=iot-platform-api_overview#api_overview) 的文件，提供了如何呼叫 API 及其完整參數集的指示。
 
 
 ## 開始之前
@@ -73,7 +78,7 @@ lastupdated: "2019-02-13"
 您可以在下列步驟中完成移轉裝置：  
 1. 將您想要保留的「裝置類型」移轉至新組織。  
 2. 將裝置本身移轉至新組織。  
-3. 更新裝置用來連接至 {{site.data.keyword.Bluemix_short}} 的主機名稱，以開始使用您的新組織 ID。
+3. 更新裝置用來連接至 {{site.data.keyword.cloud_notm}} 的主機名稱，以開始使用您的新組織 ID。
 4. 移轉您在 Lite 平台中所建立的任何「資料管理」資訊。   
 這可能包括「裝置實體」及「邏輯介面」、「物品」及「規則」。
 
@@ -178,14 +183,14 @@ lastupdated: "2019-02-13"
 4. 儲存變更並重新部署 Node-RED 流程。
 
 ### 更新不使用 Cloud Foundry 連結的應用程式
-識別應用程式儲存組織 ID、API 金鑰及授權記號的位置，並將它們取代為先前儲存的值。
+識別應用程式儲存組織 ID、「API 金鑰」及「授權記號」的位置，並將它們取代為先前儲存的值。
 
 如果您的應用程式使用其中一個 {{site.data.keyword.iot_short_notm}} SDK，這些值可能會保留在一個 properties 檔中。
 {: tip}
 
 ### 更新使用 Cloud Foundry 連結的應用程式
 
-{{site.data.keyword.Bluemix_short}} 提供一種將 Cloud Foundry 應用程式連結至一個以上 Cloud Foundry 服務的機制。可以使用 {{site.data.keyword.Bluemix_short}} CLI 建立連結，或者透過在 {{site.data.keyword.Bluemix_short}} 儀表板的「應用程式」及「服務」之間建立`連線`來建立連結。
+{{site.data.keyword.cloud_notm}} 提供一種將 Cloud Foundry 應用程式連結至一個以上 Cloud Foundry 服務的機制。可以使用 {{site.data.keyword.cloud_notm}} CLI 建立連結，或者透過在 {{site.data.keyword.cloud_notm}} 儀表板的「應用程式」及「服務」之間建立`連線`來建立連結。
 
 當應用程式連結至服務時，會將服務 API 金鑰及鑑別記號認證複製到 `VCAP_SERVICES` 環境變數，應用程式可從中擷取它們。
 

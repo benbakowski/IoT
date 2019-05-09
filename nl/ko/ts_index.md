@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} 문제점 해결
 {: #ts}
 
-<p>이 {{site.data.keyword.Bluemix}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
-전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/IoT/plans_overview.html#plans_overview)에서 찾을 수 있습니다.
+<p>이 {{site.data.keyword.cloud}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
+전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)에서 찾을 수 있습니다.
 </p>
 {: important}
 
-여기에는 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.iot_full}}을 사용하는 데 대한 일반 문제점 해결 질문에 대한 답변이 있습니다.
+여기에는 {{site.data.keyword.cloud_notm}}에서 {{site.data.keyword.iot_full}} 사용에 대한 일반 문제점 해결 질문에 대한 답변이 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} 조직에 액세스하는 문제점
@@ -33,12 +37,12 @@ lastupdated: "2019-02-13"
 `https://internetofthings.ibmcloud.com`을 사용하거나 조직 URL을 사용하여 직접 {{site.data.keyword.iot_short_notm}} 조직에 로그인할 수 없습니다.
 {: tsSymptoms}
 
-{{site.data.keyword.iot_short_notm}} 조직에 대한 액세스 권한이 만료되었을 수 있습니다. {{site.data.keyword.Bluemix}}를 사용하여 작성된 {{site.data.keyword.iot_short_notm}} 조직은 기본적으로 임시 사용자 프로파일을 사용합니다.
+{{site.data.keyword.iot_short_notm}} 조직에 대한 액세스 권한이 만료되었을 수 있습니다. {{site.data.keyword.cloud}}를 사용하여 작성된 {{site.data.keyword.iot_short_notm}} 조직은 기본적으로 임시 사용자 프로파일을 사용합니다.
 {: tsCauses}
 
-{{site.data.keyword.Bluemix_notm}}를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에 액세스하고 사용자 프로파일의 만기 설정을 변경하여 이 문제점을 해결할 수 있습니다. 사용자 만기 설정을 변경하려면 다음을 수행하십시오.
+{{site.data.keyword.cloud_notm}}를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에 액세스하고 사용자 프로파일의 만기 설정을 변경하여 이 문제점을 해결할 수 있습니다. 사용자 만기 설정을 변경하려면 다음을 수행하십시오.
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}} 서비스를 여십시오.
+1. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}} 서비스를 여십시오.
 2. 탐색줄에서 **구성원**을 클릭하십시오.
 3. **편집** 아이콘을 클릭하십시오.
 4. **액세스 만료** 선택란의 선택을 취소하고 **저장**을 클릭하십시오.

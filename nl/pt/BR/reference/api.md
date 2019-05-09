@@ -3,7 +3,11 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: own organization, Extension HTTP APIs, API Use, AT&T Extension, Administer AT&T
+
+subcollection: iot-platform
 
 ---
 
@@ -11,6 +15,7 @@ lastupdated: "2019-02-13"
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:tip: .tip}
 {:pre: .pre}
 {:important: .important}
 
@@ -18,54 +23,46 @@ lastupdated: "2019-02-13"
 # APIs
 {: #api_overview}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
 Várias APIs estão disponíveis para desenvolver código para dispositivos, gateways e aplicativos que se conectam ao {{site.data.keyword.iot_full}}.
 
-As APIs HTTP são protegidas com autenticação básica HTTP. Quando você gera uma chave API usando o painel, são apresentados uma chave e um token de autenticação. Para obter mais informações sobre chaves de API e tokens, consulte [Conexão de chave de API ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key).
+As APIs de HTTP são protegidas pela autenticação básica de HTTP. Quando você gera uma chave API usando o painel, são apresentados uma chave e um token de autenticação. Para obter mais informações sobre chaves de API e tokens, consulte [Conexão de chave de API ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/platform_authorization.html#api-key){: new_window}.
 
 
 ## Sobre APIs HTTP
 {: #api_about}
 
-Após o registro para sua própria organização, é fornecido um ID da organização de 6 caracteres a você, que é necessário no nome do host para quaisquer chamadas de API HTTP. A URL base para sua organização pode ser acessada no endereço a seguir:
+Cada organização do {{site.data.keyword.iot_short_notm}} é identificada por um ID de organização de 6 caracteres, necessário no nome do host para qualquer chamada de API de HTTP.   
 
-https://<**orgId**>.internetofthings.ibmcloud.com/api/v0002
+### Docs API
+{: #api_docs}
 
-Para autenticar solicitações para a API do aplicativo, configure o nome do usuário para a chave API e a senha para o token de autenticação.
+Para visualizar docs de API, acesse a página [APIs de REST do IBM Watson IoT Platform ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/index.html){: new_window}. Nessa página inicial, é possível acessar a documentação das APIs disponíveis do {{site.data.keyword.iot_short_notm}}.
 
-Para APIs do sistema de mensagens, use o endereço a seguir:
+### Docs da API interativa
 
-https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002
+Para visualizar e usar os docs da API interativa, a URL base da sua organização pode ser acessada no seguinte endereço:
 
-## APIs HTTP
-{: #api_http}
+`https://<orgId>.internetofthings.ibmcloud.com/docs/index.html`
 
-API do                     | Use para...       
-------------- | -------------
-[Administração da organização ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configure uma organização (incluindo a criação e a exclusão de dispositivos), verifique o uso, consulte o status do serviço e diagnostique problemas de conexão do dispositivo.
-[Segurança ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gerencie a autenticação e a autorização de usuários, chaves API e dispositivos.
-[Gerenciamento de informações ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acessar dados do evento de dispositivo e também obter e atualizar a localização de dispositivo e obter informações meteorológicas para esse local.
-[Gerenciamento de dados ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organizar e integrar dados entrando e saindo do {{site.data.keyword.iot_short_notm}}.
-[Gerenciamento de dispositivo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagir com dispositivos gerenciados usando o protocolo de gerenciamento de dispositivo.
-[Sistema de mensagens ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publicar eventos e enviar comandos usando HTTP.
-[Gerenciamento de risco ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Gerenciar as políticas e os relatórios de gerenciamento de risco.
+Nessa página inicial, é possível acessar a documentação das APIs disponíveis do {{site.data.keyword.iot_short_notm}}. Para ter acesso para executar as chamadas de API diretamente da documentação, deve-se estar autorizado.
 
-## APIs HTTP de extensão
-{: #api_extension}
+Para ser autorizado automaticamente, conclua as etapas a seguir:
 
-API do                     | Use para...       
-------------- | -------------
-[Extensão AT&T ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-atnt.html){: new_window} | Administrar dispositivos AT&.
-[Extensão Jasper  ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-jasper.html){: new_window} | Administrar dispositivos Jasper.
-[Extensão Orange ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/ext-orange.html){: new_window} | Visualizar dados do cartão SIM de dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e têm um cartão SIM da Orange instalado.
+1. Efetue login no painel do {{site.data.keyword.iot_short_notm}}.
+2. No mesmo navegador, abra uma nova guia e acesse a página inicial dos docs da API interativa.
 
-## APIs HTTP Beta
-{: #api_beta}
+Se não efetuou login no painel do {{site.data.keyword.iot_short_notm}}, conclua as etapas a seguir:
 
-API do                     | Use para...       
-------------- | -------------
-[ Restaurar dispositivos excluídos ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/restore-device-beta.html){: new_window}   | Se um dispositivo é excluído por engano, é possível restaurá-lo dentro de 14 dias.
+1. Acesse a página inicial dos docs da API interativa.
+2. Selecione `Autorizar`.
+3. Na caixa `Autorizações disponíveis`, configure o nome de usuário para a chave de API e a senha para o token de autenticação. Selecione `Autorizar`.
+4. Feche a caixa `Autorizações disponíveis`. **Importante:** não selecione `Efetuar logout`.
+
+Depois de estar autorizado, acesse chamadas de API específicas e use o botão `Experimentar` para executar as chamadas de API diretamente da documentação.
+
+<!-- To authenticate requests to the application API, set the username to the API key and the password to the authentication token. -->

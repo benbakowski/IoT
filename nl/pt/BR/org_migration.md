@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-13"
 # Migrando o {{site.data.keyword.iot_short_notm}} Lite para o {{site.data.keyword.iot_short_notm}} Non-production ou Production
 {: #org_migration}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para obter a documentação completa do recurso {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no {{site.data.keyword.IBM}} Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para obter a documentação completa do recurso {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no {{site.data.keyword.IBM}} Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -45,7 +49,7 @@ Este documento descreve os tipos de dados que você pode desejar migrar de uma i
 
 Se, no entanto, você desejar transferir algumas de suas configurações existentes do Lite, as seções a seguir fornecerão orientação durante o processo.
 
-A documentação nas [APIs do {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html#api_overview) fornece instruções sobre como chamar as APIs e seu conjunto completo de parâmetros.
+A documentação sobre as [APIs do {{site.data.keyword.iot_short_notm}}]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) fornece instruções sobre como chamar as APIs e seu conjunto completo de parâmetros.
 
 
 ## Antes de iniciar
@@ -74,7 +78,7 @@ Os usuários agora têm acesso à nova organização, que será exibida no selet
 A migração de dispositivos pode ser realizada nestas etapas:  
 1. Migre os Tipos de dispositivo que você deseja preservar para a nova organização.  
 2. Migre os próprios dispositivos para a nova organização.  
-3. Atualize o nome do host usado pelos dispositivos para se conectar ao {{site.data.keyword.Bluemix_short}} para iniciar com seu novo ID da organização.
+3. Atualize o nome do host usado pelos dispositivos para se conectar ao {{site.data.keyword.cloud_notm}} para iniciar com seu novo ID da organização.
 4. Migre quaisquer informações de Gerenciamento de dados criadas na plataforma Lite.   
 Isso pode incluir as Interfaces físicas e lógicas do dispositivo, as Coisas e as Regras.
 
@@ -179,15 +183,15 @@ Será necessário configurar os nós Node-RED para se conectar à nova instânci
 4. Salve suas mudanças e reimplemente o fluxo de Node-RED.
 
 ### Atualizando um aplicativo que não usa uma ligação do Cloud Foundry
-Identifique o local no qual seu aplicativo armazena o ID da organização, a Chave de API e o Token de autorização e substitua-os pelos valores salvos anteriormente.
+Identifique o local no qual seu aplicativo armazena o ID da organização, a chave de API e o token de autorização e substitua-os pelos valores salvos anteriormente.
 
 Se o seu aplicativo usar um dos SDKs do {{site.data.keyword.iot_short_notm}}, esses valores provavelmente serão mantidos em um arquivo de Propriedades.
 {: tip}
 
 ### Atualizando um aplicativo que usa uma ligação do Cloud Foundry
 
-O {{site.data.keyword.Bluemix_short}} fornece um mecanismo para ligar aplicativos Cloud Foundry a um ou mais serviços do Cloud Foundry. As ligações podem ser estabelecidas usando a CLI do {{site.data.keyword.Bluemix_short}} ou criando uma `Connection` entre o Aplicativo e o Serviço no painel do {{site.data.keyword.Bluemix_short}}.
+O {{site.data.keyword.cloud_notm}} fornece um mecanismo para ligar aplicativos Cloud Foundry a um ou mais serviços do Cloud Foundry. As ligações podem ser estabelecidas usando a CLI do {{site.data.keyword.cloud_notm}} ou criando uma `Connection` entre o Aplicativo e o Serviço no painel do {{site.data.keyword.cloud_notm}}.
 
 Quando um Aplicativo é ligado a um serviço, as credenciais de serviço Chave de API e Token de autenticação são copiadas para a variável de ambiente `VCAP_SERVICES`, de onde o aplicativo pode recuperá-las.
 
-**Importante:** esse mecanismo de ligação não pode ser usado com o novo serviço {{site.data.keyword.iot_short_notm}}. Deve-se localizar o código no aplicativo que estiver lendo de `VCAP_SERVICES` e substituí-lo pelo código que lê os valores de um local no qual você agora armazena a Chave de API e o Token de autorização. Para concluir a atualização, deve-se reconstruir e reimplementar o aplicativo.
+**Importante:** esse mecanismo de ligação não pode ser usado com o novo serviço {{site.data.keyword.iot_short_notm}}. Deve-se localizar o código no aplicativo que estiver lendo em `VCAP_SERVICES` e substituí-lo pelo código que lê os valores de um local no qual você agora armazena a chave de API e o token de autorização. Para concluir a atualização, deve-se reconstruir e reimplementar o aplicativo.

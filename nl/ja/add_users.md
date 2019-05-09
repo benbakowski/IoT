@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: user access, Add function, members dashboard
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # ユーザーのアクセス権限の管理
 {: #managing-user-access}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
-ダッシュボードの「メンバー」ページから、{{site.data.keyword.iot_full}} 組織に対するアクセス権限を制御したり管理したりできます。ユーザーを追加する方法には、追加、招待、インポートがあります。 また、役割の割り当てによって、さまざまなレベルのアクセス権限をユーザーに付与できます。
+ダッシュボードの「メンバー」ページから、{{site.data.keyword.iot_full}} 組織に対するアクセス権限を制御したり管理したりできます。 ユーザーを追加する方法には、追加、招待、インポートがあります。 また、役割の割り当てによって、さまざまなレベルのアクセス権限をユーザーに付与できます。
 {:shortdesc}
 
 ## ユーザーの追加
@@ -99,7 +103,7 @@ user3@sample.com,PD_ADMIN_USER,2018-03-13
 ## ユーザー・アクセスの制限
 {: #limiting-users}
 
-リソース・レベル・アクセス制御を行うことによって、組織内のデバイスへのアクセスを制限できます。リソース・グループを使用して、各ユーザーまたは API キーが管理できるデバイスを指定できます。 リソース・レベル・アクセス制御の構成方法については、 [リソース・レベル・アクセス制御の構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/rlac.html#configure_RLAC){: new_window} を参照してください。
+リソース・レベル・アクセス制御を行うことによって、組織内のデバイスへのアクセスを制限できます。 リソース・グループを使用して、各ユーザーまたは API キーが管理できるデバイスを指定できます。 リソース・レベル・アクセス制御の構成方法については、 [リソース・レベル・アクセス制御の構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/rlac.html#configure_RLAC){: new_window} を参照してください。
 
 ## ユーザーの削除
 {: #removing-users}

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,9 +21,8 @@ lastupdated: "2019-02-13"
 # Migrazione di {{site.data.keyword.iot_short_notm}} Lite a {{site.data.keyword.iot_short_notm}} non di produzione o di produzione
 {: #org_migration}
 
-<p>Questa raccolta di documentazione {{site.data.keyword.Bluemix}} è relativa al piano dei prezzi {{site.data.keyword.iot_full}} Lite e include le informazioni introduttive di base, le guide di riferimento API e delle informazioni generali per la risoluzione dei problemi.
-Per la documentazione completa della funzione {{site.data.keyword.iot_short_notm}}, vedi la [documentazione del prodotto {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) nell'{{site.data.keyword.IBM}} Knowledge Center.
-Ulteriori informazioni sui vari piani sono disponibili in [Piani di servizio {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Questa raccolta di documentazione {{site.data.keyword.cloud}} è relativa al piano dei prezzi {{site.data.keyword.iot_full}} Lite e include le informazioni introduttive di base, le guide di riferimento API e delle informazioni generali per la risoluzione dei problemi.
+Per la documentazione completa della funzione {{site.data.keyword.iot_short_notm}}, vedi la [documentazione del prodotto {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) nell'{{site.data.keyword.IBM}} Knowledge Center. Ulteriori informazioni sui vari piani sono disponibili in [Piani di servizio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -46,7 +49,7 @@ Questo documento descrive i tipi di dati che potresti voler migrare da un'istanz
 
 Se, tuttavia, vuoi trasferire qualcuna delle tue impostazioni Lite esistenti, le seguenti azioni ti illustrano il processo.
 
-La documentazione sulle [API {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html#api_overview) fornisce le istruzioni su come richiamare le API e il loro insieme completo di parametri.
+La documentazione sulle [API {{site.data.keyword.iot_short_notm}}]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) fornisce le istruzioni su come richiamare le API e il loro insieme completo di parametri. 
 
 
 ## Prima di cominciare
@@ -65,7 +68,7 @@ Utilizza il comando `GET /authorization/users` per esportare tutti i tuoi utenti
 2. Ripulisci l'elenco utenti.  
 Se necessario, modifica la struttura JSON per rimuovere gli utenti che non desideri migrare alla tua nuova organizzazione.
 3. Importa gli utenti alla nuova organizzazione.  
-Utilizza il comando `POST /authorization/users/multiple` per importare l'elenco JSON modificato di utenti nella nuova organizzazione.
+Utilizza il comando `POST /authorization/users/multiple` per importare l'elenco JSON modificato di utenti nella nuova organizzazione. 
 
 Gli utenti ora hanno accesso alla nuova organizzazione, che verrà visualizzata nel selettore delle organizzazioni nel dashboard {{site.data.keyword.iot_short_notm}}.
 
@@ -75,7 +78,7 @@ Gli utenti ora hanno accesso alla nuova organizzazione, che verrà visualizzata 
 La migrazione dei dispositivi può essere realizzata nei seguenti passi:  
 1. Esegui la migrazione dei tipi di dispositivo che desideri conservare alla nuova organizzazione.  
 2. Esegui la migrazione dei dispositivi stessi alla nuova organizzazione.  
-3. Aggiorna il nome host utilizzato dai dispositivi per connettersi a {{site.data.keyword.Bluemix_short}} per iniziare con il tuo nuovo ID organizzazione.
+3. Aggiorna il nome host utilizzato dai dispositivi per connettersi a {{site.data.keyword.cloud_notm}} per iniziare con il tuo nuovo ID organizzazione.
 4. Esegui la migrazione delle eventuali informazioni di gestione dei dati che hai creato nella piattaforma Lite.   
 Possono includere regole, oggetti e interfacce fisiche e logiche dei dispositivi.
 
@@ -180,15 +183,15 @@ Dovrai configurare i tuoi nodi Node-RED per stabilire una connessione alla tua n
 4. Salva le tue modifiche e ridistribuisci il tuo flusso Node-RED.
 
 ### Aggiornamento di un'applicazione che non utilizza un'associazione mediante bind Cloud Foundry
-Identifica l'ubicazione dove la tua applicazione archivia l'ID organizzazione, la chiave API e il token di autorizzazione ed eseguine la sostituzione con i valori che hai salvato in precedenza.
+Identifica l'ubicazione in cui la tua applicazione archivia l'ID org, la chiave API e il token di autenticazione e sostituiscili con i valori che hai salvato in precedenza. 
 
 Se la tua applicazione utilizza uno degli SDK {{site.data.keyword.iot_short_notm}}, questi valori saranno probabilmente memorizzati in un file delle proprietà.
 {: tip}
 
 ### Aggiornamento di un'applicazione che utilizza un'associazione mediante bind Cloud Foundry
 
-{{site.data.keyword.Bluemix_short}} fornisce un meccanismo per associare mediante bind le applicazioni Cloud Foundry a uno o più servizi Cloud Foundry. Le associazioni mediante bind possono essere stabilite utilizzando la CLI {{site.data.keyword.Bluemix_short}} o creando una connessione (`Connection`) tra l'applicazione e il servizio nel dashboard {{site.data.keyword.Bluemix_short}}.
+{{site.data.keyword.cloud_notm}} fornisce un meccanismo per associare mediante bind le applicazioni Cloud Foundry a uno o più servizi Cloud Foundry. Le associazioni mediante bind possono essere stabilite utilizzando la CLI {{site.data.keyword.cloud_notm}} o creando una connessione (`Connection`) tra l'applicazione e il servizio nel dashboard {{site.data.keyword.cloud_notm}}.
 
 Quando un'applicazione è associata mediante bind a un servizio, le credenziali di chiave API e token di autenticazione vengono copiate nella variabile di ambiente `VCAP_SERVICES` da cui l'applicazione può eseguirne il richiamo.
 
-**Importante:** questo meccanismo di associazione mediante bind non può essere utilizzato con il nuovo servizio {{site.data.keyword.iot_short_notm}}. Devi trovare il codice nella tua applicazione che sta leggendo da `VCAP_SERVICES` e sostituirlo con il codice che legge i valori da un'ubicazione dove ora memorizzi la chiave API e il token di autorizzazione. per completare l'aggiornamento, devi ricompilare e ridistribuire la tua applicazione.
+**Importante:** questo meccanismo di associazione mediante bind non può essere utilizzato con il nuovo servizio {{site.data.keyword.iot_short_notm}}. Devi trovare il codice nella tua applicazione che sta leggendo da `VCAP_SERVICES` e sostituirlo con il codice che legge i valori da un'ubicazione in cui ora archivi la chiave API e il token di autenticazione. Per completare l'aggiornamento, devi ricompilare e ridistribuire la tua applicazione.

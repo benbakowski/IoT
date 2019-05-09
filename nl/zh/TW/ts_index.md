@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} 疑難排解
 {: #ts}
 
-<p>此 {{site.data.keyword.Bluemix}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包括基本入門資訊、API 參考資料及一般疑難排解資訊。
-如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/IoT/plans_overview.html#plans_overview)中找到各種方案的相關資訊。
+<p>此 {{site.data.keyword.cloud}} 文件集合與 {{site.data.keyword.iot_full}}「精簡」定價方案相關，包含了基本入門資訊、API 參考資料及一般疑難排解資訊。
+如需完整的 {{site.data.keyword.iot_short_notm}} 特性文件，請參閱 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。您可以在 [{{site.data.keyword.iot_short_notm}} 服務方案](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到各種方案的相關資訊。
 </p>
 {: important}
 
-這裡會回答有關在 {{site.data.keyword.Bluemix_notm}} 上使用 {{site.data.keyword.iot_full}} 的常見疑難排解問題。
+這裡會回答有關在 {{site.data.keyword.cloud_notm}} 上使用 {{site.data.keyword.iot_full}} 的常見疑難排解問題。
 {:shortdesc}
 
 ## 存取 {{site.data.keyword.iot_short_notm}} 組織時發生問題
@@ -33,12 +37,12 @@ lastupdated: "2019-02-13"
 您無法使用組織 URL 或使用 `https://internetofthings.ibmcloud.com` 直接登入 {{site.data.keyword.iot_short_notm}} 組織。
 {: tsSymptoms}
 
-您對 {{site.data.keyword.iot_short_notm}} 組織的存取權可能已過期。使用 {{site.data.keyword.Bluemix}} 所建立的 {{site.data.keyword.iot_short_notm}} 組織，預設會使用暫存使用者設定檔。
+您對 {{site.data.keyword.iot_short_notm}} 組織的存取權可能已過期。使用 {{site.data.keyword.cloud}} 所建立的 {{site.data.keyword.iot_short_notm}} 組織，預設會使用暫存使用者設定檔。
 {: tsCauses}
 
-您可以藉由使用 {{site.data.keyword.Bluemix_notm}} 來存取 {{site.data.keyword.iot_short_notm}} 組織以及變更使用者設定檔的到期設定來解決此問題。若要變更使用者到期設定，請執行下列動作：
+您可以藉由使用 {{site.data.keyword.cloud_notm}} 來存取 {{site.data.keyword.iot_short_notm}} 組織以及變更使用者設定檔的到期設定來解決此問題。若要變更使用者到期設定，請執行下列動作：
 
-1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟 {{site.data.keyword.iot_short_notm}} 服務。
+1. 從 {{site.data.keyword.cloud_notm}} 儀表板中，開啟 {{site.data.keyword.iot_short_notm}} 服務。
 2. 從導覽列中，按一下**成員**。
 3. 按一下**編輯**圖示。
 4. 清除**存取到期**勾選框，然後按一下**儲存**。

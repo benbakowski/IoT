@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,14 +20,14 @@ lastupdated: "2019-02-13"
 # Resolução de problemas do {{site.data.keyword.iot_short_notm}}
 {: #ts}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
 Aqui estão as respostas às perguntas comuns de resolução de problemas sobre o
 uso do {{site.data.keyword.iot_full}} no
-{{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 ## Problema ao acessar a organização do {{site.data.keyword.iot_short_notm}}
@@ -35,12 +39,12 @@ Não é possível efetuar login em uma organização do {{site.data.keyword.iot_
 Não é possível efetuar login em sua organização do {{site.data.keyword.iot_short_notm}} diretamente usando a URL da organização ou usando `https://internetofthings.ibmcloud.com`.
 {: tsSymptoms}
 
-Seu acesso à organização do {{site.data.keyword.iot_short_notm}} pode ter expirado. As organizações do {{site.data.keyword.iot_short_notm}} que foram criadas usando o {{site.data.keyword.Bluemix}} usam perfis de usuário temporários por padrão.
+Seu acesso à organização do {{site.data.keyword.iot_short_notm}} pode ter expirado. As organizações do {{site.data.keyword.iot_short_notm}} que foram criadas usando o {{site.data.keyword.cloud}} usam perfis de usuário temporários por padrão.
 {: tsCauses}
 
-É possível resolver esse problema acessando sua organização do {{site.data.keyword.iot_short_notm}} usando o {{site.data.keyword.Bluemix_notm}} e mudando a configuração de expiração de seu perfil do usuário. Para mudar as configurações de expiração do usuário:
+É possível resolver esse problema acessando sua organização do {{site.data.keyword.iot_short_notm}} usando o {{site.data.keyword.cloud_notm}} e mudando a configuração de expiração de seu perfil do usuário. Para mudar as configurações de expiração do usuário:
 
-1. No painel do {{site.data.keyword.Bluemix_notm}}, abra o serviço {{site.data.keyword.iot_short_notm}}.
+1. No painel do {{site.data.keyword.cloud_notm}}, abra o serviço {{site.data.keyword.iot_short_notm}}.
 2. Clique em **Membros** na barra de navegação.
 3. Clique no ícone **Editar**.
 4. Limpe a caixa de seleção **O acesso expira** e clique em **Salvar**.

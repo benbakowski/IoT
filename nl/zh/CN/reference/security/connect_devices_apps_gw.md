@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # 应用程序、设备和网关的连接信息
 {: #connect_devices_apps_gw}
 
-<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
-有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+<p>该 {{site.data.keyword.cloud}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到有关各种套餐的更多信息。
 </p>
 {: important}
 
@@ -44,11 +48,6 @@ lastupdated: "2019-02-13"
 - 其中，*orgId* 是注册服务实例时生成的唯一组织标识。
 - 如果要将设备或应用程序连接到 Quickstart 服务，请将“quickstart”指定为 *orgId* 值。
 
-## 防火墙配置
-{: #firewall_configuration}
-
-要将设备和应用程序连接到 {{site.data.keyword.iot_short_notm}}，必须确保任何防火墙都已配置为允许特定端口上的流量。防火墙可能位于本地计算机上、路由器上，或者作为公司网络的一部分。
-
 ### 端口安全性
 {: #client_port_security}
 
@@ -72,7 +71,7 @@ MQTT 通过 TCP 和 WebSocket 进行支持。MQTT 客户机通过使用相应凭
 
 确保所需 IP 地址已打开并启用以进行通信。
 
-|区域|IP 地址|消息传递端口</br> （非安全）|消息传递端口（安全）|
+|区域|IP 地址|消息传递端口</br>（不安全）|消息传递端口（安全）|
 |:---|:---|:---| :---|
 |us-south|169.45.2.16/28* </br>169.46.7.56/29</br>169.48.234.208/29</br>169.62.202.128/29|1883,80 | 8883,443|
 |eu-gb|159.8.169.208/28* </br>158.175.111.152/29</br>158.176.104.24/29</br>141.125.70.152/29|1883,80 | 8883,443|

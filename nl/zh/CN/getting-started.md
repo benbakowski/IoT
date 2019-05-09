@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: IoT device, Watson IoT Platform, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -16,10 +20,10 @@ lastupdated: "2019-02-13"
 
 
 # 入门教程
-{: #getting-started .task}
+{: #getting-started}
 
-<p>该 {{site.data.keyword.Bluemix}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
-有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/IoT/plans_overview.html#plans_overview)中找到有关各种套餐的更多信息。
+<p>该 {{site.data.keyword.cloud}} 文档集合与 {{site.data.keyword.iot_full}} 轻量价格套餐有关，并且包含基本入门信息、API 参考和一般故障诊断信息。
+有关完整的 {{site.data.keyword.iot_short_notm}} 功能文档，请参阅 IBM Knowledge Center 上的 [{{site.data.keyword.iot_short_notm}} 产品文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)。可在 [{{site.data.keyword.iot_short_notm}} 服务套餐](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)中找到有关各种套餐的更多信息。
 </p>
 {: important}
 
@@ -36,9 +40,9 @@ lastupdated: "2019-02-13"
 {: #byb .sectiontitle}  
 
 要能够开始使用 {{site.data.keyword.iot_short_notm}}，必须先拥有以下项：  
-* [{{site.data.keyword.Bluemix}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/registration/){: new_window}。
+* [{{site.data.keyword.cloud}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/registration/){: new_window}。
 * {{site.data.keyword.iot_short_notm}} 实例。  
-您可以直接从 [{{site.data.keyword.Bluemix_short}} 服务目录中的 {{site.data.keyword.iot_short_notm}} 页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window} 创建 {{site.data.keyword.iot_short_notm}} 实例。  
+您可以直接从 [{{site.data.keyword.cloud_notm}} 服务目录中的 {{site.data.keyword.iot_short_notm}} 页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window} 创建 {{site.data.keyword.iot_short_notm}} 实例。  
 * 满足以下需求的设备：  
   *	您的设备必须能够使用 HTTP 或 MQTT 协议进行通信。
   * 设备消息必须符合 {{site.data.keyword.iot_short_notm}} 消息有效内容需求。  
@@ -49,7 +53,7 @@ lastupdated: "2019-02-13"
  |  |已部署此服务|未部署此服务
  | -------------| ------------- | -------------
   |**我有要连接的设备**|请遵循本主题中概述的过程。|了解[使用 {{site.data.keyword.iot_short_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} 中的设备连接。
-  |**我没有要连接的设备**| [模拟设备数据](/docs/IoT/devices/device_sim.html)或者[连接智能手机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|开始使用 [{{site.data.keyword.iot_short_notm}} 入门模板](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}。
+  |**我没有要连接的设备**| [模拟设备数据](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data)或者[连接智能手机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。|开始使用 [{{site.data.keyword.iot_short_notm}} 入门模板](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}。
 
 
 
@@ -60,7 +64,7 @@ lastupdated: "2019-02-13"
 **提示：**您可以从 [{{site.data.keyword.iot_short_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://internetofthings.ibmcloud.com){: new_window} 一次注册一个设备，也可使用 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} 添加多个设备。
 
 要从 {{site.data.keyword.iot_short_notm}} 仪表板添加设备，请执行以下操作：
-1. 在 {{site.data.keyword.Bluemix_notm}} 控制台中，单击 {{site.data.keyword.iot_short_notm}} 服务详细信息页面上的**启动**。
+1. 在 {{site.data.keyword.cloud_notm}} 控制台中，单击 {{site.data.keyword.iot_short_notm}} 服务详细信息页面上的**启动**。
 
     此时，{{site.data.keyword.iot_short_notm}} Web 控制台将在新浏览器选项卡中打开，URL 如下：
 
@@ -154,7 +158,7 @@ lastupdated: "2019-02-13"
 通过创建并连接您自己的应用程序以使用设备数据，从而扩展数据分析功能。
 - 有关如何将特定设备类型连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅 [developerWorks 诀窍 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。
 - 检查[客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} 以获取工具来构建用于集成并连接设备和应用程序的代码。
-- 探索 [{{site.data.keyword.iot_short_notm}} API 文档](/docs/IoT/reference/api.html)。
+- 探索 [{{site.data.keyword.iot_short_notm}} API 文档](/docs/services/IoT?topic=iot-platform-api_overview#api_overview)。
 - [连接 {{site.data.keyword.cloudantfull}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} 到 {{site.data.keyword.iot_short_notm}} 以存储历史设备数据。
 - 要利用完整的 [{{site.data.keyword.iot_short_notm}} 功能集 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}，您可以购买一个 Connection and Analytics Service 套餐，然后迁移现有环境。
 

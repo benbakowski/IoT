@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # アプリケーション、デバイス、ゲートウェイの接続情報
 {: #connect_devices_apps_gw}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
-MQTT プロトコルを使用して、アプリケーション、デバイス、ゲートウェイを {{site.data.keyword.iot_full}} に接続できます。デバイスは、HTTP REST API を使用して {{site.data.keyword.iot_short_notm}} に接続することもできます。
+MQTT プロトコルを使用して、アプリケーション、デバイス、ゲートウェイを {{site.data.keyword.iot_full}} に接続できます。 デバイスは、HTTP REST API を使用して {{site.data.keyword.iot_short_notm}} に接続することもできます。
 {: shortdesc}
 
 
@@ -44,31 +48,26 @@ MQTT プロトコルを使用して、アプリケーション、デバイス、
 - *orgId* は、サービス・インスタンスを登録したときに生成された固有の組織 ID です。
 - デバイスまたはアプリケーションを Quickstart サービスに接続する場合は、*orgId* 値に 'quickstart' を指定します。
 
-## ファイアウォール構成
-{: #firewall_configuration}
-
-デバイスやアプリケーションを {{site.data.keyword.iot_short_notm}} に接続するには、特定のポートでトラフィックを許可するようにファイアウォールを構成する必要があります。ファイアウォールは、ローカル・マシンやルーターに置くことも、企業ネットワークの中に組み込むこともできます。
-
 ### ポート・セキュリティー
 {: #client_port_security}
 
-デバイス、ゲートウェイ、アプリケーションは、MQTT か HTTP のいずれかのプロトコルを使用して {{site.data.keyword.iot_short_notm}} に接続します。非セキュア接続もセキュア接続も可能です。
+デバイス、ゲートウェイ、アプリケーションは、MQTT か HTTP のいずれかのプロトコルを使用して {{site.data.keyword.iot_short_notm}} に接続します。 非セキュア接続もセキュア接続も可能です。
 
 |接続タイプ |プロトコル|ポート番号|
 |:---|:---|:---|
 |非セキュア*|MQTT および HTTP|1883 または 80|
 |セキュア (TLS)|MQTT および HTTPS|8883 または 443|
 
-&ast; ポート 1883 と 80 でのメッセージングは、デフォルトで無効になっています。デフォルト設定の変更について詳しくは、[セキュリティー・ポリシーの構成 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/security/set_up_policies.html#set_up_policies.html){: new_window} を参照してください。
+&ast; ポート 1883 と 80 は、デフォルトでメッセージングには無効になっています。 デフォルト設定の変更について詳しくは、[セキュリティー・ポリシーの構成 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/security/set_up_policies.html#set_up_policies.html){: new_window} を参照してください。
 
-MQTT は、TCP と WebSockets でサポートされています。 MQTT クライアントは接続の際に適切な資格情報を使用します (例えば、デバイスの場合はデバイス認証トークン、アプリケーションの場合は API キーとトークンを使用します)。 非セキュア・ポート 1883 に MQTT メッセージングを行うとこれらの資格情報が非暗号化テキストで送信されるため、代わりにセキュアな代替ポート 8883 または 443 を必ず使用してください。 セキュア・ポートを介して送信される場合、TLS 資格情報は必ず暗号化されます。 必ず (Python MQTT ライブラリーの `tls_set()` メソッドを使用するなどして) アプリケーションで TLS を有効にしてください。そうしないと、データが保護されずに送信される可能性があります。
+MQTT は、TCP と WebSockets でサポートされています。 MQTT クライアントは接続の際に適切な資格情報を使用します (例えば、デバイスの場合はデバイス認証トークン、アプリケーションの場合は API キーとトークンを使用します)。 非セキュア・ポート 1883 に MQTT メッセージングを行うとこれらの資格情報が非暗号化テキストで送信されるため、代わりにセキュアな代替ポート 8883 または 443 を必ず使用してください。 セキュア・ポートを介して送信される場合、TLS 資格情報は必ず暗号化されます。 必ず (Python MQTT ライブラリーの `tls_set()` メソッドを使用するなどして) アプリケーションで TLS を有効にしてください。 そうしないと、データが保護されずに送信される可能性があります。
 
 ポート 8883 または 443 でセキュアな MQTT メッセージングを使用すると、今までより新しいクライアント・ライブラリーは {{site.data.keyword.iot_short_notm}} によって提供されるデフォルトの証明書を自動的に信頼します。 クライアント環境がこれに該当しない場合、[messaging.pem ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/blob/master/src/wiotp/sdk/messaging.pem){: new_window} から完全な証明書チェーンをダウンロードして使用することができます。 カスタム証明書をアップロードした場合は、クライアント環境に適切な trust チェーンを追加しなければならない可能性があります。
 
 ## ファイアウォール構成
 {: #firewall_configuration .sectiontitle}
 
-デバイスやアプリケーションを {{site.data.keyword.iot_short_notm}} に接続するには、特定のポートでトラフィックを許可するようにファイアウォールを構成する必要があります。ファイアウォールは、ローカル・マシンやルーターに置くことも、企業ネットワークの中に組み込むこともできます。
+デバイスやアプリケーションを {{site.data.keyword.iot_short_notm}} に接続するには、特定のポートでトラフィックを許可するようにファイアウォールを構成する必要があります。 ファイアウォールは、ローカル・マシンやルーターに置くことも、企業ネットワークの中に組み込むこともできます。
 
 必須の IP アドレスが開いており、通信に使用可能であることを確認してください。
 
@@ -79,7 +78,7 @@ MQTT は、TCP と WebSockets でサポートされています。 MQTT クラ�
 |eu-de|159.122.121.80/28* </br>149.81.125.176/29</br>158.177.82.208/29</br>161.156.96.80/29|1883,80 | 8883,443|
 |Quickstart|169.45.2.16/28* </br>169.46.7.56/29</br>169.48.234.208/29</br>169.62.202.128/29|1883,80 | 使用不可|
 |専用 {{site.data.keyword.iot_short_notm}}|{{site.data.keyword.IBM}} 担当者にお問い合わせください。|-| - |
-&ast; 2019 年の第 1 四半期以降は使用されません。
+&ast; 2019 年の第 1 四半期の後は使用されません。
 
 ## TLS 要件
 {: #tls_requirements}

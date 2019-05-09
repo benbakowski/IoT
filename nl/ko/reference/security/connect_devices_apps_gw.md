@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # 애플리케이션, 디바이스 및 게이트웨이에 대한 연결 정보
 {: #connect_devices_apps_gw}
 
-<p>이 {{site.data.keyword.Bluemix}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
-전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/IoT/plans_overview.html#plans_overview)에서 찾을 수 있습니다.
+<p>이 {{site.data.keyword.cloud}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
+전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)에서 찾을 수 있습니다.
 </p>
 {: important}
 
@@ -44,15 +48,10 @@ MQTT 프로토콜을 사용하여 {{site.data.keyword.iot_full}}에 애플리케
 - 여기서 *orgId*는 서비스 인스턴스를 등록할 때 생성된 고유 조직 ID입니다.
 - Quickstart 서비스에 디바이스 또는 애플리케이션을 연결하는 경우 *orgId* 값으로 'quickstart'를 지정하십시오.
 
-## 방화벽 구성
-{: #firewall_configuration}
-
-디바이스 및 애플리케이션을 {{site.data.keyword.iot_short_notm}}에 연결하려면 특정 포트의 트래픽을 허용하도록 방화벽이 구성되어 있어야 합니다. 방화벽은 로컬 시스템, 사용자 라우터에 있거나 회사 네트워크 일부로 있을 수 있습니다.
-
 ### 포트 보안
 {: #client_port_security}
 
-디바이스, 게이트웨이 및 애플리케이션은 MQTT 또는 HTTP 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 연결됩니다. 연결은 비보안(보안이 설정되지 않음) 또는 보안(보안이 설정됨)일 수 있습니다. 
+디바이스, 게이트웨이 및 애플리케이션은 MQTT 또는 HTTP 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 연결됩니다. 연결은 비보안(보안이 설정되지 않음) 또는 보안(보안이 설정됨)일 수 있습니다.
 
 |연결 유형 |프로토콜|포트 번호|
 |:---|:---|:---|
@@ -72,7 +71,7 @@ MQTT는 TCP 및 WebSocket에서 지원됩니다. MQTT 클라이언트에서는 �
 
 필수 IP 주소가 열려 있고 통신에 사용할 수 있는지 확인하십시오.
 
-|지역 | IP 주소 |메시징 포트</br> (비보안) | 메시징 포트(보안)|
+|지역 | IP 주소|메시징 포트</br>(비보안) | 메시징 포트(보안)|
 |:---|:---|:---| :---|
 |us-south|169.45.2.16/28* </br>169.46.7.56/29</br>169.48.234.208/29</br>169.62.202.128/29|1883,80 | 8883,443|
 |eu-gb|159.8.169.208/28* </br>158.175.111.152/29</br>158.176.104.24/29</br>141.125.70.152/29|1883,80 | 8883,443|

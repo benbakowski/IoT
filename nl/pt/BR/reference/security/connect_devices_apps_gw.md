@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # Informações de conexão para aplicativos, dispositivos e gateways
 {: #connect_devices_apps_gw}
 
-<p>Essa coleção de documentação do {{site.data.keyword.Bluemix}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
-Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Essa coleção de documentação do {{site.data.keyword.cloud}} pertence ao plano de precificação Lite do {{site.data.keyword.iot_full}} e inclui informações básicas de introdução, referências de API e informações gerais de resolução de problemas. 
+Para a documentação de recurso integral do {{site.data.keyword.iot_short_notm}}, consulte a [documentação do produto do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) no IBM Knowledge Center. Mais informações sobre os vários planos podem ser localizadas em [{{site.data.keyword.iot_short_notm}} planos de serviço](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -43,11 +47,6 @@ Para conectar clientes de dispositivo, aplicativo e gateway à sua instância do
 **Notas**
 - Em que *orgId* é o ID exclusivo da organização que foi gerado quando você registrou a instância de serviço.
 - Se você estiver conectando um dispositivo ou aplicativo ao serviço de iniciação rápida, especifique 'quickstart' como o valor de *orgId*.
-
-## Configuração de firewall
-{: #firewall_configuration}
-
-Para conectar dispositivos e aplicativos ao {{site.data.keyword.iot_short_notm}}, deve-se assegurar que qualquer firewall esteja configurado para permitir tráfego em portas específicas. Um firewall pode residir em sua máquina local, em seu roteador ou como parte de sua rede corporativa.
 
 ### Segurança de porta
 {: #client_port_security}

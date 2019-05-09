@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, gateway devices, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -15,15 +19,15 @@ lastupdated: "2019-02-13"
 {:important: .important}
 
 
-# 概説のチュートリアル
+# 入門チュートリアル
 {: #getting-started-with-iotp .task}
 
-<p>この {{site.data.keyword.Bluemix}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
-全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/IoT/plans_overview.html#plans_overview)を参照してください。 
+<p>この {{site.data.keyword.cloud}} 資料コレクションは、{{site.data.keyword.iot_full}} ライトの料金プランが対象になっていて、基本的な入門情報や、API リファレンス、一般的なトラブルシューティング情報が含まれています。
+全ての {{site.data.keyword.iot_short_notm}} 機能の資料については、IBM Knowledge Center 上の [{{site.data.keyword.iot_short_notm}} 製品資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) を参照してください。 各種プランの詳細については、[{{site.data.keyword.iot_short_notm}} のサービス・プラン](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)を参照してください。 
 </p>
 {: important}
 
-この {{site.data.keyword.iot_full}} の概説のチュートリアルでは、IoT デバイスを {{site.data.keyword.iot_short_notm}} に接続します。
+この {{site.data.keyword.iot_full}} の入門チュートリアルでは、IoT デバイスを {{site.data.keyword.iot_short_notm}} に接続します。
 {:shortdesc}
 
 ## このタスクについて
@@ -35,7 +39,7 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 {: #index-byb .sectiontitle}  
 
 {{site.data.keyword.iot_short_notm}} の使用を開始する前に、以下のものを揃えておいてください。  
-* [IBM Cloud アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/registration/){: new_window}。
+* [IBM Cloud アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/registration/){: new_window}。
 * {{site.data.keyword.iot_short_notm}} インスタンス。  
 {{site.data.keyword.iot_short_notm}} インスタンスは、[IBM Cloud サービス・カタログの {{site.data.keyword.iot_short_notm}} ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window} から直接作成できます。  
 * 以下の要件を満たしたデバイス。  
@@ -47,8 +51,8 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 
  |  |   サービスがデプロイされている | サービスがデプロイされていない
  | -------------| ------------- | -------------
-  |**接続するデバイスがある** | このトピックで説明されているプロセスを実行します。| [Play with {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} で、デバイスの接続を試すことができます。
-  |**接続するデバイスがない** | [デバイス・データをシミュレートする](/docs/IoT/devices/device_sim.html)か、[スマートフォンを接続します ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。| [Watson IoT Platform の概説](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}から始めます。
+  |**接続するデバイスがある** | このトピックで説明されているプロセスを実行します。 | [Play with {{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} で、デバイスの接続を試すことができます。
+  |**接続するデバイスがない** | [デバイス・データをシミュレートする](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data)か、[スマートフォンを接続します ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}。 | [Watson IoT Platform の概説](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}から始めます。
 
 
 
@@ -59,7 +63,7 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 **ヒント:** [{{site.data.keyword.iot_short_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://internetofthings.ibmcloud.com){: new_window} から 1 つずつデバイスを登録することも、[Watson IoT Platform API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} を使用して複数のデバイスを追加することも可能です。
 
 {{site.data.keyword.iot_short_notm}} ダッシュボードからデバイスを追加するには、以下のようにします。
-1. {{site.data.keyword.Bluemix_notm}} コンソールで、{{site.data.keyword.iot_short_notm}} サービスの詳細ページの**「起動」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} コンソールで、{{site.data.keyword.iot_short_notm}} サービスの詳細ページの**「起動」**をクリックします。
 
     新しいブラウザー・タブで以下の URL の {{site.data.keyword.iot_short_notm}} Web コンソールが開きます。
 
@@ -153,10 +157,10 @@ IoT デバイスからデータを受信する操作を開始するには、そ�
 デバイス・データをコンシュームする独自のアプリを作成して接続することで、データ分析機能を拡張します。
 - 特定のデバイス・タイプを {{site.data.keyword.iot_short_notm}} に接続する方法について詳しくは、[developerWorks recipes ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。
 - デバイスとアプリを統合し、接続するためのコードをビルドする場合は、ツールの[クライアント・ライブラリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} を参照してください。
-- [{{site.data.keyword.iot_short_notm}} API 資料](/docs/IoT/reference/api.html)を調べてください。
+- [{{site.data.keyword.iot_short_notm}} API 資料](/docs/services/IoT?topic=iot-platform-api_overview#api_overview)を調べてください。
 - {{site.data.keyword.iot_short_notm}} に [{{site.data.keyword.cloudantfull}} サービスを接続して ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window}、デバイスの履歴データを格納してください。
 - 接続/分析のいずれかのサービス・プランを購入して既存の環境をマイグレーションすれば、[{{site.data.keyword.iot_short_notm}}のフルセットの機能 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window} を利用できます。
 
 プランをマイグレーションする場合は、{{site.data.keyword.IBM}} 担当者に連絡するか、サポート・チケットを開いてください。
 
-さらに詳しい一連の概説ガイドとサンプル・アプリケーションもあります。{{site.data.keyword.iot_short_notm}} を使用して、実稼働環境ですぐに利用できるエンドツーエンド IoT プロトタイプ・システムを開発する基本的な手順を段階的に取り上げた資料です。IBM Knowledge Center にある {{site.data.keyword.iot_short_notm}} 製品資料を参照してください。{{site.data.keyword.iot_short_notm}} の操作を始めたばかりの開発者であれば、[概説ガイド ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window} のセクションにあるステップバイステップ・プロセスを使用してください。
+さらに詳しい一連の概説ガイドとサンプル・アプリケーションもあります。{{site.data.keyword.iot_short_notm}} を使用して、実稼働環境ですぐに利用できるエンドツーエンド IoT プロトタイプ・システムを開発する基本的なひととおりの手順を取り上げた資料です。IBM Knowledge Center にある {{site.data.keyword.iot_short_notm}} 製品資料を参照してください。 {{site.data.keyword.iot_short_notm}} の操作を始めたばかりの開発者であれば、[概説ガイド ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window} のセクションにあるステップバイステップ・プロセスを使用してください。

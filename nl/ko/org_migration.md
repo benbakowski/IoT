@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-13"
 # {{site.data.keyword.iot_short_notm}} Non-production 또는 Production으로 {{site.data.keyword.iot_short_notm}} Lite 마이그레이션
 {: #org_migration}
 
-<p>이 {{site.data.keyword.Bluemix}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
-전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 {{site.data.keyword.IBM}} Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/IoT/plans_overview.html#plans_overview)에서 찾을 수 있습니다.
+<p>이 {{site.data.keyword.cloud}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
+전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 {{site.data.keyword.IBM}} Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)에서 찾을 수 있습니다.
 </p>
 {: important}
 
@@ -45,7 +49,7 @@ Watson IoT Platform Lite의 품질과 성능에 대한 사전 점검을 완료�
 
 그러나 기존의 Lite 설정 중 일부를 이전하려는 경우에는 다음 절에서 안내하는 프로세스를 참조하십시오.
 
-[{{site.data.keyword.iot_short_notm}} API](/docs/IoT/reference/api.html#api_overview)의 문서에서는 API 및 전체 매개변수 세트를 호출하는 방법에 대한 지시사항을 제공합니다.
+[{{site.data.keyword.iot_short_notm}} API](/docs/services/IoT?topic=iot-platform-api_overview#api_overview)의 문서에서는 API 및 전체 매개변수 세트를 호출하는 방법에 대한 지시사항을 제공합니다.
 
 
 ## 시작하기 전에
@@ -74,14 +78,14 @@ Watson IoT Platform Lite의 품질과 성능에 대한 사전 점검을 완료�
 디바이스 마이그레이션은 다음 단계를 통해 완료할 수 있습니다.  
 1. 새 조직에 유지하려는 디바이스 유형을 마이그레이션하십시오.  
 2. 새 조직에 디바이스 자체를 마이그레이션하십시오.  
-3. 디바이스가 {{site.data.keyword.Bluemix_short}}에 연결하는 데 사용하는 호스트 이름을 업데이트하여 새 조직 ID로 시작하십시오.
+3. 디바이스가 {{site.data.keyword.cloud_notm}}에 연결하는 데 사용하는 호스트 이름을 업데이트하여 새 조직 ID로 시작하십시오.
 4. Lite 플랫폼에서 작성한 데이터 관리 정보를 마이그레이션하십시오.   
 여기에는 디바이스 실제 및 논리 인터페이스, 항목 및 규칙이 포함될 수 있습니다.
 
 <p>디바이스 유형 및 디바이스는 다음 API를 사용하여 대량으로 마이그레이션할 수 있습니다.
 <table>
 <tr>
-<th> API 문서</th>
+<th> API 문서 </th>
 <th> 내보내기 API </th>
 <th> 가져오기 API </th>
 </tr>
@@ -153,14 +157,14 @@ Lite 플랫폼에서 사용하도록 설정한 확장기능은 새 조직에서 
 1. 새 {{site.data.keyword.iot_short_notm}} 서비스의 최상위 레벨 대시보드에 로그인하십시오.
 2. **사용량** 탭을 선택하십시오.
 3. {{site.data.keyword.iot_short_notm}} 서비스 정보를 표시하려면 **보기 세부사항** 링크를 클릭하십시오.  
-다음 정보가 표시됩니다. 
+다음 정보가 표시됩니다.
    - 6자의 orgID
    - API 키 및 토큰  
    여기에 표시된 API 키를 사용하는 대신 각 애플리케이션에 대한 새 API 키를 생성해야 합니다. 그러면 각 애플리케이션에 대한 적절한 권한을 설정할 수 있습니다.
    - 호스트 URL
 4. 애플리케이션에 대한 API 키 및 인증 토큰 조합을 작성하십시오.  
 조직에 연결하기 위해 애플리케이션을 구성할 때 이러한 사항이 필요합니다.   
-   1.  `실행`을 클릭하십시오.   
+   1.  `실행`을 클릭하십시오.  
    {{site.data.keyword.iot_short_notm}} Lite 서비스를 관리하는 데 사용한 기본 서비스 대시보드로 이동하게 됩니다.
    2. **앱**을 연결하십시오.
    3. **API 키 생성**을 클릭하십시오.
@@ -179,15 +183,15 @@ Lite 플랫폼에서 사용하도록 설정한 확장기능은 새 조직에서 
 4. 변경사항을 저장하고 Node-RED 플로우를 다시 배치하십시오.
 
 ### Cloud Foundry 바인딩을 사용하지 않는 애플리케이션 업데이트
-애플리케이션이 조직 ID, API 키 및 인증 토큰을 저장하는 위치를 식별하고 전에 저장한 값으로 이를 대체하십시오.
+애플리케이션에서 조직 ID, API 키 및 인증 토큰을 저장하는 위치를 식별하고 이전에 사용자가 저장한 값으로 이를 대체하십시오.
 
 애플리케이션에서 {{site.data.keyword.iot_short_notm}} SDK 중 하나를 사용하는 경우 이러한 값은 특성 파일에 있을 수 있습니다.
 {: tip}
 
 ### Cloud Foundry 바인딩을 사용하는 애플리케이션 업데이트
 
-{{site.data.keyword.Bluemix_short}}에서는 Cloud Foundry 애플리케이션을 하나 이상의 Cloud Foundry 서비스에 바인딩하는 메커니즘을 제공합니다. {{site.data.keyword.Bluemix_short}} CLI를 사용하거나 {{site.data.keyword.Bluemix_short}} 대시보드에서 애플리케이션과 서비스 간에 `Connection`을 작성하여 바인딩을 설정할 수 있습니다. 
+{{site.data.keyword.cloud_notm}}에서는 Cloud Foundry 애플리케이션을 하나 이상의 Cloud Foundry 서비스에 바인딩하는 메커니즘을 제공합니다. {{site.data.keyword.cloud_notm}} CLI를 사용하거나 {{site.data.keyword.cloud_notm}} 대시보드에서 애플리케이션과 서비스 간에 `Connection`을 작성하여 바인딩을 설정할 수 있습니다.
 
 애플리케이션이 서비스에 바인드되면 서비스 API키 및 인증 토큰 인증 정보가 애플리케이션에서 검색할 수 있는 위치의 `VCAP_SERVICES` 환경 변수에 복사됩니다.
 
-**중요:** 이 바인딩 메커니즘은 새 {{site.data.keyword.iot_short_notm}} 서비스와 함께 사용할 수 없습니다. `VCAP_SERVICES`로부터 읽는 애플리케이션에서 코드를 찾고 이제 API 키와 인증 토큰을 저장하는 위치에서 값을 읽는 코드로 대체하십시오. 업데이트를 완료하려면 애플리케이션을 다시 빌드하고 다시 배치해야 합니다.
+**중요:** 이 바인딩 메커니즘은 새 {{site.data.keyword.iot_short_notm}} 서비스와 함께 사용할 수 없습니다. `VCAP_SERVICES`로부터 읽는 애플리케이션의 코드를 찾아 지금 API 키와 인증 토큰을 저장하는 위치로부터 값을 읽는 코드로 대체해야 합니다. 업데이트를 완료하려면 애플리케이션을 다시 빌드하고 다시 배치해야 합니다.

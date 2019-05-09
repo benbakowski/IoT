@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # Risoluzione dei problemi di {{site.data.keyword.iot_short_notm}}
 {: #ts}
 
-<p>Questa raccolta di documentazione {{site.data.keyword.Bluemix}} è relativa al piano dei prezzi {{site.data.keyword.iot_full}} Lite e include le informazioni introduttive di base, le guide di riferimento API e delle informazioni generali per la risoluzione dei problemi.
-Per la documentazione completa della funzione {{site.data.keyword.iot_short_notm}}, vedi la [documentazione del prodotto {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) nell'IBM Knowledge Center. Ulteriori informazioni sui vari piani sono disponibili in [Piani di servizio {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Questa raccolta di documentazione {{site.data.keyword.cloud}} è relativa al piano dei prezzi {{site.data.keyword.iot_full}} Lite e include le informazioni introduttive di base, le guide di riferimento API e delle informazioni generali per la risoluzione dei problemi.
+Per la documentazione completa della funzione {{site.data.keyword.iot_short_notm}}, vedi la [documentazione del prodotto {{site.data.keyword.iot_short_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) nell'IBM Knowledge Center. Ulteriori informazioni sui vari piani sono disponibili in [Piani di servizio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
-Queste sono le risposte a domande sulla risoluzione dei problemi comuni riguardo l'utilizzo di {{site.data.keyword.iot_full}} su {{site.data.keyword.Bluemix_notm}}.
+Queste sono le risposte a domande sulla risoluzione dei problemi comuni riguardo l'utilizzo di {{site.data.keyword.iot_full}} su {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 ## Problema di accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}}
@@ -33,12 +37,12 @@ Non puoi accedere all'organizzazione {{site.data.keyword.iot_short_notm}} che ti
 Non puoi accedere alla tua organizzazione {{site.data.keyword.iot_short_notm}} direttamente utilizzando l'URL dell'organizzazione o utilizzando `https://internetofthings.ibmcloud.com`.
 {: tsSymptoms}
 
-Il tuo accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}} potrebbe essere scaduto. Le organizzazioni {{site.data.keyword.iot_short_notm}} create utilizzando {{site.data.keyword.Bluemix}} utilizzano i profili utente temporanei per impostazione predefinita.
+Il tuo accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}} potrebbe essere scaduto. Le organizzazioni {{site.data.keyword.iot_short_notm}} create utilizzando {{site.data.keyword.cloud}} utilizzano i profili utente temporanei per impostazione predefinita.
 {: tsCauses}
 
-Puoi risolvere questo problema accedendo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando {{site.data.keyword.Bluemix_notm}} e modificando le impostazioni sulla scadenza del tuo profilo utente. Per modificare le tue impostazioni di scadenza utente:
+Puoi risolvere questo problema accedendo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando {{site.data.keyword.cloud_notm}} e modificando le impostazioni sulla scadenza del tuo profilo utente. Per modificare le tue impostazioni di scadenza utente:
 
-1. Dal tuo dashboard {{site.data.keyword.Bluemix_notm}}, apri il tuo servizio {{site.data.keyword.iot_short_notm}}.
+1. Dal tuo dashboard {{site.data.keyword.cloud_notm}}, apri il tuo servizio {{site.data.keyword.iot_short_notm}}.
 2. Fai clic su **Members** dalla barra di navigazione.
 3. Fai clic sull'icona **Edit**.
 4. Deseleziona la casella di spunta **Access expires** e fai clic su **Save**.

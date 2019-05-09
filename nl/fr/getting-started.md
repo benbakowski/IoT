@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: IoT device, Watson IoT Platform, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -16,10 +20,10 @@ lastupdated: "2019-02-13"
 
 
 # Tutoriel d'initiation
-{: #getting-started .task}
+{: #getting-started}
 
-<p>Cette série de documents {{site.data.keyword.Bluemix}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
-Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir [la documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [Plans de service {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview).
+<p>Cette série de documents {{site.data.keyword.cloud}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
+Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir [la documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center.  Vous trouverez davantage d'informations sur les divers plans dans [{{site.data.keyword.iot_short_notm}}Plans de service](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -34,21 +38,21 @@ Avant de pouvoir commencer à recevoir des données depuis vos terminaux IoT, vo
 ## Avant de commencer
 {: #byb .sectiontitle}  
 
-Pour pouvoir commencer à utiliser {{site.data.keyword.iot_short_notm}}, vous devez disposer des éléments suivants :   
-* Un compte [{{site.data.keyword.Bluemix}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/registration/){: new_window}.
-* Une instance {{site.data.keyword.iot_short_notm}}.   
-Vous pouvez créer une instance {{site.data.keyword.iot_short_notm}} directement depuis la [page {{site.data.keyword.iot_short_notm}} dans le catalogue des services {{site.data.keyword.Bluemix_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
-* Un terminal qui remplit les exigences suivantes :   
+Pour pouvoir commencer à utiliser {{site.data.keyword.iot_short_notm}}, vous devez disposer des éléments suivants :  
+* Un [compte {{site.data.keyword.cloud}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/registration/){: new_window}.
+* Une instance {{site.data.keyword.iot_short_notm}}.  
+Vous pouvez créer une instance {{site.data.keyword.iot_short_notm}} directement depuis la [page {{site.data.keyword.iot_short_notm}} dans le catalogue des services {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
+* Un terminal qui remplit les exigences suivantes :  
   *	Votre terminal doit pouvoir communiquer à l'aide des protocoles HTTP ou MQTT.
   * Les messages du terminal doivent remplir les exigences relatives à la charge de message {{site.data.keyword.iot_short_notm}}.  
 Pour plus d'informations, voir [Développement de terminaux sur {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/devices/device_dev_index.html){: new_window}.
 
-Explorez les options suivantes en fonction de votre situation : 
+Explorez les options suivantes en fonction de votre situation :
 
  |  |   Le service est déployé | Le service n'est pas déployé
  | -------------| ------------- | -------------
   |**J'ai un terminal à connecter** | Suivez le processus présenté dans cette rubrique. | Explorez la connexion de terminal dans la [démonstration Play with {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**Je n'ai pas de terminal à connecter** | [Simulez des données de terminal](/docs/IoT/devices/device_sim.html) ou [connectez votre smartphone ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Initiez-vous avec le [module de démarrage {{site.data.keyword.iot_short_notm}}](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}.
+  |**Je n'ai pas de terminal à connecter** | [Simulez des données de terminal](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data) ou [connectez votre smartphone ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Commencez à utiliser [{{site.data.keyword.iot_short_notm}} Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}.
 
 
 
@@ -56,10 +60,10 @@ Explorez les options suivantes en fonction de votre situation :
 {: #step1 .sectiontitle}  
 L'enregistrement d'un terminal implique de le classifier sous un type de terminal, de lui attribuer un nom et de fournir des informations le concernant. Vous indiquez ensuite un jeton de connexion ou acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
-**Astuce :** vous pouvez enregistrer vos terminaux un à un depuis le [tableau de bord {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe ")](https://internetofthings.ibmcloud.com){: new_window}, ou utiliser l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter plusieurs terminaux simultanément. 
+**Astuce :** vous pouvez enregistrer vos terminaux un à un depuis le [tableau de bord {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe ")](https://internetofthings.ibmcloud.com){: new_window}, ou utiliser l'[API {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} pour ajouter plusieurs terminaux simultanément.
 
 Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
-1. Dans la console {{site.data.keyword.Bluemix_notm}}, cliquez sur **Lancer** dans la page des détails du service {{site.data.keyword.iot_short_notm}}.
+1. Dans la console {{site.data.keyword.cloud_notm}}, cliquez sur **Lancer** dans la page des détails du service {{site.data.keyword.iot_short_notm}}.
 
     La console web {{site.data.keyword.iot_short_notm}} s'ouvre dans un nouvel onglet de navigateur à l'URL suivante :
 
@@ -110,7 +114,7 @@ aussi un paramètre indispensable à la connexion de votre terminal à {{site.da
     * ID d'organisation
     * Type de terminal
     * ID de terminal
-    * Méthode d'authentification 
+    * Méthode d'authentification
     * Jeton d'authentification
 
     Vous aurez besoin d'un ID d'organisation, d'un type de terminal, d'un ID de terminal et d'un jeton d'authentification pour configurer votre terminal afin qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
@@ -153,13 +157,13 @@ l'ID d'organisation, le type de terminal, l'ID de terminal et le jeton d'authent
 ## Etapes suivantes  
 {: #related .sectiontitle}
 
-Etendez les fonctions d'analyse de données en créant et en connectant vos propres applications afin qu'elles consomment des données de terminal. 
+Etendez les fonctions d'analyse de données en créant et en connectant vos propres applications afin qu'elles consomment des données de terminal.
 - Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.
-- Consultez les [bibliothèques client ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} en quête d'outils de construction du code pour l'intégration et la connexion de vos terminaux et de vos applications. 
-- Explorez la [documentation d'API {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html).
-- <dMD:A HREF="https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/cloudant_connector.html">Connectez un service {{site.data.keyword.cloudantfull}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"){:new_window} à votre instance {{site.data.keyword.iot_short_notm}} pour stocker les données de terminal historiques. 
-- Pour bénéficier de l'[ensemble de fonctions {{site.data.keyword.iot_short_notm}} complet ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html){:new_window}, vous pouvez acheter l'un des plans Connection and Analytics Service, puis migrer votre environnement existant. 
+- Consultez les [bibliothèques client ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} en quête d'outils de construction du code pour l'intégration et la connexion de vos terminaux et de vos applications.
+- Explorez la [documentation d'API {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-api_overview#api_overview).
+- <dMD:A HREF="https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/cloudant_connector.html">Connectez un service {{site.data.keyword.cloudantfull}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"){:new_window} à votre instance {{site.data.keyword.iot_short_notm}} pour stocker les données de terminal historiques.
+- Pour bénéficier de l'[ensemble de fonctions {{site.data.keyword.iot_short_notm}} complet ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html){:new_window}, vous pouvez acheter l'un des plans Connection and Analytics Service, puis migrer votre environnement existant.
 
-Pour migrer des plans, contactez votre interlocuteur {{site.data.keyword.IBM}} ou ouvrez un ticket de demande de service. 
+Pour migrer des plans, contactez votre interlocuteur {{site.data.keyword.IBM}} ou ouvrez un ticket de demande de service.
 
-Un ensemble plus détaillé de guides d'initiation et de modèles d'application permettant de découvrir les bases du développement d'un prototype Iot de bout en bout prêt à être utilisé en production avec {{site.data.keyword.iot_short_notm}} est également disponible dans la documentation du produit {{site.data.keyword.iot_short_notm}}, dans l'{{site.data.keyword.IBM_notm}} Knowledge Center. Si vous êtes novice en développement avec {{site.data.keyword.iot_short_notm}}, utilisez les processus détaillés dans la section [Guides d'initiation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window}. 
+Un ensemble plus détaillé de guides d'initiation et de modèles d'application permettant de découvrir les bases du développement d'un prototype Iot de bout en bout prêt à être utilisé en production avec {{site.data.keyword.iot_short_notm}} est également disponible dans la documentation du produit {{site.data.keyword.iot_short_notm}}, dans l'{{site.data.keyword.IBM_notm}} Knowledge Center. Si vous êtes novice en développement avec {{site.data.keyword.iot_short_notm}}, utilisez les processus détaillés dans la section [Guides d'initiation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/platform/getting_started/getting-started-iot-overview.html#getting-started){:new_window}.

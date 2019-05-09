@@ -3,7 +3,11 @@
 copyright:
 
 years: 2017, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Data backup Use, data backup strategy, records of device management requests
+
+subcollection: iot-platform
 
 ---
 
@@ -19,8 +23,8 @@ lastupdated: "2019-02-13"
 # Sauvegarde des données
 {: #back_up}
 
-<p>Cette série de documents {{site.data.keyword.Bluemix}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
-Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir [la documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center. Vous trouverez davantage d'informations sur les divers plans dans [Plans de service {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview).
+<p>Cette série de documents {{site.data.keyword.cloud}} concerne le plan de tarification {{site.data.keyword.iot_full}} Lite et inclut le guide d'initiation, les références d'API et les informations générales relatives au traitement des incidents.
+Pour la documentation complète de la fonction {{site.data.keyword.iot_short_notm}}, voir [la documentation du produit {{site.data.keyword.iot_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/fr/SSQP8H/iot/overview/overview.html) dans l'IBM Knowledge Center.  Vous trouverez davantage d'informations sur les divers plans dans [{{site.data.keyword.iot_short_notm}}Plans de service](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -44,7 +48,7 @@ Les types de données client suivants sont sauvegardés dans le cadre de la stra
 Les types de données suivants ne sont pas sauvegardés dans {{site.data.keyword.iot_short_notm}} :
 
 - Les événements de terminaux
-- L'état de messagerie transitoire, par exemple les données en transit 
+- L'état de messagerie transitoire, par exemple les données en transit
 - Les messages MQTT envoyés dans le cadre d'une demande de gestion de terminal
 <!-- - Analytics rules and alert configuration -->
 
@@ -61,6 +65,6 @@ Emplacement                   | Emplacement de la sauvegarde
 IBM Cloud Sud des Etats-Unis (Dallas)| Washington
 IBM Cloud Royaume-Uni (Londres) | Francfort
 IBM Cloud Allemagne (Francfort) | Londres
-IBM Cloud Dedicated | En fonction de la demande client au moment de la commande de {{site.data.keyword.iot_short_notm}} Dedicated 
+IBM Cloud Dedicated | En fonction de la demande client au moment de la commande de {{site.data.keyword.iot_short_notm}} Dedicated
 
 **Remarque :** les emplacements sont susceptibles de changer dans le futur afin de prendre en compte les lois sur la confidentialité des données, par exemple l'impact potentiel du Brexit sur les règles de souveraineté des données de l'Union européenne.

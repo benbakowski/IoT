@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-16"
+
+keywords: IoT device, Watson IoT Platform, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -16,10 +20,10 @@ lastupdated: "2019-02-13"
 
 
 # 시작하기 튜토리얼
-{: #getting-started .task}
+{: #getting-started}
 
-<p>이 {{site.data.keyword.Bluemix}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
-전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/IoT/plans_overview.html#plans_overview)에서 찾을 수 있습니다.
+<p>이 {{site.data.keyword.cloud}} 문서 콜렉션은 {{site.data.keyword.iot_full}} Lite 가격 플랜과 관계가 있으며 기본 시작하기 정보, API 참조 및 일반 문제점 해결 정보가 포함되어 있습니다.
+전체 {{site.data.keyword.iot_short_notm}} 기능 문서는 IBM Knowledge Center의 [{{site.data.keyword.iot_short_notm}} 제품 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html)를 참조하십시오. 다양한 플랜에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 서비스 플랜](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview)에서 찾을 수 있습니다.
 </p>
 {: important}
 
@@ -35,9 +39,9 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 {: #byb .sectiontitle}  
 
 {{site.data.keyword.iot_short_notm}}을 사용하려면 다음 항목이 있어야 합니다.  
-* [{{site.data.keyword.Bluemix}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/registration/){: new_window}.
+* [{{site.data.keyword.cloud}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/registration/){: new_window}.
 * {{site.data.keyword.iot_short_notm}} 인스턴스.  
-[{{site.data.keyword.Bluemix_short}} 서비스 카탈로그의 {{site.data.keyword.iot_short_notm}} 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}에서 {{site.data.keyword.iot_short_notm}} 인스턴스를 직접 작성할 수 있습니다.   
+[{{site.data.keyword.cloud_notm}} 서비스 카탈로그의 {{site.data.keyword.iot_short_notm}} 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}에서 {{site.data.keyword.iot_short_notm}} 인스턴스를 직접 작성할 수 있습니다.   
 * 다음 요구사항을 충족하는 디바이스:  
   *	디바이스가 HTTP 또는 MQTT 프로토콜을 사용하여 통신할 수 있어야 합니다.
   * 디바이스 메시지가 {{site.data.keyword.iot_short_notm}} 메시지 페이로드 요구사항을 준수해야 합니다.  
@@ -48,7 +52,7 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
  |  |서비스가 배치됨 |서비스가 배치되지 않음
  | -------------| ------------- | -------------
   |**연결할 디바이스가 있음** | 이 주제에서 간략히 설명된 프로세스를 따르십시오. |[{{site.data.keyword.iot_short_notm}}으로 재생 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결을 탐색합니다.
-  |**연결할 디바이스가 없음** | [디바이스 데이터 시뮬레이션](/docs/IoT/devices/device_sim.html) 또는 [스마트폰 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | [{{site.data.keyword.iot_short_notm}} 스타터](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}를 시작합니다.
+  |**연결할 디바이스가 없음** | [디바이스 데이터 시뮬레이션](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data) 또는 [스마트폰 연결 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | [{{site.data.keyword.iot_short_notm}} 스타터](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}를 시작합니다.
 
 
 
@@ -59,7 +63,7 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 **팁:** [{{site.data.keyword.iot_short_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://internetofthings.ibmcloud.com){: new_window}에서 디바이스를 하나씩 등록하거나 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window}를 사용하여 여러 디바이스를 추가할 수 있습니다.
 
 {{site.data.keyword.iot_short_notm}} 대시보드에서 디바이스를 추가하려면 다음을 수행하십시오.
-1. {{site.data.keyword.Bluemix_notm}} 콘솔의 {{site.data.keyword.iot_short_notm}} 서비스 세부사항 페이지에서 **실행**을 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 콘솔의 {{site.data.keyword.iot_short_notm}} 서비스 세부사항 페이지에서 **실행**을 클릭하십시오.
 
     {{site.data.keyword.iot_short_notm}} 웹 콘솔은 새 브라우저 탭에서 다음 URL을 엽니다.
 
@@ -153,7 +157,7 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 디바이스 데이터를 이용하기 위해 고유 앱을 작성 및 연결하여 데이터 분석 기능을 확장합니다.
 - 특정 디바이스 유형을 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 자세한 정보는 [developerWorks 레시피 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}를 참조하십시오.
 - 디바이스와 앱을 통합한 후 연결하기 위해 코드를 빌드하도록 도구에 대한 [클라이언트 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window}를 체크아웃하십시오.
-- [{{site.data.keyword.iot_short_notm}} API 문서](/docs/IoT/reference/api.html)를 탐색하십시오.
+- [{{site.data.keyword.iot_short_notm}} API 문서](/docs/services/IoT?topic=iot-platform-api_overview#api_overview)를 탐색하십시오.
 - [{{site.data.keyword.cloudantfull}} 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window}를 {{site.data.keyword.iot_short_notm}}에 연결하여 히스토리 디바이스 데이터를 저장하십시오.
 - 전체 [{{site.data.keyword.iot_short_notm}} 기능 세트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}를 활용하기 위해, 연결 및 분석 서비스 플랜 중 하나를 구매한 후 기존 환경을 마이그레이션할 수 있습니다.
 

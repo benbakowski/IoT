@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Lite plan, migrate, Watson IoT Platform
+
+subcollection: iot-platform
 
 ---
 
@@ -17,8 +21,8 @@ lastupdated: "2019-02-13"
 # Migración de {{site.data.keyword.iot_short_notm}} Lite a {{site.data.keyword.iot_short_notm}} de producción o de no producción
 {: #org_migration}
 
-<p>Esta recopilación de documentación de {{site.data.keyword.Bluemix}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
-Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en {{site.data.keyword.IBM}} Knowledge Center. Encontrará más información acerca de los distintos planes en [planes de servicios de {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Esta recopilación de documentación de {{site.data.keyword.cloud}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
+Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en {{site.data.keyword.IBM}} Knowledge Center. Encontrará más información acerca de los distintos planes en [Planes del servicio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -45,7 +49,7 @@ En este documento se describen los tipos de datos que puede que desee migrar de 
 
 No obstante, si desea transferir algunos de los valores existentes de Lite, las secciones siguientes le indican los pasos a seguir.
 
-La documentación de las [API de {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html#api_overview) proporciona instrucciones sobre cómo invocar las API y su conjunto completo de parámetros.
+La documentación sobre las [API de {{site.data.keyword.iot_short_notm}}]/docs/services/IoT?topic=iot-platform-api_overview#api_overview) contiene instrucciones sobre cómo invocar las API y su conjunto completo de parámetros.
 
 
 ## Antes de empezar
@@ -64,7 +68,7 @@ Utilice el mandato `GET /authorization/users` para exportar todos los usuarios d
 2. Limpie la lista de usuarios.  
 Si es necesario, edite la estructura JSON para eliminar los usuarios que no desee migrar a la nueva organización.
 3. Importe los usuarios a la nueva organización.  
-Utilice el mandato `POST /authorization/users/multiple` para importar a la lista de usuarios JSON editada a la nueva organización.
+Utilice el mandato `POST /authorization/users/multiple` para importar a la lista de usuarios JSON editada en la nueva organización.
 
 Ahora los usuarios tienen acceso a la nueva organización, que se mostrará en el selector de organización en el panel de control de {{site.data.keyword.iot_short_notm}}.
 
@@ -74,7 +78,7 @@ Ahora los usuarios tienen acceso a la nueva organización, que se mostrará en e
 La migración de los dispositivos se puede llevar a cabo siguiendo estos pasos:  
 1. Migre los tipos de dispositivo que desea conservar en la nueva organización.  
 2. Migre los dispositivos en sí a la nueva organización.  
-3. Actualice el nombre de host que utilizan los dispositivos para conectarse a {{site.data.keyword.Bluemix_short}} para empezar a trabajar con el nuevo ID de organización.
+3. Actualice el nombre de host que utilizan los dispositivos para conectarse a {{site.data.keyword.cloud_notm}} para empezar a trabajar con el nuevo ID de organización.
 4. Migre la información de gestión de datos que haya creado en la plataforma Lite.   
 Esto puede incluir interfaces lógicas y físicas de dispositivo, cosas y reglas.
 
@@ -186,7 +190,7 @@ Si la aplicación utiliza uno de los SDK de {{site.data.keyword.iot_short_notm}}
 
 ### Actualización de una aplicación que utiliza un enlace de Cloud Foundry
 
-{{site.data.keyword.Bluemix_short}} proporciona un mecanismo para enlazar las aplicaciones de Cloud Foundry con uno o varios servicios de Cloud Foundry. Los enlaces se pueden establecer utilizando la CLI de {{site.data.keyword.Bluemix_short}} o creando una `Conexión` entre la aplicación y el servicio en el panel de control de {{site.data.keyword.Bluemix_short}}.
+{{site.data.keyword.cloud_notm}} proporciona un mecanismo para enlazar las aplicaciones de Cloud Foundry con uno o varios servicios de Cloud Foundry. Los enlaces se pueden establecer utilizando la CLI de {{site.data.keyword.cloud_notm}} o creando una `Conexión` entre la aplicación y el servicio en el panel de control de {{site.data.keyword.cloud_notm}}.
 
 Cuando una aplicación está enlazada con un servicio, las credenciales de clave de API y señal de autenticación del servicio se copian en la variable de entorno `VCAP_SERVICES`, desde donde puede recuperarlas la aplicación.
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, gateway devices, Watson IoT Platform service plans
+
+subcollection: iot-platform
 
 ---
 
@@ -18,8 +22,8 @@ lastupdated: "2019-02-13"
 # Guía de aprendizaje de iniciación
 {: #getting-started-with-iotp .task}
 
-<p>Esta recopilación de documentación de {{site.data.keyword.Bluemix}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
-Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [planes de servicios de {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Esta recopilación de documentación de {{site.data.keyword.cloud}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
+Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [Planes del servicio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -35,7 +39,7 @@ Antes de empezar a recibir datos desde los dispositivos de IoT, debe conectarlos
 {: #index-byb .sectiontitle}  
 
 Antes de empezar a utilizar {{site.data.keyword.iot_short_notm}}, necesitará lo siguiente:  
-* Una [cuenta de IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/registration/){: new_window}.
+* Una [cuenta de IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/registration/){: new_window}.
 * Una instancia de {{site.data.keyword.iot_short_notm}}.  
 Puede crear una instancia de {{site.data.keyword.iot_short_notm}} directamente desde la [página de {{site.data.keyword.iot_short_notm}} del Catálogo de servicios de IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 * Un dispositivo que cumple los requisitos siguientes:  
@@ -48,7 +52,7 @@ Explore las opciones siguientes en función de su situación:
  |  |   El servicio se despliega | El servicio no se despliega
  | -------------| ------------- | -------------
   |**Tengo ningún dispositivo que conectar** | Siga el proceso que se describe en este tema. | Explore la conexión de dispositivos en el apartado sobre [Practicar con {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**No tengo un dispositivo para conectar** | [Simule datos de dispositivo](/docs/IoT/devices/device_sim.html) o [Conecte su teléfono inteligente ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Iníciese en [Watson IoT Platform Starter](https://console.bluemix.net/docs/IoT-starter/iot500.html#gettingstartedtemplate){:new_window}.
+  |**No tengo un dispositivo para conectar** | [Simule datos de dispositivo](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data) o [Conecte su teléfono inteligente ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Iníciese en [Watson IoT Platform Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}.
 
 
 
@@ -59,7 +63,7 @@ El registro de un dispositivo implica la clasificación del dispositivo como un 
 **Sugerencia:** Puede registrar los dispositivos uno a uno desde el [panel de control de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://internetofthings.ibmcloud.com){: new_window}, o puede utilizar la [API de Watson IoT Platform ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/org-admin.html#!/Device_Bulk_Configuration/post_bulk_devices_add){: new_window} para añadir varios dispositivos.
 
 Para añadir un dispositivo desde el panel de control de {{site.data.keyword.iot_short_notm}}:
-1. En la consola de {{site.data.keyword.Bluemix_notm}}, pulse **Iniciar** en la página de detalles de servicio de {{site.data.keyword.iot_short_notm}}.
+1. En la consola de {{site.data.keyword.cloud_notm}}, pulse **Iniciar** en la página de detalles de servicio de {{site.data.keyword.iot_short_notm}}.
 
     Se abre la consola web de {{site.data.keyword.iot_short_notm}} en un nuevo separador del navegador con el siguiente URL:
 
@@ -153,7 +157,7 @@ Para conectar un dispositivo a {{site.data.keyword.iot_short_notm}}:
 Amplíe las características de análisis de datos de creando y conectando sus propias apps para consumir datos de dispositivos.
 - Para obtener más información sobre cómo conectarse a tipos de dispositivos específicos a {{site.data.keyword.iot_short_notm}}, consulte [Recetas de developerWorks ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.
 - Extraiga herramientas de las [bibliotecas de cliente ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/iot_platform_client_lib.html){:new_window} para crear código para integrar y conectar sus dispositivos y apps.
-- Explore la [Documentación de API de {{site.data.keyword.iot_short_notm}}](/docs/IoT/reference/api.html).
+- Explore la [Documentación de API de {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-api_overview#api_overview).
 - [Conecte un servicio de {{site.data.keyword.cloudantfull}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/cloudant_connector.html){:new_window} a {{site.data.keyword.iot_short_notm}} para almacenar datos de dispositivos históricos.
 - Para aprovechar todas [las funciones de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html){:new_window}, puede adquirir uno de los planes de servicio de conexión y análisis y, a continuación, migrar el entorno existente.
 

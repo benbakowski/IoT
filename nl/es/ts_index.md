@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Watson IoT Platform, Watson IoT Platform organization, IoT Platform, troubleshooting
+
+subcollection: iot-platform
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # Resolución de problemas de {{site.data.keyword.iot_short_notm}}
 {: #ts}
 
-<p>Esta recopilación de documentación de {{site.data.keyword.Bluemix}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
-Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [planes de servicios de {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Esta recopilación de documentación de {{site.data.keyword.cloud}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
+Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [Planes del servicio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
-A continuación se muestran las respuestas a preguntas de resolución de problemas comunes sobre cómo utilizar {{site.data.keyword.iot_full}} en {{site.data.keyword.Bluemix_notm}}.
+A continuación se muestran las respuestas a preguntas de resolución de problemas comunes sobre cómo utilizar {{site.data.keyword.iot_full}} en {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 ## Problema al acceder a la organización de {{site.data.keyword.iot_short_notm}}
@@ -33,12 +37,12 @@ No puede iniciar una sesión en una organización de {{site.data.keyword.iot_sho
 No puede iniciar una sesión en su organización de {{site.data.keyword.iot_short_notm}} directamente mediante el URL o mediante `https://internetofthings.ibmcloud.com`.
 {: tsSymptoms}
 
-Es posible que su acceso a la organización de {{site.data.keyword.iot_short_notm}} haya caducado. Las organizaciones de {{site.data.keyword.iot_short_notm}} creadas mediante {{site.data.keyword.Bluemix}} utilizan de forma predeterminada perfiles de usuario temporales.
+Es posible que su acceso a la organización de {{site.data.keyword.iot_short_notm}} haya caducado. Las organizaciones de {{site.data.keyword.iot_short_notm}} creadas mediante {{site.data.keyword.cloud}} utilizan de forma predeterminada perfiles de usuario temporales.
 {: tsCauses}
 
-Puede solucionar este problema accediendo a su organización de {{site.data.keyword.iot_short_notm}} mediante {{site.data.keyword.Bluemix_notm}} y modificando el valor de caducidad de su perfil de usuario. Para cambiar los valores de caducidad de usuario:
+Puede solucionar este problema accediendo a su organización de {{site.data.keyword.iot_short_notm}} mediante {{site.data.keyword.cloud_notm}} y modificando el valor de caducidad de su perfil de usuario. Para cambiar los valores de caducidad de usuario:
 
-1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, abra el servicio {{site.data.keyword.iot_short_notm}}.
+1. En el panel de control de {{site.data.keyword.cloud_notm}}, abra el servicio {{site.data.keyword.iot_short_notm}}.
 2. Pulse **Miembros** en la barra de navegación.
 3. Pulse el icono **Editar**.
 4. Desmarque el recuadro de selección **El acceso caduca** y pulse **Guardar**.

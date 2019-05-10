@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-04-05"
+
+keywords: Client connection URLs, MQTT protocol, device authentication tokens
+
+subcollection: iot-platform
 
 ---
 
@@ -16,8 +20,8 @@ lastupdated: "2019-02-13"
 # Información de conexión para aplicaciones, dispositivos y pasarelas
 {: #connect_devices_apps_gw}
 
-<p>Esta recopilación de documentación de {{site.data.keyword.Bluemix}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
-Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [planes de servicios de {{site.data.keyword.iot_short_notm}}](/docs/IoT/plans_overview.html#plans_overview). 
+<p>Esta recopilación de documentación de {{site.data.keyword.cloud}} pertenece al plan de precios Lite de {{site.data.keyword.iot_full}} e incluye información básica de iniciación, referencias de API e información general de resolución de problemas. 
+Para obtener la documentación completa de {{site.data.keyword.iot_short_notm}}, consulte la [documentación de producto de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/overview/overview.html) en IBM Knowledge Center. Encontrará más información acerca de los distintos planes en [Planes del servicio {{site.data.keyword.iot_short_notm}}](/docs/services/IoT?topic=iot-platform-plans_overview#plans_overview). 
 </p>
 {: important}
 
@@ -43,11 +47,6 @@ Para conectar clientes de dispositivos, aplicaciones y pasarelas a la instancia 
 **Notas**
 - Donde *orgId* es el único ID de organización generado al registrar la instancia de servicio.
 - Si está conectando un dispositivo o aplicación al servicio de Inicio rápido, especifique 'quickstart' como valor de *orgId*.
-
-## Configuración del cortafuegos
-{: #firewall_configuration}
-
-Para conectar dispositivos y aplicaciones a {{site.data.keyword.iot_short_notm}}, debe asegurarse de que los cortafuegos estén configurados para permitir el tráfico en puertos específicos. Los cortafuegos pueden estar ubicados en la máquina local, en el direccionador o en la red corporativa.
 
 ### Seguridad de puerto
 {: #client_port_security}

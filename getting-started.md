@@ -49,10 +49,10 @@ For more information, see [Developing devices on {{site.data.keyword.iot_short_n
 
 Explore the following options depending on your situation:
 
- |  |   The service is deployed | The service is not deployed
- | -------------| ------------- | -------------
-  |**I have a device to connect** | Follow the process that is outlined in this topic. | Explore device connection in the [Play with {{site.data.keyword.iot_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  |**I do not have a device to connect** | [Simulate device data](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data) or [Connect your smartphone ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play/device/smartphone){:new_window}. | Get started with [{{site.data.keyword.iot_short_notm}} Starter](https://cloud.ibm.com/docs/IoT-starter?topic=iot-starter-gettingstartedtemplate#gettingstartedtemplate){:new_window}.
+ | Device availability |   Next steps
+ | -------------| ------------- 
+  |**I have a device to connect** | Follow the process that is outlined in this topic. 
+  |**I do not have a device to connect** | [Simulate device data](/docs/services/IoT?topic=iot-platform-sim_device_data#sim_device_data). 
 
 
 
